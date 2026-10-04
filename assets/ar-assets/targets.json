@@ -1,0 +1,22 @@
+[
+  {
+    "id": "embroidered-eye-mask",
+    "name": "苏绣眼罩礼盒",
+    "image": "ar-assets/product.jpg",
+    "externalId": "1082079045031",
+    "widthMeters": 0.16,
+    "lesson": 0,
+    "credit": "商家已导入商品主图，仅在梨花季项目内使用"
+  },
+  {
+    "id": "lotus",
+    "name": "卷枝莲花",
+    "image": "ar-assets/lotus.png",
+    "basicId": "WM-41700874",
+    "widthMeters": 0.16,
+    "lesson": 1,
+    "credit": "Christopher J. Fynn · CC BY-SA 4.0 · 基于传统纹样绘制",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ashtamangala_Lotus.svg",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+  }
+]
