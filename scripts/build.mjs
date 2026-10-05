@@ -11,6 +11,6 @@ for(const p of patterns)for(const key of ['image','thumbnail'])if(!p[key].starts
 for(const p of products)for(const f of [p.image_path,...p.gallery,...p.variants.flatMap(v=>[v.photo,v.sticker].filter(Boolean))])if(f.includes('..')||!fs.existsSync('assets/'+f))throw Error('Missing product asset '+f);
 for(const f of ['app.js','face.js','index.html'])if(/trycloudflare\.com|127\.0\.0\.1|fetch\(['"]\/api\//.test(fs.readFileSync(f,'utf8')))throw Error('Local service dependency in '+f);
 if(!fs.existsSync('_site'))fs.mkdirSync('_site');
-for(const f of ['index.html','app.js','style.css','pages.css','face.html','face.js','.nojekyll','404.html'])fs.copyFileSync(f,path.join('_site',f));
+for(const f of ['index.html','app.js','style.css','pages.css','face.html','face.js','design-guide.html','.nojekyll','404.html'])fs.copyFileSync(f,path.join('_site',f));
 for(const f of ['content','assets'])fs.cpSync(f,path.join('_site',f),{recursive:true});
 console.log(`Validated ${patterns.length} patterns, ${products.length} showcase items; assembled static site.`);
