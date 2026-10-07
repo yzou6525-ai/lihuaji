@@ -1,0 +1,72 @@
+const {chromium}=require('playwright');
+const fs=require('fs'),path=require('path'),assert=require('assert/strict');
+const base='http://127.0.0.1:8898';
+const output=path.resolve('../delivery/payment-integration-2026-10-06/taobao-browser');
+fs.mkdirSync(output,{recursive:true});
+(async()=>{
+ const browser=await chromium.launch({channel:'msedge',headless:true});
+ const context=await browser.newContext({viewport:{width:1440,height:1000}});
+ const page=await context.newPage(),errors=[],checks=[];
+ page.on('pageerror',e=>errors.push(e.message));
+ try {
+  await page.goto(base+'/#mall');await page.waitForLoadState('networkidle');
+  const products=await(await page.request.get(base+'/api/products')).json();
+  assert.equal(products.length,75);
+  const links=await page.evaluate(async products=>{
+   const {taobaoProductUrl}=await import('/shop-links.js');
+   return products.map(p=>taobaoProductUrl(p));
+  },products);
+  assert.equal(links.filter(Boolean).length,75);
+  checks.push('75件导入在售商品均得到匹配原商品ID的购买链接');
+  await page.goto(base+'/#product/'+products[0].id);await page.waitForLoadState('networkidle');
+  const link=page.locator('#taobao-buy');await link.waitFor();
+  assert.equal(await link.getAttribute('href'),products[0].source.external_url);
+  assert.equal(await link.getAttribute('rel'),'noopener noreferrer');
+  assert((await page.locator('#taobao-purchase-note').innerText()).includes('不会自动同步'));
+  await link.focus();assert(await link.evaluate(e=>e===document.activeElement));
+  await page.screenshot({path:output+'/product-desktop.png',fullPage:true});
+  checks.push('未登录也能看到购买入口；可键盘聚焦，交易归属说明完整');
+  let intercepted='';
+  await context.route('https://item.taobao.com/**',async route=>{
+   intercepted=route.request().url();
+   await route.fulfill({contentType:'text/html',body:'<!doctype html><title>External navigation test</title><p>External request intercepted for acceptance.</p>'});
+  });
+  const popupPromise=context.waitForEvent('page');await link.click();const popup=await popupPromise;
+  await popup.waitForLoadState('domcontentloaded');assert.equal(intercepted,products[0].source.external_url);
+  await popup.close();checks.push('点击在独立标签打开匹配商品URL；外站请求被测试拦截，未下单');
+  await page.setViewportSize({width:390,height:844});
+  await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+  await page.locator('#sidebar').evaluate(e=>Promise.all(e.getAnimations({subtree:true}).map(a=>a.finished.catch(()=>{}))));
+  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+  assert(await link.isVisible());
+  await page.screenshot({path:output+'/product-mobile.png',fullPage:true,animations:'disabled'});
+  await page.locator('#buy').click();await page.locator('#modal[open]').waitFor();
+  assert((await page.locator('#modal').innerText()).includes('支付暂未开放'));
+  await page.keyboard.press('Escape');
+  checks.push('390像素手机无横向溢出，原本站购买仍明确支付未开放');
+  await page.goto(base+'/#register');await page.waitForLoadState('networkidle');
+  const username='taobaoui_'+Date.now();
+  await page.locator('#auth-form [name=name]').fill('购买入口验收');
+  await page.locator('#auth-form [name=username]').fill(username);
+  await page.locator('#auth-form [name=password]').fill('OnlyUITest!2026');
+  for(const checkbox of await page.locator('#auth-form input[type=checkbox]').all())await checkbox.check();
+  await page.locator('#auth-form button[type=submit]').click();await page.waitForURL(/#home$/);
+  await page.locator('#logout').click();await page.waitForURL(/#login$/);
+  await page.locator('#auth-form [name=username]').fill(username);
+  await page.locator('#auth-form [name=password]').fill('OnlyUITest!2026');
+  await page.locator('#auth-form button[type=submit]').click();await page.waitForURL(/#home$/);
+  await page.goto(base+'/#product/'+products[0].id);await page.locator('#taobao-buy').waitFor();
+  const cartSaved=page.waitForResponse(r=>r.url().endsWith('/api/cart')&&r.request().method()==='PUT');
+  await page.locator('#add-cart').click();assert((await cartSaved).ok());
+  await page.goto(base+'/#cart');await page.waitForLoadState('networkidle');
+  await page.getByRole('heading',{name:products[0].title,exact:true}).waitFor();
+  checks.push('注册、退出、重新登录与加入购物车仍可用');
+  assert.deepEqual(errors,[]);
+  fs.writeFileSync(output+'/report.json',JSON.stringify({ok:true,checks,errors,scope:'隔离数据库；站外跳转被拦截，仅验证正确URL。未验证淘宝今日库存、实际付款、退款或订单同步。'},null,2));
+  console.log(JSON.stringify({ok:true,checks:checks.length,errors}));
+ } catch(e) {
+  await page.screenshot({path:output+'/failure.png',fullPage:true}).catch(()=>{});
+  fs.writeFileSync(output+'/report.json',JSON.stringify({ok:false,checks,errors,error:e.stack},null,2));
+  console.error(e);process.exitCode=1;
+ } finally {await browser.close();}
+})();

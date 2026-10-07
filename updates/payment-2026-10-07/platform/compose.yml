@@ -1,0 +1,121 @@
+name: lihuaji
+services:
+  db:
+    image: postgres:15-alpine
+    restart: unless-stopped
+    logging:
+      driver: local
+      options: {max-size: "10m", max-file: "3"}
+    environment:
+      POSTGRES_DB: lihuaji
+      POSTGRES_USER: lihuaji
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U lihuaji -d lihuaji"]
+      interval: 5s
+      retries: 20
+    networks: [private]
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    logging:
+      driver: local
+      options: {max-size: "10m", max-file: "3"}
+    command: [redis-server, --appendonly, "yes", --requirepass, "${REDIS_PASSWORD:?Set REDIS_PASSWORD}"]
+    environment:
+      REDISCLI_AUTH: ${REDIS_PASSWORD}
+    volumes: [redisdata:/data]
+    healthcheck:
+      test: [CMD, redis-cli, ping]
+      interval: 5s
+      retries: 20
+    networks: [private]
+  llm:
+    init: true
+    security_opt: [no-new-privileges:true]
+    cap_drop: [ALL]
+    build:
+      context: ..
+      dockerfile: platform/deploy/Dockerfile.llm
+    restart: unless-stopped
+    logging:
+      driver: local
+      options: {max-size: "10m", max-file: "3"}
+    command: [-m, /models/qwen.gguf, --host, 0.0.0.0, --port, "8080", -c, "4096", -t, "4", -ngl, "0", --api-key, "${LLM_API_KEY:?Set LLM_API_KEY}"]
+    volumes: ["../src/ai/model.gguf:/models/qwen.gguf:ro"]
+    healthcheck:
+      test: [CMD, curl, -fsS, http://127.0.0.1:8080/health]
+      interval: 20s
+      timeout: 5s
+      start_period: 90s
+      retries: 15
+    networks: [private]
+  api:
+    init: true
+    security_opt: [no-new-privileges:true]
+    cap_drop: [ALL]
+    stop_grace_period: 45s
+    build:
+      context: ..
+      dockerfile: platform/deploy/Dockerfile
+    restart: unless-stopped
+    logging:
+      driver: local
+      options: {max-size: "10m", max-file: "3"}
+    env_file: ${LIHUA_ENV_FILE:-.env}
+    environment:
+      APP_ENV: production
+      TZ: Asia/Shanghai
+      DEMO_MODE: "0"
+      EXPORT_SEED_SQL: "0"
+      DATABASE_URL: postgresql+psycopg://lihuaji:${POSTGRES_PASSWORD}@db:5432/lihuaji
+      REDIS_URL: redis://:${REDIS_PASSWORD}@redis:6379/0
+      LIHUA_DATA: /app/data
+      LEGACY_ASSETS: /app/assets
+      SD_CLI: /usr/local/bin/sd-cli
+      SD_MODEL: /app/assets/diffusion/model.gguf
+      CONTROLNET_MODEL: /app/models/controlnet-canny-ldm.safetensors
+      LLM_BASE_URL: http://llm:8080
+      LLM_API_KEY: ${LLM_API_KEY}
+    volumes:
+      - appdata:/app/data
+      - ../src:/app/assets:ro
+      - ./models:/app/models:ro
+      - ./secrets:/run/secrets:ro
+    depends_on:
+      db: {condition: service_healthy}
+      redis: {condition: service_healthy}
+      llm: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health', timeout=5)"]
+      interval: 20s
+      timeout: 8s
+      start_period: 30s
+      retries: 15
+    networks: [private, outbound]
+  nginx:
+    image: nginx:1.28-alpine
+    restart: unless-stopped
+    logging:
+      driver: local
+      options: {max-size: "10m", max-file: "3"}
+    ports: ["80:80", "443:443"]
+    volumes:
+      - ./deploy/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./certs:/etc/nginx/certs:ro
+    depends_on:
+      api: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, wget, -q, --spider, http://127.0.0.1/nginx-healthz]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+    networks: [private, outbound]
+volumes:
+  pgdata:
+  redisdata:
+  appdata:
+networks:
+  private: {internal: true}
+  outbound:
