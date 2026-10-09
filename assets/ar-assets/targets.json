@@ -18,5 +18,18 @@
     "credit": "Christopher J. Fynn · CC BY-SA 4.0 · 基于传统纹样绘制",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ashtamangala_Lotus.svg",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  {
+    "id": "pear-blossom", "name": "梨花 · 一枝春", "image": "ar-assets/markers/pear-blossom.png",
+    "widthMeters": 0.16, "lesson": null,
+    "credit": "梨花季 · AI辅助编写的原创矢量构图示意，非馆藏图像或真实绣品扫描；工艺资料待补充",
+    "layers": [
+      {"src":"ar-assets/layers/pear-blossom/layer_00_base.png","name":"底稿","depth":0},
+      {"src":"ar-assets/layers/pear-blossom/layer_01_branch.png","name":"枝干","depth":0.03},
+      {"src":"ar-assets/layers/pear-blossom/layer_02_leaf.png","name":"叶片","depth":0.06},
+      {"src":"ar-assets/layers/pear-blossom/layer_03_petals_back.png","name":"后层花瓣","depth":0.09},
+      {"src":"ar-assets/layers/pear-blossom/layer_04_petals_front.png","name":"前层花瓣","depth":0.12},
+      {"src":"ar-assets/layers/pear-blossom/layer_05_stamen.png","name":"花蕊","depth":0.15}
+    ]
   }
 ]

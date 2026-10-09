@@ -1,1 +1,15 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="icon.png"><title>梨花季 · AR 绣境</title><link rel="stylesheet" href="ar-experience.css"></head><body data-ready="0"><div id="stage"><video id="camera" muted playsinline></video><span id="badge">3D 预览 · 摄像头未开启</span><div id="hint" role="status">正在准备绣品…</div></div><div class="controls" aria-busy="true"><button id="preview" disabled>3D 预览</button><button id="sample" disabled>用示例图片验证识别</button><button id="cameraStart" disabled>开启摄像头扫描</button><button id="plane" disabled>检测平面 AR 支持…</button><button id="stop" disabled>关闭摄像头</button></div><p id="privacy">摄像头画面仅在本机内存处理，不上传、不自动保存。点击扫描前，请在上方同意使用摄像头。</p><script type="module" src="ar-experience.js"></script></body></html>
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="icon.png"><title>梨花季 · AR 绣境 · 一枝春</title><link rel="stylesheet" href="ar-experience.css"></head>
+<body data-ready="0">
+ <header class="experience-title"><div><p>AR 绣境</p><h1 id="pattern-title">梨花 · 一枝春</h1></div><label class="target-label">选择纹样<select id="target" disabled aria-label="选择纹样"></select></label></header>
+ <div id="stage"><video id="camera" muted playsinline></video><span id="badge">正在准备纹样</span><span id="tracking-state" class="sr-only" aria-live="polite"></span><div id="hint" role="status">正在准备绣品…</div><div id="fatal" hidden></div></div>
+ <section id="layer-tools" hidden aria-label="纹样赏析">
+  <div class="mode-row"><div class="modes" role="group" aria-label="赏析模式"><button data-view="appreciate" aria-pressed="true">赏纹</button><button data-view="explain" aria-pressed="false">解绣</button><button data-view="craft" aria-pressed="false">看针</button></div><button id="toggle-layers" disabled>收拢</button></div>
+  <p id="view-help">拖动欣赏层次，点击“解绣”细看构图。</p><div id="layer-list" hidden aria-label="选择图层"></div><aside id="craft-info" hidden aria-live="polite"></aside>
+ </section>
+ <div class="controls" aria-busy="true"><button id="preview" disabled>3D 预览</button><button id="sample" disabled>用示例图片验证识别</button><button id="cameraStart" disabled>开启摄像头扫描</button><button id="plane" disabled>检测平面 AR 支持…</button><button id="stop" disabled>关闭摄像头</button></div>
+ <label id="standalone-consent" class="consent" hidden><input id="camera-consent" type="checkbox">同意本次在设备内使用相机，不上传画面。</label>
+ <p id="privacy">摄像头画面只在本机内存处理，不上传、不自动保存。扫描前请先同意使用摄像头。</p>
+ <details id="marker-card"><summary>查看与下载识别卡</summary><div class="marker-layout"><img id="marker" alt="当前纹样识别卡" width="240" height="240"><div><h2>让一枝梨花，在眼前展开</h2><p>将这张完整识别卡打印，或用另一块屏幕打开，再用手机对准。保持光线均匀，让整张图留在画面里。</p><a id="marker-download" class="button" download>下载识别卡</a><p id="credit" class="small"></p></div></div></details>
+ <noscript><p>此体验需要开启浏览器 JavaScript。</p></noscript><script type="module" src="ar-experience.js"></script>
+</body></html>

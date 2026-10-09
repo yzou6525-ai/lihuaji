@@ -5,6 +5,14 @@ import path from 'node:path';
 const patterns=JSON.parse(fs.readFileSync('content/patterns.json','utf8').replace(/^\uFEFF/,''));
 const products=JSON.parse(fs.readFileSync('content/products.json','utf8').replace(/^\uFEFF/,''));
 const site=JSON.parse(fs.readFileSync('content/site.json','utf8').replace(/^\uFEFF/,''));
+const arTargets=JSON.parse(fs.readFileSync('assets/ar-assets/targets.json','utf8'));
+for(const target of arTargets){
+  const files=[target.image,...(target.layers||[]).map(l=>l.src)];
+  for(const file of files)if(!/^ar-assets\/[\w./-]+$/.test(file)||file.includes('..')||!fs.existsSync('assets/'+file))throw Error('Invalid AR asset: '+file);
+  const dimensions=(target.layers||[]).map(layer=>{const bytes=fs.readFileSync('assets/'+layer.src);if(bytes.subarray(0,8).toString('hex')!=='89504e470d0a1a0a')throw Error('AR layer must be PNG');return [bytes.readUInt32BE(16),bytes.readUInt32BE(20)].join('x');});
+  if(new Set(dimensions).size>1)throw Error('AR layers must share a canvas size');
+}
+if(!fs.existsSync('assets/ar-assets/targets.mind'))throw Error('AR target database missing');
 if(!site.name||!site.title||!site.intro)throw Error('site.json missing text');
 if(new Set(patterns.map(p=>p.id)).size!==patterns.length)throw Error('Duplicate pattern IDs');
 for(const p of patterns)for(const key of ['image','thumbnail'])if(!p[key].startsWith('assets/')||!fs.existsSync(p[key]))throw Error('Missing or invalid pattern asset: '+p[key]);
