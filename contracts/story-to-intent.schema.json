@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "POST /api/story-to-intent response contract (not deployed on GitHub Pages)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["model", "intent"],
+  "properties": {
+    "model": {
+      "type": "object", "additionalProperties": false, "required": ["name", "version"],
+      "properties": {"name": {"type": "string", "minLength": 1, "maxLength": 100}, "version": {"type": "string", "minLength": 1, "maxLength": 100}}
+    },
+    "intent": {
+      "type": "object", "additionalProperties": false,
+      "required": ["storySummary", "emotions", "relationship", "occasion", "motifCandidates", "paletteCandidates", "compositionCandidates", "evidence"],
+      "properties": {
+        "storySummary": {"type": "string", "maxLength": 500},
+        "emotions": {"type": "array", "maxItems": 15, "uniqueItems": true, "items": {"enum": ["惜别", "祝愿", "重逢", "相伴", "温柔", "希望", "坚韧", "成长", "自然", "回忆", "平静", "喜悦", "家庭", "平安", "祝贺"]}},
+        "relationship": {"enum": ["未指定", "朋友", "家人", "伴侣", "自己"]},
+        "occasion": {"enum": ["日常", "毕业", "生日", "婚礼", "旅行", "纪念", "新年"]},
+        "motifCandidates": {"type": "array", "maxItems": 6, "uniqueItems": true, "items": {"type": "string", "maxLength": 80}},
+        "paletteCandidates": {"type": "array", "minItems": 1, "maxItems": 4, "uniqueItems": true, "items": {"type": "integer", "minimum": 0, "maximum": 3}},
+        "compositionCandidates": {"type": "array", "minItems": 1, "maxItems": 3, "uniqueItems": true, "items": {"enum": ["circular", "diagonal", "paired"]}},
+        "evidence": {"type": "array", "maxItems": 0}
+      }
+    }
+  }
+}

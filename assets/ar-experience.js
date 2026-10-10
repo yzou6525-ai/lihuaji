@@ -9,6 +9,7 @@ const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
 async function main(){
  const response=await fetch('./ar-assets/targets.json');if(!response.ok)throw Error('纹样目录暂未加载，请刷新重试。');
  const targets=await response.json();if(!targets.length)throw Error('没有可用的纹样。');
+ const baseTargetCount=targets.length;let customIndex=-1;
  const requested=new URLSearchParams(location.search).get('target');
  let targetIndex=requested===null?Math.max(0,targets.findIndex(t=>t.id==='pear-blossom')):Math.min(targets.length-1,Math.max(0,Math.floor(Number(requested)||0)));
  let stream=null,controller=null,alive=true,epoch=0,mode='preview',found=false,consent=false,xrSession=null,hitSource=null,referenceSpace=null;
@@ -41,7 +42,7 @@ async function main(){
    layered?.dispose();layered=null;legacy.visible=false;$('#layer-tools').hidden=true;overlay.hide();
    const data=targets[index];let candidate=null;
    if(data.layers?.length){candidate=new LayeredPattern({reducedMotion,onWarning:text=>status(text)});const loaded=await candidate.load(data);if(!alive||ticket!==visualEpoch){candidate.dispose();return;}if(loaded){layered=candidate;layered.mount(content);showLayers();$('#layer-tools').hidden=false;$('#toggle-layers').disabled=false;layered.amount=view==='appreciate'?1:1.7;if(open)layered.playExplosion();}else candidate.dispose();}
-   if(!layered){const texture=await new THREE.TextureLoader().loadAsync(data.image);if(!alive||ticket!==visualEpoch){texture.dispose();return;}texture.colorSpace=THREE.SRGBColorSpace;artwork.material.map?.dispose();artwork.material.map=texture;artwork.material.needsUpdate=true;legacy.visible=true;}
+   if(!layered){const texture=await new THREE.TextureLoader().loadAsync(data.artworkImage||data.image);if(!alive||ticket!==visualEpoch){texture.dispose();return;}texture.colorSpace=THREE.SRGBColorSpace;artwork.material.map?.dispose();artwork.material.map=texture;artwork.material.needsUpdate=true;legacy.visible=true;}
    visualIndex=index;pendingVisual=-1;updateToggle();
  }
  function resize(){
@@ -71,13 +72,14 @@ async function main(){
    const ctl=new Controller({inputWidth:width,inputHeight:height,warmupTolerance:3,missTolerance:2,maxTrack:1,onUpdate:data=>{
      if(current!==epoch||data.type!=='updateMatrix'||!targets[data.targetIndex])return;
      const detected=data.worldMatrix!==null;
-     if(detected){if(tracking.target!==data.targetIndex&&visualIndex!==data.targetIndex&&pendingVisual!==data.targetIndex){if(layered)layered.group.visible=false;legacy.visible=false;}
-       anchor.matrix.fromArray(data.worldMatrix).multiply(postMatrices[data.targetIndex]);anchor.visible=true;content.rotation.set(0,0,0);targetIndex=data.targetIndex;}
-     tracking.observe(data.targetIndex,detected,performance.now());
+     const displayedIndex=targetIndex===customIndex&&data.targetIndex===2?customIndex:data.targetIndex;
+     if(detected){if(tracking.target!==displayedIndex&&visualIndex!==displayedIndex&&pendingVisual!==displayedIndex){if(layered)layered.group.visible=false;legacy.visible=false;}
+       anchor.matrix.fromArray(data.worldMatrix).multiply(postMatrices[data.targetIndex]);anchor.visible=true;content.rotation.set(0,0,0);targetIndex=displayedIndex;}
+     tracking.observe(displayedIndex,detected,performance.now());
    }});controller=ctl;
    const response=await fetch('./ar-assets/targets.mind');if(!response.ok)throw Error('识别卡数据未加载，请使用 3D 预览或稍后重试。');
    const buffer=await response.arrayBuffer();if(!alive||current!==epoch)return null;
-   const {dimensions}=ctl.addImageTargetsFromBuffer(buffer);if(dimensions.length!==targets.length)throw Error('识别卡版本不一致，请刷新页面。');
+   const {dimensions}=ctl.addImageTargetsFromBuffer(buffer);if(dimensions.length!==baseTargetCount)throw Error('识别卡版本不一致，请刷新页面。');
    postMatrices=dimensions.map(([w,h])=>new THREE.Matrix4().compose(new THREE.Vector3(w/2,h/2,0),new THREE.Quaternion(),new THREE.Vector3(w,w,w)));
    anchor.matrixAutoUpdate=false;anchor.visible=false;camera.position.set(0,0,0);camera.quaternion.identity();camera.projectionMatrix.fromArray(ctl.getProjectionMatrix());camera.projectionMatrixInverse.copy(camera.projectionMatrix).invert();inputWidth=width;inputHeight=height;resize();await ctl.dummyRun(input);return {ctl,postMatrices};
  }
@@ -93,13 +95,13 @@ async function main(){
  }
  async function sample(){
    closeInput();const current=epoch;mode='sample';$('#badge').textContent='示例识别 · 摄像头未开启';status('正在匹配示例图片的真实特征…',false);
-   const index=targetIndex,img=new Image();img.src=targets[index].image;await img.decode();if(!alive||current!==epoch)return;
+   const index=targetIndex,markerIndex=targets[index].trackingIndex??index,img=new Image();img.src=targets[index].image;await img.decode();if(!alive||current!==epoch)return;
    const canvas=document.createElement('canvas');canvas.width=800;canvas.height=600;const ctx=canvas.getContext('2d');ctx.fillStyle='#e9e7dc';ctx.fillRect(0,0,800,600);
    const scale=Math.min(520/img.width,460/img.height),w=img.width*scale,h=img.height*scale;ctx.drawImage(img,(800-w)/2,(600-h)/2,w,h);
    const runtime=await setupController(800,600,canvas,current);if(!runtime||current!==epoch)return;
-   const features=await runtime.ctl.detect(canvas);if(current!==epoch)return;const match=await runtime.ctl.match(features.featurePoints,index);if(current!==epoch)return;
+   const features=await runtime.ctl.detect(canvas);if(current!==epoch)return;const match=await runtime.ctl.match(features.featurePoints,markerIndex);if(current!==epoch)return;
    if(!match.modelViewTransform)throw Error('这次示例匹配没有成功，可重试或继续 3D 预览。');
-   anchor.matrix.fromArray(runtime.ctl.getWorldMatrix(match.modelViewTransform,index)).multiply(runtime.postMatrices[index]);anchor.visible=true;content.rotation.set(0,0,0);
+   anchor.matrix.fromArray(runtime.ctl.getWorldMatrix(match.modelViewTransform,markerIndex)).multiply(runtime.postMatrices[markerIndex]);anchor.visible=true;content.rotation.set(0,0,0);
    tracking.observe(index,true,performance.now());status('识别成功：'+targets[index].name+' · 真实图片特征匹配已触发展开',true);document.body.dataset.matched=String(index);
  }
  function recover(error){if(!alive)return;preview({open:false});status(error.name==='NotAllowedError'?'摄像头未获许可，已返回 3D 预览，可随时重试。':(error.message||'启动未完成，已返回 3D 预览。'),false);post({type:'error',message:error.message});}
@@ -115,7 +117,14 @@ async function main(){
  element.onpointermove=e=>{if(!drag||drag.id!==e.pointerId)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;drag.moved ||= Math.hypot(e.clientX-drag.startX,e.clientY-drag.startY)>7;if(mode==='preview'&&drag.moved){content.rotation.y=Math.max(-1.15,Math.min(1.15,content.rotation.y+dx*.009));content.rotation.x=Math.max(-.9,Math.min(.9,content.rotation.x+dy*.009));}drag.x=e.clientX;drag.y=e.clientY;};
  element.onpointerup=e=>{if(drag&&!drag.moved&&view==='craft'&&layered&&anchor.visible){const r=element.getBoundingClientRect();pointer.set((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1);scene.updateMatrixWorld(true);camera.updateMatrixWorld(true);raycaster.setFromCamera(pointer,camera);selectLayer(layered.pick(raycaster));}drag=null;};element.onpointercancel=()=>drag=null;
  if(parent===window){$('#standalone-consent').hidden=false;$('#camera-consent').onchange=e=>{consent=e.target.checked;if(!consent&&(mode==='scan'||mode==='plane'||stream||xrSession))preview();};}
- function message(e){if(e.origin!==location.origin||e.source!==parent||e.data?.scope!=='lihua-ar-host')return;if(e.data.type==='consent'){consent=e.data.value===true;if(!consent&&(mode==='scan'||mode==='plane'||stream||xrSession))preview();}if(e.data.type==='stop')destroy();}window.addEventListener('message',message);
+ async function importGenerated(data){
+   const png=s=>typeof s==='string'&&s.length<2500000&&/^data:image\/png;base64,[A-Za-z0-9+/=]+$/.test(s);
+   if(!data||!Array.isArray(data.layers)||data.layers.length!==5||!data.layers.every(l=>png(l.src))||!png(data.artworkImage))throw Error('作品图层数据无效');
+   preview({open:false});const definition={id:'my-story',name:String(data.name||'我的故事纹样').slice(0,70),image:targets[2].image,trackingIndex:2,widthMeters:.16,artworkImage:data.artworkImage,credit:'此作品使用梨花识别卡作为定位载体，不是对生成图案本身的识别。五层为当代构图示意，真实工艺资料待补充。',layers:data.layers.map((l,i)=>({name:String(l.name).slice(0,30),src:l.src,depth:i*.035}))};
+   if(customIndex<0){customIndex=targets.length;targets.push(definition);const o=document.createElement('option');o.value=customIndex;o.textContent='我的故事纹样';$('#target').append(o);}else targets[customIndex]=definition;
+   await loadVisual(customIndex,true);if(!alive)return;preview({open:false});status('我的作品已进入绣境。扫描时请使用下方的梨花识别卡。',false);document.body.dataset.custom='1';post({type:'generated-ready'});
+ }
+ function message(e){if(e.origin!==location.origin||e.source!==parent||e.data?.scope!=='lihua-ar-host')return;if(e.data.type==='consent'){consent=e.data.value===true;if(!consent&&(mode==='scan'||mode==='plane'||stream||xrSession))preview();}if(e.data.type==='generated-pattern')guard(()=>importGenerated(e.data.pattern))();if(e.data.type==='stop')destroy();}window.addEventListener('message',message);
  async function plane(){
    if(!consent)throw Error('请先勾选摄像头使用说明。');if(!navigator.xr)throw Error('当前设备不支持平面 AR，可使用图像扫描。');
    closeInput();const current=epoch,session=await navigator.xr.requestSession('immersive-ar',{requiredFeatures:['hit-test'],optionalFeatures:['dom-overlay'],domOverlay:{root:document.body}});

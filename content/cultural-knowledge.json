@@ -1,0 +1,2797 @@
+[
+  {
+    "id": "pear",
+    "canonicalName": "梨花",
+    "aliases": [
+      "梨花"
+    ],
+    "category": "花卉",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "馆藏陈师曾作品以一枝梨花为题材；该条不证明梨花必然象征相守。",
+        "sourceId": "pear-source"
+      }
+    ],
+    "emotions": [
+      "自然",
+      "回忆",
+      "温柔"
+    ],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "pear-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": "pear",
+    "generationEnabled": true
+  },
+  {
+    "id": "peony",
+    "canonicalName": "牡丹",
+    "aliases": [
+      "牡丹"
+    ],
+    "category": "花卉",
+    "verifiedMeanings": [
+      {
+        "label": "吉祥富贵",
+        "sourceId": "peony-source",
+        "context": "官方牡丹展将牡丹联系于幸福、美满和富贵。"
+      }
+    ],
+    "verifiedFacts": [
+      {
+        "summary": "官方牡丹展将牡丹联系于幸福、美满和富贵。",
+        "sourceId": "peony-source"
+      }
+    ],
+    "emotions": [
+      "祝愿",
+      "喜悦",
+      "祝贺"
+    ],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "peony-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": "peony",
+    "generationEnabled": true
+  },
+  {
+    "id": "lotus",
+    "canonicalName": "莲花",
+    "aliases": [
+      "莲花"
+    ],
+    "category": "花卉",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "元代盘饰有莲池鸳鸯与缠枝莲；只能作为历史形态证据。",
+        "sourceId": "lotus-source"
+      }
+    ],
+    "emotions": [
+      "自然",
+      "平静",
+      "夏天"
+    ],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "lotus-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": "lotus",
+    "generationEnabled": true
+  },
+  {
+    "id": "plum",
+    "canonicalName": "梅花",
+    "aliases": [
+      "梅花"
+    ],
+    "category": "草木",
+    "verifiedMeanings": [
+      {
+        "label": "高洁与坚强",
+        "sourceId": "gentlemen-source",
+        "context": "属于四君子题材；品格解释针对该类题材，非苏绣专属。"
+      }
+    ],
+    "verifiedFacts": [
+      {
+        "summary": "属于四君子题材；品格解释针对该类题材，非苏绣专属。",
+        "sourceId": "gentlemen-source"
+      }
+    ],
+    "emotions": [
+      "坚韧",
+      "希望",
+      "成长"
+    ],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "gentlemen-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": "plum",
+    "generationEnabled": true
+  },
+  {
+    "id": "orchid",
+    "canonicalName": "兰草",
+    "aliases": [
+      "兰草"
+    ],
+    "category": "草木",
+    "verifiedMeanings": [
+      {
+        "label": "高洁与坚强",
+        "sourceId": "gentlemen-source",
+        "context": "属于四君子题材；品格解释针对该类题材，非苏绣专属。"
+      }
+    ],
+    "verifiedFacts": [
+      {
+        "summary": "属于四君子题材；品格解释针对该类题材，非苏绣专属。",
+        "sourceId": "gentlemen-source"
+      }
+    ],
+    "emotions": [
+      "坚韧",
+      "希望",
+      "成长"
+    ],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "gentlemen-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": "orchid",
+    "generationEnabled": true
+  },
+  {
+    "id": "bamboo",
+    "canonicalName": "竹叶",
+    "aliases": [
+      "竹叶"
+    ],
+    "category": "草木",
+    "verifiedMeanings": [
+      {
+        "label": "高洁与坚强",
+        "sourceId": "gentlemen-source",
+        "context": "属于四君子题材；品格解释针对该类题材，非苏绣专属。"
+      }
+    ],
+    "verifiedFacts": [
+      {
+        "summary": "属于四君子题材；品格解释针对该类题材，非苏绣专属。",
+        "sourceId": "gentlemen-source"
+      }
+    ],
+    "emotions": [
+      "坚韧",
+      "希望",
+      "成长"
+    ],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "gentlemen-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": "bamboo",
+    "generationEnabled": true
+  },
+  {
+    "id": "fish",
+    "canonicalName": "鱼纹",
+    "aliases": [
+      "鱼"
+    ],
+    "category": "动物",
+    "verifiedMeanings": [
+      {
+        "label": "富足有余",
+        "sourceId": "auspicious-source",
+        "context": "吉祥图案词条以鱼联系富足有余。"
+      }
+    ],
+    "verifiedFacts": [
+      {
+        "summary": "吉祥图案词条以鱼联系富足有余。",
+        "sourceId": "auspicious-source"
+      }
+    ],
+    "emotions": [
+      "祝愿",
+      "喜悦"
+    ],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "auspicious-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": "fish",
+    "generationEnabled": true
+  },
+  {
+    "id": "butterfly",
+    "canonicalName": "蝶纹",
+    "aliases": [
+      "蝶"
+    ],
+    "category": "动物",
+    "verifiedMeanings": [
+      {
+        "label": "双蝶喜相逢",
+        "sourceId": "meeting-source",
+        "context": "相向双蝶是喜相逢图案的一种，含义依赖成对组合。"
+      }
+    ],
+    "verifiedFacts": [
+      {
+        "summary": "相向双蝶是喜相逢图案的一种，含义依赖成对组合。",
+        "sourceId": "meeting-source"
+      }
+    ],
+    "emotions": [
+      "重逢",
+      "相伴",
+      "惜别"
+    ],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "meeting-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": "butterfly",
+    "generationEnabled": true
+  },
+  {
+    "id": "bat",
+    "canonicalName": "蝠纹",
+    "aliases": [
+      "蝠"
+    ],
+    "category": "动物",
+    "verifiedMeanings": [
+      {
+        "label": "福",
+        "sourceId": "auspicious-source",
+        "context": "吉祥图案词条以蝙蝠谐福。"
+      }
+    ],
+    "verifiedFacts": [
+      {
+        "summary": "吉祥图案词条以蝙蝠谐福。",
+        "sourceId": "auspicious-source"
+      }
+    ],
+    "emotions": [
+      "祝愿",
+      "喜悦"
+    ],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "auspicious-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": "bat",
+    "generationEnabled": true
+  },
+  {
+    "id": "cloud",
+    "canonicalName": "祥云",
+    "aliases": [
+      "祥云"
+    ],
+    "category": "吉纹",
+    "verifiedMeanings": [
+      {
+        "label": "吉祥祝愿",
+        "sourceId": "cloud-source",
+        "context": "建筑彩画讲座介绍祥云寄托吉祥愿望；不是苏绣专属证据。"
+      }
+    ],
+    "verifiedFacts": [
+      {
+        "summary": "建筑彩画讲座介绍祥云寄托吉祥愿望；不是苏绣专属证据。",
+        "sourceId": "cloud-source"
+      }
+    ],
+    "emotions": [
+      "祝愿",
+      "希望",
+      "平安"
+    ],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "cloud-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": "cloud",
+    "generationEnabled": true
+  },
+  {
+    "id": "fruit",
+    "canonicalName": "石榴纹",
+    "aliases": [
+      "石榴"
+    ],
+    "category": "果实",
+    "verifiedMeanings": [
+      {
+        "label": "多子（历史语境）",
+        "sourceId": "three-source",
+        "context": "石榴是三多纹组成之一，与多子祝愿有关；不用于推断用户生育意愿。"
+      }
+    ],
+    "verifiedFacts": [
+      {
+        "summary": "石榴是三多纹组成之一，与多子祝愿有关；不用于推断用户生育意愿。",
+        "sourceId": "three-source"
+      }
+    ],
+    "emotions": [
+      "家庭"
+    ],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "three-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": "fruit",
+    "generationEnabled": true
+  },
+  {
+    "id": "ruyi",
+    "canonicalName": "如意云头",
+    "aliases": [
+      "如意云头"
+    ],
+    "category": "吉纹",
+    "verifiedMeanings": [
+      {
+        "label": "祈福祝颂",
+        "sourceId": "ruyi-source",
+        "context": "博物馆教育页介绍如意云头装饰与祈福祝颂。"
+      }
+    ],
+    "verifiedFacts": [
+      {
+        "summary": "博物馆教育页介绍如意云头装饰与祈福祝颂。",
+        "sourceId": "ruyi-source"
+      }
+    ],
+    "emotions": [
+      "祝愿",
+      "平安"
+    ],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "ruyi-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": "ruyi",
+    "generationEnabled": true
+  },
+  {
+    "id": "chrysanthemum",
+    "canonicalName": "菊",
+    "aliases": [
+      "菊"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [
+      {
+        "label": "高洁（组合语境）",
+        "sourceId": "gentlemen-source",
+        "context": "为四君子组合之一。"
+      }
+    ],
+    "verifiedFacts": [
+      {
+        "summary": "为四君子组合之一。",
+        "sourceId": "gentlemen-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "gentlemen-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "pine",
+    "canonicalName": "松",
+    "aliases": [
+      "松"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "五清的增补元素之一。",
+        "sourceId": "gentlemen-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "gentlemen-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "narcissus",
+    "canonicalName": "水仙",
+    "aliases": [
+      "水仙"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "五清的可选增补题材。",
+        "sourceId": "gentlemen-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "gentlemen-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "scholar-rock",
+    "canonicalName": "奇石",
+    "aliases": [
+      "奇石"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "五清的可选增补题材。",
+        "sourceId": "gentlemen-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "gentlemen-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "four-gentlemen",
+    "canonicalName": "四君子",
+    "aliases": [
+      "四君子"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [
+      {
+        "label": "高洁与坚强",
+        "sourceId": "gentlemen-source",
+        "context": "组合包含梅、兰、竹、菊。"
+      }
+    ],
+    "verifiedFacts": [
+      {
+        "summary": "组合包含梅、兰、竹、菊。",
+        "sourceId": "gentlemen-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "gentlemen-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "five-pure",
+    "canonicalName": "五清",
+    "aliases": [
+      "五清"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [
+      {
+        "label": "高洁（题材语境）",
+        "sourceId": "gentlemen-source",
+        "context": "在四君子之外增补松、水仙或奇石。"
+      }
+    ],
+    "verifiedFacts": [
+      {
+        "summary": "在四君子之外增补松、水仙或奇石。",
+        "sourceId": "gentlemen-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "gentlemen-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "peach",
+    "canonicalName": "寿桃",
+    "aliases": [
+      "寿桃"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [
+      {
+        "label": "祝寿",
+        "sourceId": "three-source",
+        "context": "与佛手、石榴组合为三多。"
+      }
+    ],
+    "verifiedFacts": [
+      {
+        "summary": "与佛手、石榴组合为三多。",
+        "sourceId": "three-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "three-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "finger-citron",
+    "canonicalName": "佛手",
+    "aliases": [
+      "佛手"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [
+      {
+        "label": "多福（组合语境）",
+        "sourceId": "three-source",
+        "context": "三多纹的组成。"
+      }
+    ],
+    "verifiedFacts": [
+      {
+        "summary": "三多纹的组成。",
+        "sourceId": "three-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "three-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "three-abundances",
+    "canonicalName": "三多纹",
+    "aliases": [
+      "三多"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [
+      {
+        "label": "多福多寿多子",
+        "sourceId": "three-source",
+        "context": "由佛手、寿桃、石榴组成。"
+      }
+    ],
+    "verifiedFacts": [
+      {
+        "summary": "由佛手、寿桃、石榴组成。",
+        "sourceId": "three-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "three-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "mandarin-duck",
+    "canonicalName": "鸳鸯",
+    "aliases": [
+      "鸳鸯"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "馆藏元代盘上描绘鸳鸯莲池。",
+        "sourceId": "lotus-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "lotus-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "heron",
+    "canonicalName": "鹭鸶",
+    "aliases": [
+      "鹭鸶"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "满池娇说明提及莲池小景中的鹭鸶。",
+        "sourceId": "lotus-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "lotus-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "lotus-pond",
+    "canonicalName": "满池娇",
+    "aliases": [
+      "满池娇"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "历史上用于池塘花鸟景色的图案名称。",
+        "sourceId": "lotus-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "lotus-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "lotus-scroll",
+    "canonicalName": "缠枝莲",
+    "aliases": [
+      "缠枝莲"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "该盘壁部以莲花和缠绕枝茎装饰。",
+        "sourceId": "lotus-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "lotus-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "diamond-brocade",
+    "canonicalName": "菱形锦纹",
+    "aliases": [
+      "菱形锦"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "该盘折沿的几何装饰。",
+        "sourceId": "lotus-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "lotus-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "magpie",
+    "canonicalName": "喜鹊",
+    "aliases": [
+      "喜鹊"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [
+      {
+        "label": "喜庆",
+        "sourceId": "auspicious-source",
+        "context": "词条用喜鹊表达喜庆。"
+      }
+    ],
+    "verifiedFacts": [
+      {
+        "summary": "词条用喜鹊表达喜庆。",
+        "sourceId": "auspicious-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "auspicious-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "whitehead",
+    "canonicalName": "白头翁",
+    "aliases": [
+      "白头翁"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "与牡丹组成富贵白头。",
+        "sourceId": "auspicious-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "auspicious-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "deer",
+    "canonicalName": "鹿",
+    "aliases": [
+      "鹿"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "与鹤组成鹤鹿同春。",
+        "sourceId": "auspicious-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "auspicious-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "crane",
+    "canonicalName": "鹤",
+    "aliases": [
+      "鹤"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "与鹿组成鹤鹿同春。",
+        "sourceId": "auspicious-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "auspicious-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "lingzhi",
+    "canonicalName": "灵芝",
+    "aliases": [
+      "灵芝"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "杂宝元素，亦见灵仙祝寿组合。",
+        "sourceId": "auspicious-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "auspicious-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "coin",
+    "canonicalName": "古钱",
+    "aliases": [
+      "古钱"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "杂宝纹中的器物元素。",
+        "sourceId": "auspicious-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "auspicious-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "fangsheng",
+    "canonicalName": "方胜",
+    "aliases": [
+      "方胜"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "杂宝纹中的元素。",
+        "sourceId": "auspicious-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "auspicious-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "qing",
+    "canonicalName": "磬",
+    "aliases": [
+      "磬"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "该袍双鱼衔磬表达吉庆有余。",
+        "sourceId": "auspicious-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "auspicious-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "ingot",
+    "canonicalName": "元宝",
+    "aliases": [
+      "元宝"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "杂宝纹中的器物元素。",
+        "sourceId": "auspicious-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "auspicious-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "scroll-book",
+    "canonicalName": "书",
+    "aliases": [
+      "书"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "杂宝纹中的元素。",
+        "sourceId": "auspicious-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "auspicious-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "scroll-paint",
+    "canonicalName": "画",
+    "aliases": [
+      "画"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "杂宝纹中的元素。",
+        "sourceId": "auspicious-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "auspicious-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "mugwort",
+    "canonicalName": "艾叶",
+    "aliases": [
+      "艾叶"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "杂宝纹中的植物元素。",
+        "sourceId": "auspicious-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "auspicious-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "banana-leaf",
+    "canonicalName": "蕉叶",
+    "aliases": [
+      "蕉叶"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "杂宝纹中的植物元素。",
+        "sourceId": "auspicious-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "auspicious-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "treasure",
+    "canonicalName": "杂宝纹",
+    "aliases": [
+      "杂宝"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "以多种吉祥物组合为装饰。",
+        "sourceId": "auspicious-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "auspicious-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "ku-dragon",
+    "canonicalName": "夔龙",
+    "aliases": [
+      "夔龙"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "该袍主纹为团夔龙。",
+        "sourceId": "auspicious-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "auspicious-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "floral-roundel",
+    "canonicalName": "团花",
+    "aliases": [
+      "团花"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "圆形组织的装饰图案。",
+        "sourceId": "pattern-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "pattern-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "scrolling-branch",
+    "canonicalName": "缠枝纹",
+    "aliases": [
+      "缠枝"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "以枝蔓相互缠绕构成连续图案。",
+        "sourceId": "pattern-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "pattern-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "meander",
+    "canonicalName": "回纹",
+    "aliases": [
+      "回"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "几何边饰的一种。",
+        "sourceId": "pattern-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "pattern-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "lotus-petal",
+    "canonicalName": "莲瓣纹",
+    "aliases": [
+      "莲瓣"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "词条介绍莲花瓣在瓷器上的历史应用。",
+        "sourceId": "pattern-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "pattern-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "peony-scroll",
+    "canonicalName": "缠枝牡丹",
+    "aliases": [
+      "缠枝牡丹"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "缠枝花纹的题材之一。",
+        "sourceId": "pattern-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "pattern-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "meeting",
+    "canonicalName": "喜相逢",
+    "aliases": [
+      "喜相逢"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "相向双蝶、双喜鹊等组合形式。",
+        "sourceId": "meeting-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "meeting-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "long-life-character",
+    "canonicalName": "寿字纹",
+    "aliases": [
+      "寿字"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "云蝠寿袷袍中的文字纹样。",
+        "sourceId": "meeting-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "meeting-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "waves",
+    "canonicalName": "立水纹",
+    "aliases": [
+      "立水"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "服饰下摆的水脚与波浪装饰。",
+        "sourceId": "meeting-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "meeting-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  },
+  {
+    "id": "eight-auspicious",
+    "canonicalName": "八吉祥",
+    "aliases": [
+      "八吉祥"
+    ],
+    "category": "传统文化元素",
+    "verifiedMeanings": [],
+    "verifiedFacts": [
+      {
+        "summary": "具有佛教语境的八件吉祥供器组合，不在本版自动生成。",
+        "sourceId": "meeting-source"
+      }
+    ],
+    "emotions": [],
+    "occasions": [],
+    "compatibleMotifs": [],
+    "incompatibleMotifs": [],
+    "compositionRules": [
+      "circular",
+      "diagonal",
+      "paired"
+    ],
+    "paletteHints": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "designRulesOrigin": "项目自定的当代构图与检索标签，不是历史文化结论；空兼容表表示未制定限制，不保证任意组合在历史上成立。",
+    "period": [],
+    "region": [],
+    "suzhouSpecific": false,
+    "craft": {
+      "verified": false,
+      "stitches": [],
+      "threadColors": [],
+      "productionOrder": null
+    },
+    "sourceIds": [
+      "meeting-source"
+    ],
+    "evidenceLevel": "A",
+    "reviewStatus": "approved",
+    "review": {
+      "method": "AI辅助公开来源事实核对",
+      "date": "2026-10-10",
+      "expertReviewed": false,
+      "scope": "仅所列事实；不包括工艺、传统配色或专家认证"
+    },
+    "generatorKey": null,
+    "generationEnabled": false
+  }
+]

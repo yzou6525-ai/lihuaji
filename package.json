@@ -1,0 +1,10 @@
+{
+  "name": "lihuaji-cultural-showcase",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test scripts/ar-state.test.cjs scripts/story.test.cjs"
+  },
+  "engines": {"node": ">=20"}
+}

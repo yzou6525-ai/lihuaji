@@ -4,7 +4,7 @@ export const motifs=[
 export const palettes=[{name:'梨白 · 苔绿',colors:['#f5eee0','#d6c69b','#9da985','#527d66','#294f43','#b9935a']},{name:'海棠 · 胭脂',colors:['#f8e8dd','#e8b4ad','#c7787b','#984d62','#677e67','#b5a171']},{name:'青瓷 · 烟蓝',colors:['#e4eee5','#b7cfc4','#83adb4','#4e788b','#2e515e','#b7a071']},{name:'秋桂 · 金棕',colors:['#f5e5b9','#dbbd70','#b98b43','#846143','#576850','#324d43']}];
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
 export function rng(seed){let s=Number(seed)||1;return ()=>((s=(s*1664525+1013904223)>>>0)/4294967296);}
-export function motifSVG(index=0,variant=1,palette=0){const m=motifs[index%motifs.length],p=palettes[palette%4].colors,R=rng(variant*77+index*901),parts=[];
+export function motifSVG(index=0,variant=1,palette=0,{transparent=false}={}){const m=motifs[index%motifs.length],p=palettes[palette%4].colors,R=rng(variant*77+index*901),parts=[];
  const line=(x,y,X,Y,color,width=1,opacity=1)=>parts.push(`<path d="M${x.toFixed(1)},${y.toFixed(1)}L${X.toFixed(1)},${Y.toFixed(1)}" stroke="${color}" stroke-width="${width}" opacity="${opacity}" stroke-linecap="round"/>`);
  function leaf(x,y,angle,size,color){parts.push(`<g transform="translate(${x} ${y}) rotate(${angle})"><path d="M0 0 Q${size*.25} ${-size*.7} ${size} 0 Q${size*.3} ${size*.38} 0 0" fill="${color}"/>`);for(let i=2;i<32;i++){let a=i/32;parts.push(`<path d="M${a*size} 0 L${a*size-size*.12} ${-Math.sin(a*Math.PI)*size*.28}" fill="none" stroke="${p[2]}" stroke-width=".6" opacity=".55"/>`);}parts.push('</g>');}
  function flower(x,y,size,petals=5){parts.push(`<g transform="translate(${x} ${y}) rotate(${R()*80})">`);for(let k=0;k<petals;k++){parts.push(`<g transform="rotate(${k*360/petals})"><path d="M0 0 C${-size*.65} ${-size*.35} ${-size*.5} ${-size*1.15} 0 ${-size} C${size*.65} ${-size*1.12} ${size*.65} ${-size*.35} 0 0" fill="${p[0]}" stroke="${p[1]}" stroke-width=".7"/>`);for(let j=0;j<22;j++){let t=(j-11)/12;parts.push(`<path d="M${t*3} -4 Q${t*size*.48} ${-size*.46} ${t*size*.32} ${-size*(.78+.2*(1-Math.abs(t)))}" stroke="${p[1]}" opacity="${.3+R()*.3}" stroke-width=".65" fill="none"/>`);}parts.push('</g>');}for(let k=0;k<15;k++){let a=k/15*Math.PI*2,r=8+R()*7;parts.push(`<path d="M0 0L${Math.cos(a)*r} ${Math.sin(a)*r}" stroke="${p[5]}" stroke-width=".7"/><circle cx="${Math.cos(a)*r}" cy="${Math.sin(a)*r}" r="1.7" fill="${p[5]}"/>`);}parts.push('</g>');}
@@ -21,7 +21,27 @@ export function motifSVG(index=0,variant=1,palette=0){const m=motifs[index%motif
  }else{
  for(let k=0;k<5;k++){let x=110+k*55,y=220+(k%2)*100;parts.push(`<g transform="translate(${x} ${y})"><path d="M0 55Q-35 20 5 3Q25 -43 65 -9Q120 -30 130 25Q170 40 140 70L30 70Q-10 70 0 55Z" fill="${p[0]}" stroke="${p[3]}" stroke-width="3"/>`);for(let j=0;j<14;j++)parts.push(`<path d="M${j*4} ${40+j*1.5}Q60 ${j} ${110+j*2} 50" fill="none" stroke="${p[2]}" stroke-width=".7"/>`);parts.push('</g>');}
  }
- return `<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600"><title>${m.name}原创程序纹样 ${variant}</title><rect width="600" height="600" fill="#faf8f0"/>${parts.join('')}</svg>`;
+ return `<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600"><title>${m.name}原创程序纹样 ${variant}</title>${transparent?'':'<rect width="600" height="600" fill="#faf8f0"/>'}${parts.join('')}</svg>`;
+}
+export function generateMotifConcept(intent,seed=1,options={}){
+ const R=rng(seed),palette=Number.isInteger(options.palette)&&options.palette>=0&&options.palette<4?options.palette:intent.paletteCandidates[0]||0,p=palettes[palette].colors;
+ const composition=['circular','diagonal','paired'].includes(options.composition)?options.composition:intent.compositionCandidates[(seed>>>0)%intent.compositionCandidates.length]||'circular';
+ const selected=(options.motifIds?intent.motifCandidates.filter(m=>options.motifIds.includes(m.id)):intent.motifCandidates.slice(0,3)).filter(m=>motifs.some(x=>x.key===m.key));
+ function drawing(m,variant){
+  // Correct silhouettes for the new flow without altering the original motif archive.
+  if(m.key==='bat')return `<path d="M300 260Q250 170 140 170L180 300Q240 250 280 350L300 320L320 350Q360 250 420 300L460 170Q350 170 300 260Z" fill="${p[3]}" stroke="${p[4]}" stroke-width="4"/><path d="M280 260L280 220L300 245L320 220L320 260" fill="${p[4]}"/>`;
+  if(m.key==='ruyi')return `<path d="M210 225Q170 150 235 135Q300 65 365 135Q430 150 390 225Q350 260 300 205Q250 260 210 225Z" fill="${p[0]}" stroke="${p[3]}" stroke-width="12"/><path d="M300 215Q360 325 285 430Q270 455 310 465" fill="none" stroke="${p[3]}" stroke-width="16"/>`;
+  return motifSVG(motifs.findIndex(x=>x.key===m.key),variant,palette,{transparent:true}).replace(/^<svg[^>]*>/,'').replace(/<\/svg>$/,'').replace(/<title>[\s\S]*?<\/title>/,'');
+ }
+ const place=(m,x,y,size,angle)=>`<g transform="translate(${x} ${y}) rotate(${angle}) scale(${size/600}) translate(-300 -300)">${drawing(m,Math.floor(R()*10000)+1)}</g>`;
+ let primary='',secondary='';
+ if(selected.length){const m=selected[0];primary=composition==='paired'?place(m,205,285,300,-18)+place(m,395,320,300,162):m.key==='butterfly'?(composition==='circular'?place(m,235,205,290,25)+place(m,365,395,290,205):place(m,230,360,290,-35)+place(m,355,245,250,145)):place(m,300,300,440,composition==='diagonal'?-22:0);selected.slice(1).forEach((m,i)=>{secondary+=place(m,i?455:145,i?420:165,210,i?25:-20);});}
+ const background=`<rect width="600" height="600" rx="8" fill="${p[0]}"/>`,branch=`<circle cx="300" cy="300" r="258" fill="none" stroke="${p[5]}" stroke-width="1.2" opacity=".7"/><path d="M70 500Q295 510 530 100" fill="none" stroke="${p[2]}" stroke-width="2" opacity=".4"/>`;
+ const detail=Array.from({length:12},(_,i)=>{const a=i*Math.PI/6;return `<circle cx="${(300+250*Math.cos(a)).toFixed(2)}" cy="${(300+250*Math.sin(a)).toFixed(2)}" r="2" fill="${p[5]}"/>`;}).join('');
+ const layers=[['background','底色',background],['branch','构图骨架',branch],['secondary','辅纹',secondary],['primary','主纹',primary],['detail','装饰细节',detail]];
+ const name=selected.length?selected.map(m=>m.name).join(' · '):'留白构图';
+ const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600"><title>${esc(name)}</title><desc>当代程序化构图；非馆藏复刻，非真实苏绣工艺方案。</desc>${layers.map(([id,n,body])=>`<g data-layer="${id}" data-layer-name="${n}">${body}</g>`).join('')}</svg>`;
+ return {id:'concept-'+(seed>>>0),seed:seed>>>0,title:name,svg,motifIds:selected.map(m=>m.id),palette,composition,logic:{circular:'以圆形边界组织留白，形成视觉聚合。',diagonal:'以斜向骨架组织主次，留出呼吸空间。',paired:'以双向呼应组织画面，表达当代设计中的相伴感。'}[composition],designRuleNotice:'色谱和构图为项目设计规则，不是历史寓意的事实判断。',reasons:selected.map(m=>({id:m.id,reason:m.reason,context:m.context,sourceIds:m.sourceIds}))};
 }
 export const dataURL=svg=>'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
 export function loadImage(src){return new Promise((resolve,reject)=>{const i=new Image;i.onload=()=>resolve(i);i.onerror=()=>reject(Error('图片无法读取，请选择 PNG、JPG 或 WebP 图片'));i.src=src;});}

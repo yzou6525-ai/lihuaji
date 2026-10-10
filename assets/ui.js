@@ -21,6 +21,6 @@ const paths = {
 };
 export const icon=(name,cls='')=>`<svg class="ui-icon ${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name]||paths.flower}</svg>`;
 export const primaryNav=[['home','首页','home'],['library','灵感','flower'],['create','译绣','needle'],['gallery','绣馆','archive'],['profile','我的','user']];
-export const routeIcons={home:'home',library:'flower',create:'needle',gallery:'archive',profile:'user',ar:'scan',face:'camera',game:'game',guide:'book',palette:'palette',collaborate:'users',about:'info',exhibit:'flower',search:'search'};
-export const activeSection=page=>({product:'gallery',face:'gallery',exhibit:'gallery',palette:'library',search:'library',ar:'create',guide:'create',game:'library',collaborate:'profile',about:'profile'})[page]||page;
+export const routeIcons={story:'needle',home:'home',library:'flower',create:'needle',gallery:'archive',profile:'user',ar:'scan',face:'camera',game:'game',guide:'book',palette:'palette',collaborate:'users',about:'info',exhibit:'flower',search:'search'};
+export const activeSection=page=>({story:'create',product:'gallery',face:'gallery',exhibit:'gallery',palette:'library',search:'library',ar:'create',guide:'create',game:'library',collaborate:'profile',about:'profile'})[page]||page;
 

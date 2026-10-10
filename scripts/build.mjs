@@ -5,6 +5,13 @@ import path from 'node:path';
 const patterns=JSON.parse(fs.readFileSync('content/patterns.json','utf8').replace(/^\uFEFF/,''));
 const products=JSON.parse(fs.readFileSync('content/products.json','utf8').replace(/^\uFEFF/,''));
 const site=JSON.parse(fs.readFileSync('content/site.json','utf8').replace(/^\uFEFF/,''));
+const cultural=JSON.parse(fs.readFileSync('content/cultural-knowledge.json','utf8'));
+const sources=JSON.parse(fs.readFileSync('content/sources.json','utf8'));
+if(new Set(cultural.map(k=>k.id)).size!==cultural.length||new Set(sources.map(s=>s.id)).size!==sources.length)throw Error('Duplicate cultural/source IDs');
+for(const k of cultural){
+ for(const field of ['id','canonicalName','aliases','category','verifiedMeanings','verifiedFacts','emotions','occasions','compatibleMotifs','incompatibleMotifs','compositionRules','paletteHints','period','region','suzhouSpecific','craft','sourceIds','evidenceLevel','reviewStatus'])if(!(field in k))throw Error('Missing cultural field '+field);
+ if(k.reviewStatus==='approved'&&(!k.sourceIds.length||!k.verifiedFacts.length||k.sourceIds.some(id=>!sources.some(s=>s.id===id&&s.verified))||[...k.verifiedMeanings,...k.verifiedFacts].some(f=>!k.sourceIds.includes(f.sourceId))))throw Error('Approved fact lacks verified source: '+k.id);
+}
 const arTargets=JSON.parse(fs.readFileSync('assets/ar-assets/targets.json','utf8'));
 for(const target of arTargets){
   const files=[target.image,...(target.layers||[]).map(l=>l.src)];
