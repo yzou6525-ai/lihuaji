@@ -1,0 +1,566 @@
+{
+  "reviewed": 376,
+  "selected": 264,
+  "notSelected": [
+    {
+      "id": "CMA-157586",
+      "originalTitle": "Object (Purpose Unknown)",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-157587",
+      "originalTitle": "Silk Belt",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-148317",
+      "originalTitle": "Woven Loom Piece",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-134606",
+      "originalTitle": "Fragment",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-142046",
+      "originalTitle": "Fragment",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-124753",
+      "originalTitle": "Brocaded Silk",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-331583",
+      "originalTitle": "General Guo Ziyi’s Birthday Banquet",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-132847",
+      "originalTitle": "Buddhist Vestment (Kesa)\r\n",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-331582",
+      "originalTitle": "Ancient Chinese Bronzes",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-103341",
+      "originalTitle": "Pair of Archer's Gloves",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-375948",
+      "originalTitle": "Jacket with Octopus",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-133696",
+      "originalTitle": "Textile",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-103344",
+      "originalTitle": "Bag",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-98271",
+      "originalTitle": "Album of Textile Samples",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-101173",
+      "originalTitle": "Textile Fragment",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-101182",
+      "originalTitle": "Textile Fragment",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-101186",
+      "originalTitle": "Textile Fragment",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-101214",
+      "originalTitle": "Textile Fragment",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-101228",
+      "originalTitle": "Textile Fragment",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-101244",
+      "originalTitle": "Textile Fragment",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-101247",
+      "originalTitle": "Textile Fragment",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-107876",
+      "originalTitle": "Brocade",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-107900",
+      "originalTitle": "Brocade",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-108091",
+      "originalTitle": "Brocade",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-105595",
+      "originalTitle": "Brocade Fragment",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-107891",
+      "originalTitle": "Striped Brocade",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-137715",
+      "originalTitle": "The merchant of Tirmiz takes the wise parrot and myna to ‘Ubaid, from a Tuti-nama (Tales of a Parrot): Forty-second Night",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-170833",
+      "originalTitle": "A Courtier, Possibly Khan Alam, Holding a Spinel and a Deccan Sword",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-161704",
+      "originalTitle": "Seated Amitabha with Attendants",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-118643",
+      "originalTitle": "Antelope and deer hunt",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-107844",
+      "originalTitle": "Head Shawl (Phulkari)",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-161653",
+      "originalTitle": "Hip Wrapper (tapis)",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-136983",
+      "originalTitle": "Yellow Long Shawl",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-119782",
+      "originalTitle": "Silk Patolu Sari",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-119780",
+      "originalTitle": "Shawl (\"Cadar\")",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-108047",
+      "originalTitle": "Part of a Sari",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-161649",
+      "originalTitle": "Dodot Lampong",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-95785",
+      "originalTitle": "Bed Cover (?)",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-97506",
+      "originalTitle": "Dress (Choli)",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-97507",
+      "originalTitle": "Woman's Dress",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-114557",
+      "originalTitle": "Man's Coat ",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-151413",
+      "originalTitle": "Fragment of a Segmentum with Palmette Tree",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-153407",
+      "originalTitle": "Roundels with camels bearing howdahs",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-95515",
+      "originalTitle": "Embroidered Towel (Peshkir)",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-95520",
+      "originalTitle": "Embroidered Towel (Peshkir)",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-95524",
+      "originalTitle": "Embroidered Towel (Peshkir)",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-95530",
+      "originalTitle": "Embroidered Towel (Peshkir)",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-95533",
+      "originalTitle": "Embroidered Towel (Peshkir)",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-134188",
+      "originalTitle": "Embroidered Towel (Peshkir)",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-134189",
+      "originalTitle": "Embroidered Towel (Peshkir)",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-134196",
+      "originalTitle": "Embroidered Towel (Peshkir)",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-134199",
+      "originalTitle": "Embroidered Towel (Peshkir)",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-147822",
+      "originalTitle": "Embroidered cotton tiraz",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-134190",
+      "originalTitle": "Embroidered Sash (Uckur)",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-114156",
+      "originalTitle": "Embroidered Bed Spread",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-95517",
+      "originalTitle": "Embroidered Towel",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-95522",
+      "originalTitle": "Embroidered Towel",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-95529",
+      "originalTitle": "Embroidered Shawl",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-95783",
+      "originalTitle": "Embroidered Towel",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-105375",
+      "originalTitle": "Embroidered Towel",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-134195",
+      "originalTitle": "Embroidered Towel",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-134200",
+      "originalTitle": "Embroidered Towel",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-102097",
+      "originalTitle": "Embroidered Robe",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-129186",
+      "originalTitle": "Fragmentary Roundel, Segmentum from a Tunic",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-143786",
+      "originalTitle": "Fragment with lions and griffins in combat",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-127873",
+      "originalTitle": "Two Fragments of Large Scale Roundel",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-127928",
+      "originalTitle": "Fragment of an Embroidery",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-127926",
+      "originalTitle": "Fragment of an Embroidery",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-127927",
+      "originalTitle": "Fragment of an Embroidery",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-156985",
+      "originalTitle": "Cloth of Gold with Rabbit Wheels",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-113227",
+      "originalTitle": "Embroidered tiraz with fringe",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-113157",
+      "originalTitle": "Embroidered tiraz",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-111467",
+      "originalTitle": "Wool Embroidery",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-151426",
+      "originalTitle": "Fragment with Frieze of Birds",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-113267",
+      "originalTitle": "Fragmentary embroidered tiraz",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-151440",
+      "originalTitle": "Fragment of a Roundel",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-127913",
+      "originalTitle": "Tiraz with gold, probably from a wide sleeve",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-128462",
+      "originalTitle": "Resist-Dyed Hanging with Biblical Scenes",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-141731",
+      "originalTitle": "Turban or shawl end with tiraz and gold",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-150631",
+      "originalTitle": "Decorations and Sleeve from a Tunic",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-151433",
+      "originalTitle": "Tunic Ornament with Part of a Saint",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-127876",
+      "originalTitle": "Duck's Head from a Large Curtain",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-150921",
+      "originalTitle": "Human Head from a Large Curtain",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-107846",
+      "originalTitle": "Brocade",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-107853",
+      "originalTitle": "Infant's Carrying Cloth, or Man's Ceremonial Headgear",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-107178",
+      "originalTitle": "Silk \"Sampot\" (Loin Cloth)",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-107857",
+      "originalTitle": "Slendang (Shoulder Cloth)",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-107845",
+      "originalTitle": "Wearing Cloth",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-95159",
+      "originalTitle": "Fragment with Floral Design on a Silver Ground",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-130176",
+      "originalTitle": "Length of Textile with Classical Ruin in a Landscape Design",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-96050",
+      "originalTitle": "Banner with Medallions of Christ's Passion (banner)",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-100366",
+      "originalTitle": "Embroidered Headdress (Called \"Triesische\")",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-105734",
+      "originalTitle": "Modern Reproduction of Iranian Brocade",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-123517",
+      "originalTitle": "Embroidered Back and Seat for Chair",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-166766",
+      "originalTitle": "Loincloth with Feather(?) Motifs",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-98097",
+      "originalTitle": "\"Hopi Brocade\" Style Dance Sash",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-109604",
+      "originalTitle": "\"Hopi Brocade\" Style Dance Sash",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-117300",
+      "originalTitle": "\"Hopi Brocade\" style Dance Sash",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-100368",
+      "originalTitle": "Embroidered Peasant Headdress",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-98932",
+      "originalTitle": "Embroidered Woman's Garment",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-122175",
+      "originalTitle": "Embroidered Taffeta Apron",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-112879",
+      "originalTitle": "Reliquary bag with lions",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-116066",
+      "originalTitle": "Embroidered Handkerchief",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-115924",
+      "originalTitle": "Embroidered Handkerchief",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-115960",
+      "originalTitle": "Embroidered Handkerchief",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-116076",
+      "originalTitle": "Embroidered Handkerchief",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-115946",
+      "originalTitle": "Embroidered Handkerchief",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-114572",
+      "originalTitle": "Embroidered Handkerchief",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-116062",
+      "originalTitle": "Embroidered Handkerchief",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-116071",
+      "originalTitle": "Embroidered Handkerchief",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-150895",
+      "originalTitle": "Roundels with Hunters",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    },
+    {
+      "id": "CMA-154393",
+      "originalTitle": "Vajrapani\r\nEmbroidered Mount with Garuda",
+      "note": "未选入本批：按取样清晰度、构图完整性及题材多样性综合筛选。"
+    }
+  ]
+}

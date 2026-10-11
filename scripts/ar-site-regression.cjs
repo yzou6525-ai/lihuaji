@@ -1,13 +1,14 @@
 const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=require('node:fs');
 const {serve}=require('./ar-local-server.cjs');
+const catalog=JSON.parse(fs.readFileSync(require('node:path').join(__dirname,'../content/patterns.json'),'utf8'));
 (async()=>{const {server,base}=await serve();let browser;const errors=[],checks=[];
 try{
  browser=await chromium.launch({channel:'msedge',headless:true});const page=await browser.newPage({viewport:{width:390,height:844}});page.on('pageerror',e=>errors.push(e.message));
  for(const route of ['home','library','create','gallery','game','guide','palette','profile','about','face']){
   await page.goto(base+'#'+route);await page.locator('#main h1').waitFor();
   assert(await page.locator('#main').innerText());assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),route+' overflow');checks.push(route+' 手机布局与页面载入');
-  if(route==='library'){assert((await page.locator('#pattern-count').innerText()).includes('774'));await page.locator('#pattern-kind').selectOption('basic');assert((await page.locator('#pattern-count').innerText()).includes('270'));}
-  if(route==='game'){assert.equal(await page.locator('[data-card]').count(),12);await page.locator('[data-card="0"]').click();await page.locator('[data-card="0"] img').waitFor();assert(await page.locator('[data-card="0"] img').evaluate(i=>i.complete&&i.naturalWidth>0));}
+  if(route==='library'){assert((await page.locator('#pattern-count').innerText()).includes(String(catalog.length)));await page.locator('#pattern-kind').selectOption('basic');assert((await page.locator('#pattern-count').innerText()).includes(String(catalog.filter(p=>p.collection==='basic').length)));}
+  if(route==='game'){assert.equal(await page.locator('[data-card]').count(),12);await page.locator('[data-card="0"]').click();await page.locator('[data-card="0"] img').waitFor();await page.locator('[data-card="0"] img').evaluate(i=>i.decode());assert(await page.locator('[data-card="0"] img').evaluate(i=>i.complete&&i.naturalWidth>0));}
  }
  await page.goto(base+'assets/ar-experience.html');await page.waitForFunction(()=>document.body.dataset.ready==='1');await page.waitForFunction(()=>lihuaARDiagnostics().layerState==='active');
  // Warm both render paths: Three.js allocates the five legacy geometries only on their first render.
