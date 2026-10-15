@@ -82,7 +82,7 @@ node scripts/library-acceptance.cjs
 
 浏览器测试使用原开发环境的Playwright/Edge；不随站点发布依赖。可设置 `SUXIU_TEST_URL=https://yzou6525-ai.github.io/lihuaji/` 对线上执行同一搜索验收。单位测试20项通过，构建成功；12组词分别在两处搜索通过，手机390px无新增横向溢出；已实测关系跳转、流程顺序、断网缓存、503后重试和异步切页。
 
-`validation-report.json` 为结构校验与实际统计，`browser-report.json` 为搜索验收，`regression-report.json` 汇总现有功能回归，`preservation-baseline.json` 是变更前文件SHA-256。哈希测试保证原AR资源、布局样式、文化库和目录字节不变；自动校验不构成文化事实专家审定。桌面模拟图片识别不替代手机真机AR测试。
+`validation-report.json` 为结构校验与实际统计，`browser-report.json` 为搜索验收，`regression-report.json` 汇总现有功能回归，`preservation-baseline.json` 是变更前文件SHA-256。哈希测试保证原AR资源、布局样式、文化库和目录内容不变（文本统一换行后比较，二进制逐字节比较）；自动校验不构成文化事实专家审定。桌面模拟图片识别不替代手机真机AR测试。
 
 ## 本轮未做
 

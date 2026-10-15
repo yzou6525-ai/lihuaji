@@ -3,10 +3,11 @@ const root=path.resolve(__dirname,'..'),read=name=>JSON.parse(fs.readFileSync(pa
 const knowledge=read('content/suxiu-knowledge.json'),sources=read('content/suxiu-sources.json');
 const modules=Promise.all([import('../assets/suxiu-knowledge-store.js'),import('./validate-suxiu.mjs')]);
 const makeFetcher=()=>async url=>({ok:true,json:async()=>structuredClone(String(url).includes('suxiu-sources')?sources:knowledge)});
-test('craft data validates, covers every required category, original files remain byte-identical',async()=>{
+test('craft data validates, covers every category, original content remains unchanged across line endings',async()=>{
  const [m,v]=await modules;assert(v.validateSuxiu(knowledge,sources).ok);
  for(const category of Object.keys(m.categories))assert(knowledge.some(k=>k.category===category),category);
- for(const [file,hash] of Object.entries(read('docs/suxiu-knowledge/preservation-baseline.json').sha256))assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex'),hash,file);
+ const baseline=read('docs/suxiu-knowledge/preservation-baseline.json');
+ for(const [file,hash] of Object.entries(baseline.sha256)){let bytes=fs.readFileSync(path.join(root,file));if(baseline.normalizedTextExtensions.includes(path.extname(file)))bytes=Buffer.from(bytes.toString('utf8').replace(/\r\n/g,'\n'));assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),hash,file);}
  assert.equal(read('content/patterns.json').length,1038);assert.equal(read('content/cultural-knowledge.json').length,50);
 });
 test('validation rejects corrupt provenance, nonofficial URLs, missing scope, broken relations and missing standard number',async()=>{
