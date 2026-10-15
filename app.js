@@ -1,5 +1,6 @@
 import {readImage,generate,designSVG,pathCSV} from './assets/engine.js';
 import {lessons,knowledge,retrieve} from './assets/knowledge.js';
+import {loadSuxiuKnowledge,searchSuxiuKnowledge,categories as suxiuCategories,scopes as suxiuScopes} from './assets/suxiu-knowledge-store.js';
 import {icon,primaryNav,routeIcons,activeSection} from './assets/ui.js';
 import {homeMarkup,stitchArchive,palette as brandPalette} from './assets/exhibition.js';
 import {mountStory,appendPatternKnowledge} from './assets/story-page.js';
@@ -71,7 +72,25 @@ function ar(id=''){
  main.querySelectorAll('[data-learn]').forEach(b=>b.onclick=()=>{const date=new Date().toLocaleDateString('sv-SE');if(!progress.days.includes(date))progress.days.push(date);save();toast('今日练习已记在此浏览器')});
  cleanup=()=>{active=false;window.removeEventListener('message',receive);frame.contentWindow?.postMessage({scope:'lihua-ar-host',type:'stop'},location.origin);};
 }
-function guide(){main.innerHTML=title('苏绣知识手册','把针法、材料与练习心得，收进随时可翻阅的小册。这里提供静态知识检索。')+'<label>查找知识<input id="knowledge-search" placeholder="针法、配色、底布…"></label><div id="knowledge-list" class="grid"></div>';const render=()=>{$('#knowledge-list').innerHTML=($('#knowledge-search').value.trim()?retrieve($('#knowledge-search').value):knowledge.slice(0,6)).map(x=>`<article class="card"><h2>${esc(x.title)}</h2><p>${esc(x.body)}</p></article>`).join('')||'<p class="empty">暂未找到这条知识，试试针法、配色或底布。</p>'};$('#knowledge-search').oninput=render;render()}
+function officialKnowledgeCard(k,data,heading='h2'){
+ const sourceById=new Map(data.sources.map(s=>[s.id,s])),byId=new Map(data.knowledge.map(x=>[x.id,x]));
+ const links=ids=>ids.map(id=>sourceById.get(id)).filter(Boolean).map(s=>`<a href="${safeLink(s.url)}" target="_blank" rel="noopener noreferrer">查看官方来源：${esc(s.organization)} · ${esc(s.title)}</a>`).join('<br>');
+ const relations=[...k.relations.map(r=>({id:r.target,label:({subtypeOf:'属于',relatedTo:'相关',partOf:'所属',stepOf:'所属流程'})[r.type]})),...data.knowledge.filter(x=>x.relations.some(r=>r.target===k.id&&r.type==='subtypeOf')).map(x=>({id:x.id,label:'分型'}))];
+ return `<article class="card" data-suxiu="${esc(k.id)}"><${heading}>${esc(k.title)}</${heading}><p>${esc(k.summary)}</p><p class="small">官方来源核验 · ${esc(suxiuCategories[k.category])} · ${esc(suxiuScopes[k.scope])}</p><p class="small">${links(k.sourceIds)}</p><details><summary>事实与关联资料</summary>${k.facts.map(f=>`<p>${esc(f.text)}</p><p class="small">${links(f.sourceIds)}</p>`).join('')}${k.orderedSteps?'<ol>'+k.orderedSteps.map(id=>`<li><a href="#guide/${encodeURIComponent(id)}">${esc(byId.get(id)?.title)}</a></li>`).join('')+'</ol>':''}${relations.map(r=>`<p class="small">${esc(r.label)}：<a href="#guide/${encodeURIComponent(r.id)}">${esc(byId.get(r.id)?.title)}</a></p>`).join('')}${k.limitations?`<p>${esc(k.limitations)}</p>`:''}<p class="small">核验日期：${esc(k.review.accessedDate)}。${esc(k.review.note)}</p></details></article>`;
+}
+function practiceKnowledgeCard(k,heading='h2'){return `<article class="card" data-practice="true"><${heading}>${esc(k.title)}</${heading}><p>${esc(k.body)}</p><p class="small">${esc(k.source)}${k.url?' · 原项目概述，非本次核验条目':' · 项目自编内容，非官方教程'}</p>${heading==='h3'?'<a class="text-link" href="#ar">进入基础课堂 '+icon('arrow')+'</a>':''}</article>`}
+async function guide(query=''){
+ const routeEpoch=epoch;
+ main.innerHTML=title('苏绣知识手册','把针法、材料与练习心得，收进随时可翻阅的小册。这里提供静态知识检索。')+'<label>查找知识<input id="knowledge-search" placeholder="针法、配色、底布…"></label><div id="knowledge-list" class="grid"></div>';
+ const input=$('#knowledge-search'),list=$('#knowledge-list');input.value=query;let revision=0;
+ const render=async()=>{const current=++revision,q=input.value.trim();let data,official=[],error='';
+  try{data=await loadSuxiuKnowledge();const exact=data.knowledge.find(k=>k.id===q);official=exact?[exact]:await searchSuxiuKnowledge(q);if(exact&&current===revision)input.value=exact.title}catch{error='官方知识暂未载入；仍可查看原练习说明。请重新输入以重试。'}
+  if(routeEpoch!==epoch||current!==revision||!list.isConnected)return;
+  const practice=q?retrieve(q):knowledge;
+  list.innerHTML=(error?`<p role="status">${esc(error)}</p>`:'')+official.map(k=>officialKnowledgeCard(k,data)).join('')+practice.map(k=>practiceKnowledgeCard(k)).join('')||'<p class="empty">暂未找到这条知识，试试针法、配色或底布。</p>';
+ };
+ input.oninput=render;await render();
+}
 function profile(){main.innerHTML=title('我的 · 慢绣日常','不赶时间，只积攒手上的熟练。练习记录仅保存在当前浏览器，不跨设备同步。')+`<div class="metrics"><div class="metric-box"><span class="metric">${progress.days.length}</span><p>练习天数</p></div><div class="metric-box"><span class="metric">${progress.best}</span><p>配对最高分</p></div></div><div class="card"><h2>365天慢绣计划</h2><p>按自己的节奏，练习直线针、套针与滚针。</p><a class="btn primary" href="#ar">开始练习</a><p>${progress.days.slice(-14).map(esc).join('、')||'尚无练习记录'}</p><button id="export-progress">导出本机学习记录</button></div><div class="profile-links"><a class="card" href="#game">${icon('game')} 纹样配对 ${icon('arrow')}</a><a class="card" href="#palette">${icon('palette')} 东方色谱 ${icon('arrow')}</a><a class="card" href="#collaborate">${icon('users')} 协作修改 ${icon('arrow')}</a></div>`;$('#export-progress').onclick=()=>download('梨花季学习记录.json',JSON.stringify(progress,null,2),'application/json')}
 function collaborate(){main.innerHTML=title('一起修改梨花季','通过公开GitHub仓库协作，提交到main分支后自动更新网站。')+`<article class="card docs-text"><h2>给朋友开放修改权限</h2><p>仓库所有者打开下方“管理合作者”，选择 Add people，输入朋友的GitHub用户名，发送邀请。朋友接受后即可编辑仓库文件。</p><div class="row"><a class="btn primary" href="${site.repository}" target="_blank" rel="noopener">打开公开仓库</a><a class="btn" href="${site.repository}/settings/access" target="_blank" rel="noopener">管理合作者（仅所有者）</a></div><h2>从哪里改内容</h2><ul><li>content/site.json：网站标题、介绍和提示。</li><li>content/patterns.json：纹样标题、地区、来源和许可。</li><li>content/products.json：文创图册与款式介绍。</li><li>app.js、style.css、pages.css：页面布局、交互与样式。</li></ul><a class="btn" href="${site.repository}/edit/main/content/site.json" target="_blank" rel="noopener">编辑首页文字</a><h2>怎样重新发布</h2><p>编辑后点击 Commit changes，提交到 main；如果创建了分支，则由所有者合并 Pull Request 到 main。仓库会自动运行 Publish GitHub Pages。等待 Actions 显示绿色成功，再刷新网站。也可在 Actions → Publish GitHub Pages → Run workflow 手动重新发布。</p><a class="btn" href="${site.repository}/actions" target="_blank" rel="noopener">查看发布进度</a><p>不需要服务器、信用卡或自购域名。公开仓库里的文件所有人都能看，请勿上传密码、客户照片或订单。</p></article>`}
 function about(){main.innerHTML=title('功能与隐私说明','这是独立托管的静态文化展示与协作版，不是原后端平台的商业运营替代品。')+`<article class="card docs-text"><h2>无需作者电脑开机</h2><p>所有页面、目录和浏览器运行资源由GitHub Pages提供，不调用原电脑、临时隧道或本地端口。只要仓库与Pages服务保持可用，作者关机不影响网站托管。</p><h2>本版可以做什么</h2><p>${patterns.length}份纹样筛选与出处查询、75件文创图册、照片快速转工艺稿与启发式评估、SVG和针路下载、文创照片搭配、已有眼罩贴图的FaceMesh、3D针路和图像识别教学、图片配对和本机学习记录。</p><h2>本版不运行什么</h2><p>真实注册登录、会员账号、商城下单、支付、订单、定制生产、绣娘接单、上传社区、管理后台、服务器AI大模型推理与模拟链存证均未启用。没有虚构登录、支付、确权或AI成功结果。GitHub Pages不提供这些后端服务；此站也不导向商业交易。</p><h2>照片与设备权限</h2><p>照片和相机帧在浏览器内存处理，不提交服务器；保存按钮仅下载文件。离开试搭或AR页会停止相机。学习日期与游戏最高分存储在本浏览器，可用浏览器设置清除。网站托管方仍会接收正常网页访问请求。</p><h2>绢白馆藏视觉说明</h2><p>首页梨花绣框、工艺特写、丝线与园林图为AI生成的品牌概念视觉，不是馆藏实拍、商品实拍或针法研究证据。${patterns.length}份纹样与原有文创实拍保持原始资料来源；本次UI改造没有接通服务器AIGC、交易或登录服务。</p><h2>素材与许可</h2><p>纹样保留原始出处、作者和许可；展示图已缩小压缩，原始来源链接仍可查看。商品实拍为项目已导入文创资料。学习素材不保证可商用。第三方运行库保留各自许可，内容不因公开仓库自动变为自由授权。</p><h2>稳定地址的边界</h2><p>地址不随作者关机失效；但GitHub服务、账户状态、仓库删除和访问者网络会影响可用性，不能承诺永远在线或所有地区网络均可达。</p></article>`}
@@ -88,16 +107,20 @@ function palettePage(){
 function exhibit(){
  main.innerHTML=title('梨花新绣','循着一朵花的轮廓，重新发现苏绣的细腻。')+`<article class="exhibit-layout"><img src="./assets/ivory/embroidery.webp" alt="梨花苏绣针脚概念图"><div><span class="english">INSPIRATION ARCHIVE · No.001</span><h2>把春天，留在丝线里。</h2><p>花瓣的柔光、花蕊的细密、叶片的层次，是这次“绢白馆藏”的视觉起点。让画面少一些装饰，让一针一线成为主角。</p><p class="small">本页为品牌视觉专题，图像由AI生成，不是实际馆藏作品。真实纹样请查看灵感图录中的逐条出处与许可。</p><div class="row"><a class="btn primary" href="#library/${encodeURIComponent('花')}">浏览花卉纹样 ${icon('arrow')}</a><a class="btn" href="#create">开始译绣 ${icon('arrow')}</a></div></div></article><a class="museum-banner" href="#ar"><div><h2>从第一针开始</h2><p>先读懂丝理，再练习颜色的过渡。</p><span class="text-link">进入针法课堂 ${icon('arrow')}</span></div><img src="./assets/ivory/silk.webp" alt="丝线材质概念图"></a>`;
 }
-function searchPage(query=''){
+async function searchPage(query=''){
+ const routeEpoch=epoch;
  $('#global-search').value=query;
  main.innerHTML=title('寻一份灵感',query?'关于“'+query+'”的绣品、针法与纹样。':'搜索绣品、针法、灵感，从一个词开始。');
  if(!query){main.innerHTML+='<div class="row"><a class="btn" href="#search/'+encodeURIComponent('花')+'">花卉纹样</a><a class="btn" href="#search/'+encodeURIComponent('套针')+'">套针练习</a><a class="btn" href="#search/'+encodeURIComponent('眼罩')+'">苏绣眼罩</a></div>';return}
  const q=query.toLowerCase(),matchedPatterns=patterns.filter(p=>[p.title,p.originalTitle,p.region,p.description,p.source,p.accession,p.date,p.technique,p.batch,JSON.stringify(p.tags||[])].join(' ').toLowerCase().includes(q)),matchedProducts=products.filter(p=>(p.title+p.category).toLowerCase().includes(q)),matchedKnowledge=knowledge.filter(k=>(k.title+k.tags+k.body).toLowerCase().includes(q));
  const block=(heading,items)=>'<section class="search-section"><h2>'+heading+'</h2>'+items+'</section>';
+ let official=[],craftData;try{craftData=await loadSuxiuKnowledge();official=await searchSuxiuKnowledge(query)}catch{}
+ if(routeEpoch!==epoch)return;
+ if(official.length)main.innerHTML+=block('苏绣知识 · '+official.length+'条','<div class="grid search-knowledge">'+official.slice(0,3).map(k=>officialKnowledgeCard(k,craftData,'h3')).join('')+'</div><a class="text-link" href="#guide/'+encodeURIComponent(query)+'">查看全部知识 '+icon('arrow')+'</a>');
  if(matchedPatterns.length)main.innerHTML+=block('灵感图录 · '+matchedPatterns.length+'份','<div class="grid four">'+matchedPatterns.slice(0,4).map(patternCard).join('')+'</div><a class="text-link" href="#library/'+encodeURIComponent(query)+'">查看全部纹样 '+icon('arrow')+'</a>');
  if(matchedProducts.length)main.innerHTML+=block('梨花绣馆 · '+matchedProducts.length+'件','<div class="grid four">'+matchedProducts.slice(0,4).map(productCard).join('')+'</div><a class="text-link" href="#gallery/'+encodeURIComponent(query)+'">查看全部文创 '+icon('arrow')+'</a>');
- if(matchedKnowledge.length)main.innerHTML+=block('针法与知识','<div class="grid search-knowledge">'+matchedKnowledge.slice(0,3).map(k=>'<article class="card"><h3>'+esc(k.title)+'</h3><p>'+esc(k.body)+'</p><a class="text-link" href="#ar">进入基础课堂 '+icon('arrow')+'</a></article>').join('')+'</div>');
- if(!matchedPatterns.length&&!matchedProducts.length&&!matchedKnowledge.length)main.innerHTML+='<div class="empty"><p>暂未找到相关内容，试试“花”“套针”或“眼罩”。</p><a class="btn" href="#library">浏览全部纹样</a></div>';
+ if(matchedKnowledge.length)main.innerHTML+=block('针法与知识','<div class="grid search-knowledge">'+matchedKnowledge.slice(0,3).map(k=>practiceKnowledgeCard(k,'h3')).join('')+'</div>');
+ if(!matchedPatterns.length&&!matchedProducts.length&&!matchedKnowledge.length&&!official.length)main.innerHTML+='<div class="empty"><p>暂未找到相关内容，试试“花”“套针”或“眼罩”。</p><a class="btn" href="#library">浏览全部纹样</a></div>';
  bindPatterns();
 }
 async function route(){
@@ -113,7 +136,7 @@ async function route(){
  try{
   const decoded=decodeURIComponent(id||'');
   if(page==='library'&&id!==undefined){libraryState.q=decoded;libraryState.page=1;libraryState.kind='';libraryState.region=''}
-  await ({home,story,library,gallery:()=>gallery(decoded),product:()=>product(decoded),create:()=>create(decoded),game,face:()=>face(decoded),ar:()=>ar(decoded),guide,profile,collaborate,about,palette:palettePage,search:()=>searchPage(decoded),exhibit}[page]||about)();
+  await ({home,story,library,gallery:()=>gallery(decoded),product:()=>product(decoded),create:()=>create(decoded),game,face:()=>face(decoded),ar:()=>ar(decoded),guide:()=>guide(decoded),profile,collaborate,about,palette:palettePage,search:()=>searchPage(decoded),exhibit}[page]||about)();
   window.scrollTo(0,0);main.focus({preventScroll:true});
  }catch(e){main.innerHTML=title('页面暂时未能打开',e.message)+'<a class="btn" href="#home">回到首页</a>'}
 }

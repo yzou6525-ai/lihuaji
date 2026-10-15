@@ -22,7 +22,7 @@ jobs:
       - name: Validate and assemble static site
         run: node scripts/build.mjs
       - name: Check AR, story workflow and museum catalogue
-        run: node --test scripts/ar-state.test.cjs scripts/story.test.cjs scripts/library.test.cjs
+        run: npm test
       - uses: actions/upload-pages-artifact@v4
         with:
           path: _site

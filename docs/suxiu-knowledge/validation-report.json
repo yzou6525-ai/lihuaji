@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-15",
+  "ok": true,
+  "knowledgeCount": 85,
+  "sourceCount": 33,
+  "categories": {
+    "overview": 2,
+    "history": 5,
+    "craft-system": 13,
+    "terminology": 2,
+    "process": 10,
+    "material": 2,
+    "tool": 4,
+    "work-form": 2,
+    "institution": 5,
+    "branch": 4,
+    "inheritor": 12,
+    "stitch": 22,
+    "standard": 2
+  },
+  "scopes": {
+    "suxiu": 43,
+    "suxiu-branch": 16,
+    "suzhou-suxiu": 8,
+    "traditional-embroidery-general": 18
+  },
+  "national": 32,
+  "localOfficial": 1,
+  "organizations": {
+    "中国非物质文化遗产网": 17,
+    "苏州非物质文化遗产信息网": 1,
+    "故宫博物院": 13,
+    "全国标准信息公共服务平台": 2
+  },
+  "checks": [
+    "唯一ID",
+    "非空标题与摘要",
+    "完整字段",
+    "事实逐条引用存在的已核验来源",
+    "官方HTTPS域名白名单",
+    "证据分级",
+    "关系目标存在",
+    "流程步骤存在",
+    "针法范围明确",
+    "标准号明确",
+    "核验记录存在",
+    "未经专家审定如实标记"
+  ]
+}

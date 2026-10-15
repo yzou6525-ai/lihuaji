@@ -1,0 +1,3165 @@
+[
+  {
+    "id": "suxiu",
+    "type": "overview",
+    "title": "苏绣",
+    "aliases": [
+      "苏州刺绣",
+      "Ⅶ-18",
+      "VII-18"
+    ],
+    "category": "overview",
+    "summary": "国家级非遗项目Ⅶ-18，序号317；2006年首批公布，申报地为江苏苏州。",
+    "facts": [
+      {
+        "text": "国家级非遗项目Ⅶ-18，序号317；2006年首批公布，申报地为江苏苏州。",
+        "sourceIds": [
+          "ih-suxiu"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "苏绣",
+      "overview"
+    ],
+    "scope": "suxiu",
+    "relations": [],
+    "sourceIds": [
+      "ih-suxiu"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "suxiu-region",
+    "type": "overview",
+    "title": "苏绣的地域范围",
+    "aliases": [],
+    "category": "overview",
+    "summary": "苏州官方资料以苏州为中心概括江苏地区的苏绣，列及无锡、常州、镇江、扬州和南通。",
+    "facts": [
+      {
+        "text": "苏州官方资料以苏州为中心概括江苏地区的苏绣，列及无锡、常州、镇江、扬州和南通。",
+        "sourceIds": [
+          "sz-official"
+        ],
+        "evidenceLevel": "B"
+      }
+    ],
+    "keywords": [
+      "苏绣的地域范围",
+      "overview"
+    ],
+    "scope": "suxiu",
+    "relations": [],
+    "sourceIds": [
+      "sz-official"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "history-origin",
+    "type": "history",
+    "title": "苏绣起源的证据边界",
+    "aliases": [],
+    "category": "history",
+    "summary": "国家非遗项目页说明苏绣起源不详，以宋代以来实物介绍其发展。",
+    "facts": [
+      {
+        "text": "国家非遗项目页说明苏绣起源不详，以宋代以来实物介绍其发展。",
+        "sourceIds": [
+          "ih-suxiu"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "苏绣起源的证据边界",
+      "history"
+    ],
+    "scope": "suxiu",
+    "relations": [],
+    "sourceIds": [
+      "ih-suxiu"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "history-ming",
+    "type": "history",
+    "title": "明代苏绣",
+    "aliases": [],
+    "category": "history",
+    "summary": "明代苏绣采用文人画稿，逐渐呈现精细雅洁的风格。",
+    "facts": [
+      {
+        "text": "明代苏绣采用文人画稿，逐渐呈现精细雅洁的风格。",
+        "sourceIds": [
+          "ih-suxiu"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "明代苏绣",
+      "history"
+    ],
+    "scope": "suxiu",
+    "relations": [],
+    "sourceIds": [
+      "ih-suxiu"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "history-qing",
+    "type": "history",
+    "title": "清代苏州绣市",
+    "aliases": [],
+    "category": "history",
+    "summary": "清代商品绣发展，苏州获得绣市之称。",
+    "facts": [
+      {
+        "text": "清代商品绣发展，苏州获得绣市之称。",
+        "sourceIds": [
+          "ih-suxiu"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "清代苏州绣市",
+      "history"
+    ],
+    "scope": "suxiu",
+    "relations": [],
+    "sourceIds": [
+      "ih-suxiu"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "history-dingpei",
+    "type": "history",
+    "title": "丁佩与《绣谱》",
+    "aliases": [],
+    "category": "history",
+    "summary": "丁佩在道光年间总结刺绣技艺，著成《绣谱》。",
+    "facts": [
+      {
+        "text": "丁佩在道光年间总结刺绣技艺，著成《绣谱》。",
+        "sourceIds": [
+          "ih-suxiu"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "丁佩与《绣谱》",
+      "history"
+    ],
+    "scope": "suxiu",
+    "relations": [],
+    "sourceIds": [
+      "ih-suxiu"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "history-shenshou",
+    "type": "history",
+    "title": "沈寿与《雪宧绣谱》",
+    "aliases": [],
+    "category": "history",
+    "summary": "沈寿创仿真绣，晚年口述《雪宧绣谱》总结经验。",
+    "facts": [
+      {
+        "text": "沈寿创仿真绣，晚年口述《雪宧绣谱》总结经验。",
+        "sourceIds": [
+          "ih-suxiu"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "沈寿与《雪宧绣谱》",
+      "history"
+    ],
+    "scope": "suxiu",
+    "relations": [],
+    "sourceIds": [
+      "ih-suxiu"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "craft-lineages",
+    "type": "craft-system",
+    "title": "苏绣三大技法谱系",
+    "aliases": [],
+    "category": "craft-system",
+    "summary": "国家项目页列传统细绣、沈寿仿真绣、杨守玉乱针绣三个有影响的谱系。",
+    "facts": [
+      {
+        "text": "国家项目页列传统细绣、沈寿仿真绣、杨守玉乱针绣三个有影响的谱系。",
+        "sourceIds": [
+          "ih-suxiu"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "苏绣三大技法谱系",
+      "craft-system"
+    ],
+    "scope": "suxiu",
+    "relations": [],
+    "sourceIds": [
+      "ih-suxiu"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "craft-fine",
+    "type": "craft-system",
+    "title": "传统细绣",
+    "aliases": [],
+    "category": "craft-system",
+    "summary": "传统细绣为国家项目页列出的苏绣技法谱系之一。",
+    "facts": [
+      {
+        "text": "传统细绣为国家项目页列出的苏绣技法谱系之一。",
+        "sourceIds": [
+          "ih-suxiu"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "传统细绣",
+      "craft-system"
+    ],
+    "scope": "suxiu",
+    "relations": [
+      {
+        "type": "partOf",
+        "target": "craft-lineages"
+      }
+    ],
+    "sourceIds": [
+      "ih-suxiu"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "craft-simulation",
+    "type": "craft-system",
+    "title": "仿真绣",
+    "aliases": [],
+    "category": "craft-system",
+    "summary": "仿真绣为国家项目页列出的苏绣技法谱系之一。",
+    "facts": [
+      {
+        "text": "仿真绣为国家项目页列出的苏绣技法谱系之一。",
+        "sourceIds": [
+          "ih-suxiu"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "仿真绣",
+      "craft-system"
+    ],
+    "scope": "suxiu",
+    "relations": [
+      {
+        "type": "partOf",
+        "target": "craft-lineages"
+      }
+    ],
+    "sourceIds": [
+      "ih-suxiu"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "craft-plain",
+    "type": "craft-system",
+    "title": "平绣",
+    "aliases": [],
+    "category": "craft-system",
+    "summary": "苏州官方资料将平绣列入苏绣六种主要绣制体系；该页面未展开其操作定义。",
+    "facts": [
+      {
+        "text": "苏州官方资料将平绣列入苏绣六种主要绣制体系；该页面未展开其操作定义。",
+        "sourceIds": [
+          "sz-official"
+        ],
+        "evidenceLevel": "B"
+      }
+    ],
+    "keywords": [
+      "平绣",
+      "craft-system"
+    ],
+    "scope": "suxiu",
+    "relations": [
+      {
+        "type": "relatedTo",
+        "target": "suxiu"
+      }
+    ],
+    "sourceIds": [
+      "sz-official"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "craft-random",
+    "type": "craft-system",
+    "title": "乱针绣",
+    "aliases": [],
+    "category": "craft-system",
+    "summary": "苏州官方资料将乱针绣列入苏绣六种主要绣制体系；该页面未展开其操作定义。",
+    "facts": [
+      {
+        "text": "苏州官方资料将乱针绣列入苏绣六种主要绣制体系；该页面未展开其操作定义。",
+        "sourceIds": [
+          "sz-official"
+        ],
+        "evidenceLevel": "B"
+      }
+    ],
+    "keywords": [
+      "乱针绣",
+      "craft-system"
+    ],
+    "scope": "suxiu",
+    "relations": [
+      {
+        "type": "relatedTo",
+        "target": "suxiu"
+      }
+    ],
+    "sourceIds": [
+      "sz-official"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "craft-virtual-random",
+    "type": "craft-system",
+    "title": "虚实乱针绣",
+    "aliases": [],
+    "category": "craft-system",
+    "summary": "苏州官方资料将虚实乱针绣列入苏绣六种主要绣制体系；该页面未展开其操作定义。",
+    "facts": [
+      {
+        "text": "苏州官方资料将虚实乱针绣列入苏绣六种主要绣制体系；该页面未展开其操作定义。",
+        "sourceIds": [
+          "sz-official"
+        ],
+        "evidenceLevel": "B"
+      }
+    ],
+    "keywords": [
+      "虚实乱针绣",
+      "craft-system"
+    ],
+    "scope": "suxiu",
+    "relations": [
+      {
+        "type": "relatedTo",
+        "target": "suxiu"
+      }
+    ],
+    "sourceIds": [
+      "sz-official"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "craft-double",
+    "type": "craft-system",
+    "title": "双面绣",
+    "aliases": [],
+    "category": "craft-system",
+    "summary": "苏州官方资料将双面绣列入苏绣六种主要绣制体系；该页面未展开其操作定义。",
+    "facts": [
+      {
+        "text": "苏州官方资料将双面绣列入苏绣六种主要绣制体系；该页面未展开其操作定义。",
+        "sourceIds": [
+          "sz-official"
+        ],
+        "evidenceLevel": "B"
+      }
+    ],
+    "keywords": [
+      "双面绣",
+      "craft-system"
+    ],
+    "scope": "suxiu",
+    "relations": [
+      {
+        "type": "relatedTo",
+        "target": "suxiu"
+      }
+    ],
+    "sourceIds": [
+      "sz-official"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "craft-double-three",
+    "type": "craft-system",
+    "title": "双面三异绣",
+    "aliases": [],
+    "category": "craft-system",
+    "summary": "苏州官方资料将双面三异绣列入苏绣六种主要绣制体系；该页面未展开其操作定义。",
+    "facts": [
+      {
+        "text": "苏州官方资料将双面三异绣列入苏绣六种主要绣制体系；该页面未展开其操作定义。",
+        "sourceIds": [
+          "sz-official"
+        ],
+        "evidenceLevel": "B"
+      }
+    ],
+    "keywords": [
+      "双面三异绣",
+      "craft-system"
+    ],
+    "scope": "suxiu",
+    "relations": [
+      {
+        "type": "relatedTo",
+        "target": "suxiu"
+      }
+    ],
+    "sourceIds": [
+      "sz-official"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "craft-hair",
+    "type": "craft-system",
+    "title": "发绣",
+    "aliases": [],
+    "category": "craft-system",
+    "summary": "苏州官方资料将发绣列入苏绣六种主要绣制体系；该页面未展开其操作定义。",
+    "facts": [
+      {
+        "text": "苏州官方资料将发绣列入苏绣六种主要绣制体系；该页面未展开其操作定义。",
+        "sourceIds": [
+          "sz-official"
+        ],
+        "evidenceLevel": "B"
+      }
+    ],
+    "keywords": [
+      "发绣",
+      "craft-system"
+    ],
+    "scope": "suxiu",
+    "relations": [
+      {
+        "type": "relatedTo",
+        "target": "suxiu"
+      }
+    ],
+    "sourceIds": [
+      "sz-official"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "term-stitch-count",
+    "type": "terminology",
+    "title": "苏绣针法数量的官方概述",
+    "aliases": [],
+    "category": "terminology",
+    "summary": "苏州官方资料概述针法为九大类四十多种，未列出九类的完整名称。",
+    "facts": [
+      {
+        "text": "苏州官方资料概述针法为九大类四十多种，未列出九类的完整名称。",
+        "sourceIds": [
+          "sz-official"
+        ],
+        "evidenceLevel": "B"
+      }
+    ],
+    "keywords": [
+      "苏绣针法数量的官方概述",
+      "terminology"
+    ],
+    "scope": "suxiu",
+    "relations": [],
+    "sourceIds": [
+      "sz-official"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "term-style",
+    "type": "terminology",
+    "title": "精细雅洁",
+    "aliases": [],
+    "category": "terminology",
+    "summary": "苏州官方资料用精细雅洁概括明代形成的苏绣艺术风格。",
+    "facts": [
+      {
+        "text": "苏州官方资料用精细雅洁概括明代形成的苏绣艺术风格。",
+        "sourceIds": [
+          "sz-official"
+        ],
+        "evidenceLevel": "B"
+      }
+    ],
+    "keywords": [
+      "精细雅洁",
+      "terminology"
+    ],
+    "scope": "suxiu",
+    "relations": [],
+    "sourceIds": [
+      "sz-official"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "process-main",
+    "type": "process",
+    "title": "苏绣工艺流程",
+    "aliases": [],
+    "category": "process",
+    "summary": "苏州官方资料列举设计绣稿至装裱的九个工序，顺序如下；不据此推定具体作品的针法顺序。",
+    "facts": [
+      {
+        "text": "苏州官方资料列举设计绣稿至装裱的九个工序，顺序如下；不据此推定具体作品的针法顺序。",
+        "sourceIds": [
+          "sz-official"
+        ],
+        "evidenceLevel": "B"
+      }
+    ],
+    "keywords": [
+      "苏绣工艺流程",
+      "process"
+    ],
+    "scope": "suxiu",
+    "relations": [],
+    "sourceIds": [
+      "sz-official"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    },
+    "orderedSteps": [
+      "process-design",
+      "process-outline",
+      "process-dye",
+      "process-frame",
+      "process-fix",
+      "process-match",
+      "process-embroider",
+      "process-unframe",
+      "process-mount"
+    ]
+  },
+  {
+    "id": "process-design",
+    "type": "process",
+    "title": "设计绣稿",
+    "aliases": [],
+    "category": "process",
+    "summary": "苏州官方流程中第1个列举工序为设计绣稿；这里只保存工序名称与次序，不补写未公开的操作参数。",
+    "facts": [
+      {
+        "text": "苏州官方流程中第1个列举工序为设计绣稿；这里只保存工序名称与次序，不补写未公开的操作参数。",
+        "sourceIds": [
+          "sz-official"
+        ],
+        "evidenceLevel": "B"
+      }
+    ],
+    "keywords": [
+      "设计绣稿",
+      "process"
+    ],
+    "scope": "suxiu",
+    "relations": [
+      {
+        "type": "stepOf",
+        "target": "process-main"
+      }
+    ],
+    "sourceIds": [
+      "sz-official"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    },
+    "order": 1
+  },
+  {
+    "id": "process-outline",
+    "type": "process",
+    "title": "勾稿",
+    "aliases": [],
+    "category": "process",
+    "summary": "苏州官方流程中第2个列举工序为勾稿；这里只保存工序名称与次序，不补写未公开的操作参数。",
+    "facts": [
+      {
+        "text": "苏州官方流程中第2个列举工序为勾稿；这里只保存工序名称与次序，不补写未公开的操作参数。",
+        "sourceIds": [
+          "sz-official"
+        ],
+        "evidenceLevel": "B"
+      }
+    ],
+    "keywords": [
+      "勾稿",
+      "process"
+    ],
+    "scope": "suxiu",
+    "relations": [
+      {
+        "type": "stepOf",
+        "target": "process-main"
+      }
+    ],
+    "sourceIds": [
+      "sz-official"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    },
+    "order": 2
+  },
+  {
+    "id": "process-dye",
+    "type": "process",
+    "title": "染线",
+    "aliases": [],
+    "category": "process",
+    "summary": "苏州官方流程中第3个列举工序为染线；这里只保存工序名称与次序，不补写未公开的操作参数。",
+    "facts": [
+      {
+        "text": "苏州官方流程中第3个列举工序为染线；这里只保存工序名称与次序，不补写未公开的操作参数。",
+        "sourceIds": [
+          "sz-official"
+        ],
+        "evidenceLevel": "B"
+      }
+    ],
+    "keywords": [
+      "染线",
+      "process"
+    ],
+    "scope": "suxiu",
+    "relations": [
+      {
+        "type": "stepOf",
+        "target": "process-main"
+      }
+    ],
+    "sourceIds": [
+      "sz-official"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    },
+    "order": 3
+  },
+  {
+    "id": "process-frame",
+    "type": "process",
+    "title": "上绷",
+    "aliases": [],
+    "category": "process",
+    "summary": "苏州官方流程中第4个列举工序为上绷；这里只保存工序名称与次序，不补写未公开的操作参数。",
+    "facts": [
+      {
+        "text": "苏州官方流程中第4个列举工序为上绷；这里只保存工序名称与次序，不补写未公开的操作参数。",
+        "sourceIds": [
+          "sz-official"
+        ],
+        "evidenceLevel": "B"
+      }
+    ],
+    "keywords": [
+      "上绷",
+      "process"
+    ],
+    "scope": "suxiu",
+    "relations": [
+      {
+        "type": "stepOf",
+        "target": "process-main"
+      }
+    ],
+    "sourceIds": [
+      "sz-official"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    },
+    "order": 4
+  },
+  {
+    "id": "process-fix",
+    "type": "process",
+    "title": "钉稿",
+    "aliases": [],
+    "category": "process",
+    "summary": "苏州官方流程中第5个列举工序为钉稿；这里只保存工序名称与次序，不补写未公开的操作参数。",
+    "facts": [
+      {
+        "text": "苏州官方流程中第5个列举工序为钉稿；这里只保存工序名称与次序，不补写未公开的操作参数。",
+        "sourceIds": [
+          "sz-official"
+        ],
+        "evidenceLevel": "B"
+      }
+    ],
+    "keywords": [
+      "钉稿",
+      "process"
+    ],
+    "scope": "suxiu",
+    "relations": [
+      {
+        "type": "stepOf",
+        "target": "process-main"
+      }
+    ],
+    "sourceIds": [
+      "sz-official"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    },
+    "order": 5
+  },
+  {
+    "id": "process-match",
+    "type": "process",
+    "title": "配线",
+    "aliases": [],
+    "category": "process",
+    "summary": "苏州官方流程中第6个列举工序为配线；这里只保存工序名称与次序，不补写未公开的操作参数。",
+    "facts": [
+      {
+        "text": "苏州官方流程中第6个列举工序为配线；这里只保存工序名称与次序，不补写未公开的操作参数。",
+        "sourceIds": [
+          "sz-official"
+        ],
+        "evidenceLevel": "B"
+      }
+    ],
+    "keywords": [
+      "配线",
+      "process"
+    ],
+    "scope": "suxiu",
+    "relations": [
+      {
+        "type": "stepOf",
+        "target": "process-main"
+      }
+    ],
+    "sourceIds": [
+      "sz-official"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    },
+    "order": 6
+  },
+  {
+    "id": "process-embroider",
+    "type": "process",
+    "title": "刺绣",
+    "aliases": [],
+    "category": "process",
+    "summary": "苏州官方流程中第7个列举工序为刺绣；这里只保存工序名称与次序，不补写未公开的操作参数。",
+    "facts": [
+      {
+        "text": "苏州官方流程中第7个列举工序为刺绣；这里只保存工序名称与次序，不补写未公开的操作参数。",
+        "sourceIds": [
+          "sz-official"
+        ],
+        "evidenceLevel": "B"
+      }
+    ],
+    "keywords": [
+      "刺绣",
+      "process"
+    ],
+    "scope": "suxiu",
+    "relations": [
+      {
+        "type": "stepOf",
+        "target": "process-main"
+      }
+    ],
+    "sourceIds": [
+      "sz-official"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    },
+    "order": 7
+  },
+  {
+    "id": "process-unframe",
+    "type": "process",
+    "title": "下绷",
+    "aliases": [],
+    "category": "process",
+    "summary": "苏州官方流程中第8个列举工序为下绷；这里只保存工序名称与次序，不补写未公开的操作参数。",
+    "facts": [
+      {
+        "text": "苏州官方流程中第8个列举工序为下绷；这里只保存工序名称与次序，不补写未公开的操作参数。",
+        "sourceIds": [
+          "sz-official"
+        ],
+        "evidenceLevel": "B"
+      }
+    ],
+    "keywords": [
+      "下绷",
+      "process"
+    ],
+    "scope": "suxiu",
+    "relations": [
+      {
+        "type": "stepOf",
+        "target": "process-main"
+      }
+    ],
+    "sourceIds": [
+      "sz-official"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    },
+    "order": 8
+  },
+  {
+    "id": "process-mount",
+    "type": "process",
+    "title": "装裱",
+    "aliases": [],
+    "category": "process",
+    "summary": "苏州官方流程中第9个列举工序为装裱；这里只保存工序名称与次序，不补写未公开的操作参数。",
+    "facts": [
+      {
+        "text": "苏州官方流程中第9个列举工序为装裱；这里只保存工序名称与次序，不补写未公开的操作参数。",
+        "sourceIds": [
+          "sz-official"
+        ],
+        "evidenceLevel": "B"
+      }
+    ],
+    "keywords": [
+      "装裱",
+      "process"
+    ],
+    "scope": "suxiu",
+    "relations": [
+      {
+        "type": "stepOf",
+        "target": "process-main"
+      }
+    ],
+    "sourceIds": [
+      "sz-official"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    },
+    "order": 9
+  },
+  {
+    "id": "material-base",
+    "type": "material",
+    "title": "底料",
+    "aliases": [],
+    "category": "material",
+    "summary": "苏州官方资料将底料列为苏绣主要原料。",
+    "facts": [
+      {
+        "text": "苏州官方资料将底料列为苏绣主要原料。",
+        "sourceIds": [
+          "sz-official"
+        ],
+        "evidenceLevel": "B"
+      }
+    ],
+    "keywords": [
+      "底料",
+      "material"
+    ],
+    "scope": "suxiu",
+    "relations": [],
+    "sourceIds": [
+      "sz-official"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "material-thread",
+    "type": "material",
+    "title": "花线",
+    "aliases": [],
+    "category": "material",
+    "summary": "苏州官方资料将花线列为苏绣主要原料。",
+    "facts": [
+      {
+        "text": "苏州官方资料将花线列为苏绣主要原料。",
+        "sourceIds": [
+          "sz-official"
+        ],
+        "evidenceLevel": "B"
+      }
+    ],
+    "keywords": [
+      "花线",
+      "material"
+    ],
+    "scope": "suxiu",
+    "relations": [],
+    "sourceIds": [
+      "sz-official"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "tool-frame",
+    "type": "tool",
+    "title": "绷架",
+    "aliases": [],
+    "category": "tool",
+    "summary": "苏州官方资料列出的苏绣工具包括绷架。",
+    "facts": [
+      {
+        "text": "苏州官方资料列出的苏绣工具包括绷架。",
+        "sourceIds": [
+          "sz-official"
+        ],
+        "evidenceLevel": "B"
+      }
+    ],
+    "keywords": [
+      "绷架",
+      "tool"
+    ],
+    "scope": "suxiu",
+    "relations": [],
+    "sourceIds": [
+      "sz-official"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "tool-bench",
+    "type": "tool",
+    "title": "绷凳",
+    "aliases": [],
+    "category": "tool",
+    "summary": "苏州官方资料列出的苏绣工具包括绷凳。",
+    "facts": [
+      {
+        "text": "苏州官方资料列出的苏绣工具包括绷凳。",
+        "sourceIds": [
+          "sz-official"
+        ],
+        "evidenceLevel": "B"
+      }
+    ],
+    "keywords": [
+      "绷凳",
+      "tool"
+    ],
+    "scope": "suxiu",
+    "relations": [],
+    "sourceIds": [
+      "sz-official"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "tool-needle",
+    "type": "tool",
+    "title": "绣针",
+    "aliases": [],
+    "category": "tool",
+    "summary": "苏州官方资料列出的苏绣工具包括绣针。",
+    "facts": [
+      {
+        "text": "苏州官方资料列出的苏绣工具包括绣针。",
+        "sourceIds": [
+          "sz-official"
+        ],
+        "evidenceLevel": "B"
+      }
+    ],
+    "keywords": [
+      "绣针",
+      "tool"
+    ],
+    "scope": "suxiu",
+    "relations": [],
+    "sourceIds": [
+      "sz-official"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "tool-rest",
+    "type": "tool",
+    "title": "搁手板",
+    "aliases": [],
+    "category": "tool",
+    "summary": "苏州官方资料列出的苏绣工具包括搁手板。",
+    "facts": [
+      {
+        "text": "苏州官方资料列出的苏绣工具包括搁手板。",
+        "sourceIds": [
+          "sz-official"
+        ],
+        "evidenceLevel": "B"
+      }
+    ],
+    "keywords": [
+      "搁手板",
+      "tool"
+    ],
+    "scope": "suxiu",
+    "relations": [],
+    "sourceIds": [
+      "sz-official"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "work-art",
+    "type": "work-form",
+    "title": "苏绣欣赏品",
+    "aliases": [
+      "欣赏品"
+    ],
+    "category": "work-form",
+    "summary": "苏州官方资料列举的欣赏品有屏风、地屏、台屏和壁挂。",
+    "facts": [
+      {
+        "text": "苏州官方资料列举的欣赏品有屏风、地屏、台屏和壁挂。",
+        "sourceIds": [
+          "sz-official"
+        ],
+        "evidenceLevel": "B"
+      }
+    ],
+    "keywords": [
+      "苏绣欣赏品",
+      "work-form"
+    ],
+    "scope": "suxiu",
+    "relations": [],
+    "sourceIds": [
+      "sz-official"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "work-daily",
+    "type": "work-form",
+    "title": "苏绣日用品",
+    "aliases": [
+      "日用品",
+      "实用品"
+    ],
+    "category": "work-form",
+    "summary": "苏州官方资料列举的实用品有床上用品、服装和剧装戏衣。",
+    "facts": [
+      {
+        "text": "苏州官方资料列举的实用品有床上用品、服装和剧装戏衣。",
+        "sourceIds": [
+          "sz-official"
+        ],
+        "evidenceLevel": "B"
+      }
+    ],
+    "keywords": [
+      "苏绣日用品",
+      "work-form"
+    ],
+    "scope": "suxiu",
+    "relations": [],
+    "sourceIds": [
+      "sz-official"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "institution-suzhou",
+    "type": "institution",
+    "title": "苏州刺绣研究所有限公司",
+    "aliases": [],
+    "category": "institution",
+    "summary": "国家项目页列其为江苏苏州申报的苏绣项目保护单位。",
+    "facts": [
+      {
+        "text": "国家项目页列其为江苏苏州申报的苏绣项目保护单位。",
+        "sourceIds": [
+          "ih-suxiu"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "苏州刺绣研究所有限公司",
+      "institution"
+    ],
+    "scope": "suxiu",
+    "relations": [
+      {
+        "type": "relatedTo",
+        "target": "suxiu"
+      }
+    ],
+    "sourceIds": [
+      "ih-suxiu"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "branch-wuxi",
+    "type": "branch",
+    "title": "苏绣（无锡精微绣）",
+    "aliases": [
+      "无锡精微绣"
+    ],
+    "category": "branch",
+    "summary": "2008年公布的国家级扩展项目，编号Ⅶ-18，申报地为江苏省无锡市。",
+    "facts": [
+      {
+        "text": "2008年公布的国家级扩展项目，编号Ⅶ-18，申报地为江苏省无锡市。",
+        "sourceIds": [
+          "ih-wuxi"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "苏绣（无锡精微绣）",
+      "branch"
+    ],
+    "scope": "suxiu-branch",
+    "relations": [
+      {
+        "type": "partOf",
+        "target": "suxiu"
+      }
+    ],
+    "sourceIds": [
+      "ih-wuxi"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "institution-wuxi",
+    "type": "institution",
+    "title": "无锡市民间艺术博物馆",
+    "aliases": [],
+    "category": "institution",
+    "summary": "该单位列为苏绣（无锡精微绣）项目的保护单位。",
+    "facts": [
+      {
+        "text": "该单位列为苏绣（无锡精微绣）项目的保护单位。",
+        "sourceIds": [
+          "ih-wuxi"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "无锡市民间艺术博物馆",
+      "institution"
+    ],
+    "scope": "suxiu-branch",
+    "relations": [
+      {
+        "type": "relatedTo",
+        "target": "branch-wuxi"
+      }
+    ],
+    "sourceIds": [
+      "ih-wuxi"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "branch-nantong",
+    "type": "branch",
+    "title": "苏绣（南通仿真绣）",
+    "aliases": [
+      "南通仿真绣"
+    ],
+    "category": "branch",
+    "summary": "2008年公布的国家级扩展项目，编号Ⅶ-18，申报地为江苏省南通市。",
+    "facts": [
+      {
+        "text": "2008年公布的国家级扩展项目，编号Ⅶ-18，申报地为江苏省南通市。",
+        "sourceIds": [
+          "ih-nantong"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "苏绣（南通仿真绣）",
+      "branch"
+    ],
+    "scope": "suxiu-branch",
+    "relations": [
+      {
+        "type": "partOf",
+        "target": "suxiu"
+      }
+    ],
+    "sourceIds": [
+      "ih-nantong"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "institution-nantong",
+    "type": "institution",
+    "title": "南通市沈寿艺术馆有限公司",
+    "aliases": [],
+    "category": "institution",
+    "summary": "该单位列为苏绣（南通仿真绣）项目的保护单位。",
+    "facts": [
+      {
+        "text": "该单位列为苏绣（南通仿真绣）项目的保护单位。",
+        "sourceIds": [
+          "ih-nantong"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "南通市沈寿艺术馆有限公司",
+      "institution"
+    ],
+    "scope": "suxiu-branch",
+    "relations": [
+      {
+        "type": "relatedTo",
+        "target": "branch-nantong"
+      }
+    ],
+    "sourceIds": [
+      "ih-nantong"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "branch-yangzhou",
+    "type": "branch",
+    "title": "苏绣（扬州刺绣）",
+    "aliases": [
+      "扬州刺绣"
+    ],
+    "category": "branch",
+    "summary": "2014年公布的国家级扩展项目，编号Ⅶ-18，申报地为江苏省扬州市。",
+    "facts": [
+      {
+        "text": "2014年公布的国家级扩展项目，编号Ⅶ-18，申报地为江苏省扬州市。",
+        "sourceIds": [
+          "ih-yangzhou"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "苏绣（扬州刺绣）",
+      "branch"
+    ],
+    "scope": "suxiu-branch",
+    "relations": [
+      {
+        "type": "partOf",
+        "target": "suxiu"
+      }
+    ],
+    "sourceIds": [
+      "ih-yangzhou"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "institution-yangzhou",
+    "type": "institution",
+    "title": "扬州刺绣研究所有限公司",
+    "aliases": [],
+    "category": "institution",
+    "summary": "该单位列为苏绣（扬州刺绣）项目的保护单位。",
+    "facts": [
+      {
+        "text": "该单位列为苏绣（扬州刺绣）项目的保护单位。",
+        "sourceIds": [
+          "ih-yangzhou"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "扬州刺绣研究所有限公司",
+      "institution"
+    ],
+    "scope": "suxiu-branch",
+    "relations": [
+      {
+        "type": "relatedTo",
+        "target": "branch-yangzhou"
+      }
+    ],
+    "sourceIds": [
+      "ih-yangzhou"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "branch-changzhou",
+    "type": "branch",
+    "title": "苏绣（常州乱针绣）",
+    "aliases": [
+      "常州乱针绣"
+    ],
+    "category": "branch",
+    "summary": "2021年公布的国家级扩展项目，编号Ⅶ-18，申报地为江苏省常州市。",
+    "facts": [
+      {
+        "text": "2021年公布的国家级扩展项目，编号Ⅶ-18，申报地为江苏省常州市。",
+        "sourceIds": [
+          "ih-changzhou"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "苏绣（常州乱针绣）",
+      "branch"
+    ],
+    "scope": "suxiu-branch",
+    "relations": [
+      {
+        "type": "partOf",
+        "target": "suxiu"
+      }
+    ],
+    "sourceIds": [
+      "ih-changzhou"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "institution-changzhou",
+    "type": "institution",
+    "title": "常州市乱针绣行业协会",
+    "aliases": [],
+    "category": "institution",
+    "summary": "该单位列为苏绣（常州乱针绣）项目的保护单位。",
+    "facts": [
+      {
+        "text": "该单位列为苏绣（常州乱针绣）项目的保护单位。",
+        "sourceIds": [
+          "ih-changzhou"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "常州市乱针绣行业协会",
+      "institution"
+    ],
+    "scope": "suxiu-branch",
+    "relations": [
+      {
+        "type": "relatedTo",
+        "target": "branch-changzhou"
+      }
+    ],
+    "sourceIds": [
+      "ih-changzhou"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "craft-wuxi",
+    "type": "craft-system",
+    "title": "无锡精微绣的微细表现",
+    "aliases": [],
+    "category": "craft-system",
+    "summary": "无锡项目页说明其以微小画幅表现人物、场景、文字与图案。",
+    "facts": [
+      {
+        "text": "无锡项目页说明其以微小画幅表现人物、场景、文字与图案。",
+        "sourceIds": [
+          "ih-wuxi"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "无锡精微绣的微细表现",
+      "craft-system"
+    ],
+    "scope": "suxiu-branch",
+    "relations": [
+      {
+        "type": "relatedTo",
+        "target": "branch-wuxi"
+      }
+    ],
+    "sourceIds": [
+      "ih-wuxi"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "craft-nantong",
+    "type": "craft-system",
+    "title": "沈绣",
+    "aliases": [
+      "美术绣"
+    ],
+    "category": "craft-system",
+    "summary": "南通仿真绣亦称沈绣、美术绣，常表现人物肖像及风景。",
+    "facts": [
+      {
+        "text": "南通仿真绣亦称沈绣、美术绣，常表现人物肖像及风景。",
+        "sourceIds": [
+          "ih-nantong"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "沈绣",
+      "craft-system"
+    ],
+    "scope": "suxiu-branch",
+    "relations": [
+      {
+        "type": "relatedTo",
+        "target": "branch-nantong"
+      }
+    ],
+    "sourceIds": [
+      "ih-nantong"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "craft-yangzhou",
+    "type": "craft-system",
+    "title": "扬州水墨写意绣",
+    "aliases": [],
+    "category": "craft-system",
+    "summary": "扬州刺绣以水墨写意见长，把绘画与刺绣表达结合。",
+    "facts": [
+      {
+        "text": "扬州刺绣以水墨写意见长，把绘画与刺绣表达结合。",
+        "sourceIds": [
+          "ih-yangzhou"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "扬州水墨写意绣",
+      "craft-system"
+    ],
+    "scope": "suxiu-branch",
+    "relations": [
+      {
+        "type": "relatedTo",
+        "target": "branch-yangzhou"
+      }
+    ],
+    "sourceIds": [
+      "ih-yangzhou"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "craft-changzhou",
+    "type": "craft-system",
+    "title": "常州乱针绣的线条组织",
+    "aliases": [],
+    "category": "craft-system",
+    "summary": "常州项目页介绍以交错、长短并用的丝线表现画面，吸收素描与油画理念。",
+    "facts": [
+      {
+        "text": "常州项目页介绍以交错、长短并用的丝线表现画面，吸收素描与油画理念。",
+        "sourceIds": [
+          "ih-changzhou"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "常州乱针绣的线条组织",
+      "craft-system"
+    ],
+    "scope": "suxiu-branch",
+    "relations": [
+      {
+        "type": "relatedTo",
+        "target": "branch-changzhou"
+      }
+    ],
+    "sourceIds": [
+      "ih-changzhou"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "inheritor-li-eying",
+    "type": "inheritor",
+    "title": "李娥瑛",
+    "aliases": [],
+    "category": "inheritor",
+    "summary": "李娥瑛为第一批国家级非遗项目苏绣代表性传承人。官方编号01-0078。",
+    "facts": [
+      {
+        "text": "李娥瑛为第一批国家级非遗项目苏绣代表性传承人。官方编号01-0078。",
+        "sourceIds": [
+          "ih-person-li-eying"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "李娥瑛",
+      "inheritor"
+    ],
+    "scope": "suzhou-suxiu",
+    "relations": [
+      {
+        "type": "relatedTo",
+        "target": "suxiu"
+      }
+    ],
+    "sourceIds": [
+      "ih-person-li-eying"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    },
+    "registryNumber": "01-0078",
+    "batch": "第一批"
+  },
+  {
+    "id": "inheritor-gu-wenxia",
+    "type": "inheritor",
+    "title": "顾文霞",
+    "aliases": [],
+    "category": "inheritor",
+    "summary": "顾文霞为第一批国家级非遗项目苏绣代表性传承人。官方编号01-0079。",
+    "facts": [
+      {
+        "text": "顾文霞为第一批国家级非遗项目苏绣代表性传承人。官方编号01-0079。",
+        "sourceIds": [
+          "ih-person-gu-wenxia"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "顾文霞",
+      "inheritor"
+    ],
+    "scope": "suzhou-suxiu",
+    "relations": [
+      {
+        "type": "relatedTo",
+        "target": "suxiu"
+      }
+    ],
+    "sourceIds": [
+      "ih-person-gu-wenxia"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    },
+    "registryNumber": "01-0079",
+    "batch": "第一批"
+  },
+  {
+    "id": "inheritor-yao-jianping",
+    "type": "inheritor",
+    "title": "姚建萍",
+    "aliases": [],
+    "category": "inheritor",
+    "summary": "姚建萍为第三批国家级非遗项目苏绣代表性传承人。官方编号03-1238。",
+    "facts": [
+      {
+        "text": "姚建萍为第三批国家级非遗项目苏绣代表性传承人。官方编号03-1238。",
+        "sourceIds": [
+          "ih-person-yao-jianping"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "姚建萍",
+      "inheritor"
+    ],
+    "scope": "suzhou-suxiu",
+    "relations": [
+      {
+        "type": "relatedTo",
+        "target": "suxiu"
+      }
+    ],
+    "sourceIds": [
+      "ih-person-yao-jianping"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    },
+    "registryNumber": "03-1238",
+    "batch": "第三批"
+  },
+  {
+    "id": "inheritor-yu-fuzhen",
+    "type": "inheritor",
+    "title": "余福臻",
+    "aliases": [],
+    "category": "inheritor",
+    "summary": "余福臻为第四批国家级非遗项目苏绣代表性传承人。官方编号04-1764。",
+    "facts": [
+      {
+        "text": "余福臻为第四批国家级非遗项目苏绣代表性传承人。官方编号04-1764。",
+        "sourceIds": [
+          "ih-person-yu-fuzhen"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "余福臻",
+      "inheritor"
+    ],
+    "scope": "suzhou-suxiu",
+    "relations": [
+      {
+        "type": "relatedTo",
+        "target": "suxiu"
+      }
+    ],
+    "sourceIds": [
+      "ih-person-yu-fuzhen"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    },
+    "registryNumber": "04-1764",
+    "batch": "第四批"
+  },
+  {
+    "id": "inheritor-zhang-yuying",
+    "type": "inheritor",
+    "title": "张玉英",
+    "aliases": [],
+    "category": "inheritor",
+    "summary": "张玉英为第四批国家级非遗项目苏绣代表性传承人。官方编号04-1765。",
+    "facts": [
+      {
+        "text": "张玉英为第四批国家级非遗项目苏绣代表性传承人。官方编号04-1765。",
+        "sourceIds": [
+          "ih-person-zhang-yuying"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "张玉英",
+      "inheritor"
+    ],
+    "scope": "suzhou-suxiu",
+    "relations": [
+      {
+        "type": "relatedTo",
+        "target": "suxiu"
+      }
+    ],
+    "sourceIds": [
+      "ih-person-zhang-yuying"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    },
+    "registryNumber": "04-1765",
+    "batch": "第四批"
+  },
+  {
+    "id": "inheritor-jiang-xueying",
+    "type": "inheritor",
+    "title": "蒋雪英",
+    "aliases": [],
+    "category": "inheritor",
+    "summary": "蒋雪英为第四批国家级非遗项目苏绣代表性传承人。官方编号04-1766。",
+    "facts": [
+      {
+        "text": "蒋雪英为第四批国家级非遗项目苏绣代表性传承人。官方编号04-1766。",
+        "sourceIds": [
+          "ih-person-jiang-xueying"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "蒋雪英",
+      "inheritor"
+    ],
+    "scope": "suzhou-suxiu",
+    "relations": [
+      {
+        "type": "relatedTo",
+        "target": "suxiu"
+      }
+    ],
+    "sourceIds": [
+      "ih-person-jiang-xueying"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    },
+    "registryNumber": "04-1766",
+    "batch": "第四批"
+  },
+  {
+    "id": "inheritor-yao-huifen",
+    "type": "inheritor",
+    "title": "姚惠芬",
+    "aliases": [],
+    "category": "inheritor",
+    "summary": "姚惠芬为第四批国家级非遗项目苏绣代表性传承人。官方编号04-1767。",
+    "facts": [
+      {
+        "text": "姚惠芬为第四批国家级非遗项目苏绣代表性传承人。官方编号04-1767。",
+        "sourceIds": [
+          "ih-person-yao-huifen"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "姚惠芬",
+      "inheritor"
+    ],
+    "scope": "suzhou-suxiu",
+    "relations": [
+      {
+        "type": "relatedTo",
+        "target": "suxiu"
+      }
+    ],
+    "sourceIds": [
+      "ih-person-yao-huifen"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    },
+    "registryNumber": "04-1767",
+    "batch": "第四批"
+  },
+  {
+    "id": "inheritor-zhang-meifang",
+    "type": "inheritor",
+    "title": "张美芳",
+    "aliases": [],
+    "category": "inheritor",
+    "summary": "张美芳为第四批国家级非遗项目苏绣代表性传承人。官方编号04-1768。",
+    "facts": [
+      {
+        "text": "张美芳为第四批国家级非遗项目苏绣代表性传承人。官方编号04-1768。",
+        "sourceIds": [
+          "ih-person-zhang-meifang"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "张美芳",
+      "inheritor"
+    ],
+    "scope": "suzhou-suxiu",
+    "relations": [
+      {
+        "type": "relatedTo",
+        "target": "suxiu"
+      }
+    ],
+    "sourceIds": [
+      "ih-person-zhang-meifang"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    },
+    "registryNumber": "04-1768",
+    "batch": "第四批"
+  },
+  {
+    "id": "inheritor-zhao-hongyu",
+    "type": "inheritor",
+    "title": "赵红育",
+    "aliases": [],
+    "category": "inheritor",
+    "summary": "赵红育为第三批国家级非遗项目苏绣（无锡精微绣）代表性传承人。官方编号03-1239。",
+    "facts": [
+      {
+        "text": "赵红育为第三批国家级非遗项目苏绣（无锡精微绣）代表性传承人。官方编号03-1239。",
+        "sourceIds": [
+          "ih-person-zhao-hongyu"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "赵红育",
+      "inheritor"
+    ],
+    "scope": "suxiu-branch",
+    "relations": [
+      {
+        "type": "relatedTo",
+        "target": "branch-wuxi"
+      }
+    ],
+    "sourceIds": [
+      "ih-person-zhao-hongyu"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    },
+    "registryNumber": "03-1239",
+    "batch": "第三批"
+  },
+  {
+    "id": "inheritor-jin-leilei",
+    "type": "inheritor",
+    "title": "金蕾蕾",
+    "aliases": [],
+    "category": "inheritor",
+    "summary": "金蕾蕾为第三批国家级非遗项目苏绣（南通仿真绣）代表性传承人。官方编号03-1240。",
+    "facts": [
+      {
+        "text": "金蕾蕾为第三批国家级非遗项目苏绣（南通仿真绣）代表性传承人。官方编号03-1240。",
+        "sourceIds": [
+          "ih-person-jin-leilei"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "金蕾蕾",
+      "inheritor"
+    ],
+    "scope": "suxiu-branch",
+    "relations": [
+      {
+        "type": "relatedTo",
+        "target": "branch-nantong"
+      }
+    ],
+    "sourceIds": [
+      "ih-person-jin-leilei"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    },
+    "registryNumber": "03-1240",
+    "batch": "第三批"
+  },
+  {
+    "id": "inheritor-wu-xiaoping",
+    "type": "inheritor",
+    "title": "吴晓平",
+    "aliases": [],
+    "category": "inheritor",
+    "summary": "吴晓平为第五批国家级非遗项目苏绣（扬州刺绣）代表性传承人。官方编号05-2596。",
+    "facts": [
+      {
+        "text": "吴晓平为第五批国家级非遗项目苏绣（扬州刺绣）代表性传承人。官方编号05-2596。",
+        "sourceIds": [
+          "ih-person-wu-xiaoping"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "吴晓平",
+      "inheritor"
+    ],
+    "scope": "suxiu-branch",
+    "relations": [
+      {
+        "type": "relatedTo",
+        "target": "branch-yangzhou"
+      }
+    ],
+    "sourceIds": [
+      "ih-person-wu-xiaoping"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    },
+    "registryNumber": "05-2596",
+    "batch": "第五批"
+  },
+  {
+    "id": "inheritor-sun-yanyun",
+    "type": "inheritor",
+    "title": "孙燕云",
+    "aliases": [],
+    "category": "inheritor",
+    "summary": "孙燕云为国家级非遗项目苏绣（常州乱针绣）代表性传承人。当前官方页未填序号及出生日期。",
+    "facts": [
+      {
+        "text": "孙燕云为国家级非遗项目苏绣（常州乱针绣）代表性传承人。当前官方页未填序号及出生日期。",
+        "sourceIds": [
+          "ih-person-sun-yanyun"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "孙燕云",
+      "inheritor"
+    ],
+    "scope": "suxiu-branch",
+    "relations": [
+      {
+        "type": "relatedTo",
+        "target": "branch-changzhou"
+      }
+    ],
+    "sourceIds": [
+      "ih-person-sun-yanyun"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    },
+    "registryNumber": null,
+    "batch": null
+  },
+  {
+    "id": "stitch-plain",
+    "type": "stitch",
+    "title": "平针",
+    "aliases": [
+      "齐针",
+      "直针"
+    ],
+    "category": "stitch",
+    "summary": "以整齐排列的绣线填入纹样，保持绣面平整且不露底。",
+    "facts": [
+      {
+        "text": "以整齐排列的绣线填入纹样，保持绣面平整且不露底。",
+        "sourceIds": [
+          "dpm-lemma-243051",
+          "dpm-lemma-245181"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "平针",
+      "stitch"
+    ],
+    "scope": "traditional-embroidery-general",
+    "relations": [],
+    "sourceIds": [
+      "dpm-lemma-243051",
+      "dpm-lemma-245181"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "stitch-tao",
+    "type": "stitch",
+    "title": "套针",
+    "aliases": [],
+    "category": "stitch",
+    "summary": "故宫将套针列为苏绣主要针法，并列出平套、集套和散套等分型。",
+    "facts": [
+      {
+        "text": "故宫将套针列为苏绣主要针法，并列出平套、集套和散套等分型。",
+        "sourceIds": [
+          "dpm-lemma-239950"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "套针",
+      "stitch"
+    ],
+    "scope": "suxiu",
+    "relations": [],
+    "sourceIds": [
+      "dpm-lemma-239950"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "stitch-pingtao",
+    "type": "stitch",
+    "title": "平套针",
+    "aliases": [
+      "平套"
+    ],
+    "category": "stitch",
+    "summary": "后层线条嵌入前层之间，形成平整、色彩衔接自然的块面。",
+    "facts": [
+      {
+        "text": "后层线条嵌入前层之间，形成平整、色彩衔接自然的块面。",
+        "sourceIds": [
+          "dpm-229672",
+          "dpm-lemma-239950"
+        ],
+        "evidenceLevel": "A"
+      },
+      {
+        "text": "平套针属于套针的分型。",
+        "sourceIds": [
+          "dpm-lemma-239950"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "平套针",
+      "stitch"
+    ],
+    "scope": "traditional-embroidery-general",
+    "relations": [
+      {
+        "type": "subtypeOf",
+        "target": "stitch-tao"
+      }
+    ],
+    "sourceIds": [
+      "dpm-229672",
+      "dpm-lemma-239950"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "stitch-jitao",
+    "type": "stitch",
+    "title": "集套针",
+    "aliases": [
+      "集套"
+    ],
+    "category": "stitch",
+    "summary": "用于圆形纹样，针线向圆心汇集。",
+    "facts": [
+      {
+        "text": "用于圆形纹样，针线向圆心汇集。",
+        "sourceIds": [
+          "dpm-lemma-239950"
+        ],
+        "evidenceLevel": "A"
+      },
+      {
+        "text": "集套针属于套针的分型。",
+        "sourceIds": [
+          "dpm-lemma-239950"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "集套针",
+      "stitch"
+    ],
+    "scope": "suxiu",
+    "relations": [
+      {
+        "type": "subtypeOf",
+        "target": "stitch-tao"
+      }
+    ],
+    "sourceIds": [
+      "dpm-lemma-239950"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "stitch-santao",
+    "type": "stitch",
+    "title": "散套针",
+    "aliases": [
+      "散套"
+    ],
+    "category": "stitch",
+    "summary": "线条错落相嵌，由外向内绣制，可表现花卉、树石及翎毛。",
+    "facts": [
+      {
+        "text": "线条错落相嵌，由外向内绣制，可表现花卉、树石及翎毛。",
+        "sourceIds": [
+          "dpm-lemma-245175",
+          "dpm-lemma-239950"
+        ],
+        "evidenceLevel": "A"
+      },
+      {
+        "text": "散套针属于套针的分型。",
+        "sourceIds": [
+          "dpm-lemma-239950"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "散套针",
+      "stitch"
+    ],
+    "scope": "traditional-embroidery-general",
+    "relations": [
+      {
+        "type": "subtypeOf",
+        "target": "stitch-tao"
+      }
+    ],
+    "sourceIds": [
+      "dpm-lemma-245175",
+      "dpm-lemma-239950"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "stitch-qiang",
+    "type": "stitch",
+    "title": "戗针",
+    "aliases": [
+      "抢针"
+    ],
+    "category": "stitch",
+    "summary": "分层绣制以表达色调变化；相关词条分别列正戗、反戗或正抢、反抢、迭抢。",
+    "facts": [
+      {
+        "text": "分层绣制以表达色调变化；相关词条分别列正戗、反戗或正抢、反抢、迭抢。",
+        "sourceIds": [
+          "dpm-230670",
+          "dpm-229675"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "戗针",
+      "stitch"
+    ],
+    "scope": "suxiu",
+    "relations": [],
+    "sourceIds": [
+      "dpm-230670",
+      "dpm-229675"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    },
+    "limitations": "不同词条对正戗方向的表述不一致，本库不生成方向教程，也不据此配置动画。"
+  },
+  {
+    "id": "stitch-jie",
+    "type": "stitch",
+    "title": "接针",
+    "aliases": [],
+    "category": "stitch",
+    "summary": "后针接续前针末端，连成条形，可用于文字及部分鸟类羽毛。",
+    "facts": [
+      {
+        "text": "后针接续前针末端，连成条形，可用于文字及部分鸟类羽毛。",
+        "sourceIds": [
+          "dpm-229477"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "接针",
+      "stitch"
+    ],
+    "scope": "traditional-embroidery-general",
+    "relations": [],
+    "sourceIds": [
+      "dpm-229477"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "stitch-chan",
+    "type": "stitch",
+    "title": "缠针",
+    "aliases": [],
+    "category": "stitch",
+    "summary": "用短线沿形体排列，适合小型单色花、叶、干。",
+    "facts": [
+      {
+        "text": "用短线沿形体排列，适合小型单色花、叶、干。",
+        "sourceIds": [
+          "dpm-230670"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "缠针",
+      "stitch"
+    ],
+    "scope": "traditional-embroidery-general",
+    "relations": [],
+    "sourceIds": [
+      "dpm-230670"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "stitch-gun",
+    "type": "stitch",
+    "title": "滚针",
+    "aliases": [],
+    "category": "stitch",
+    "summary": "针迹连续相接形成条纹，转折处针脚缩短。",
+    "facts": [
+      {
+        "text": "针迹连续相接形成条纹，转折处针脚缩短。",
+        "sourceIds": [
+          "dpm-229477"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "滚针",
+      "stitch"
+    ],
+    "scope": "traditional-embroidery-general",
+    "relations": [],
+    "sourceIds": [
+      "dpm-229477"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "stitch-dazi",
+    "type": "stitch",
+    "title": "打籽针",
+    "aliases": [
+      "打籽"
+    ],
+    "category": "stitch",
+    "summary": "绣线绕成小粒状结，逐粒组成绣面。",
+    "facts": [
+      {
+        "text": "绣线绕成小粒状结，逐粒组成绣面。",
+        "sourceIds": [
+          "dpm-230670"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "打籽针",
+      "stitch"
+    ],
+    "scope": "traditional-embroidery-general",
+    "relations": [],
+    "sourceIds": [
+      "dpm-230670"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "stitch-wang",
+    "type": "stitch",
+    "title": "网针",
+    "aliases": [],
+    "category": "stitch",
+    "summary": "故宫将其列为苏绣针法，以横直斜线组成连续几何格，再在格内绣花纹。",
+    "facts": [
+      {
+        "text": "故宫将其列为苏绣针法，以横直斜线组成连续几何格，再在格内绣花纹。",
+        "sourceIds": [
+          "dpm-229477"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "网针",
+      "stitch"
+    ],
+    "scope": "suxiu",
+    "relations": [],
+    "sourceIds": [
+      "dpm-229477"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "stitch-wangxiu",
+    "type": "stitch",
+    "title": "网绣",
+    "aliases": [],
+    "category": "stitch",
+    "summary": "先用线布置菱形方格，再依格挑绣；故宫列横、直、斜三种缠针组织。",
+    "facts": [
+      {
+        "text": "先用线布置菱形方格，再依格挑绣；故宫列横、直、斜三种缠针组织。",
+        "sourceIds": [
+          "dpm-231169"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "网绣",
+      "stitch"
+    ],
+    "scope": "traditional-embroidery-general",
+    "relations": [],
+    "sourceIds": [
+      "dpm-231169"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "stitch-shi",
+    "type": "stitch",
+    "title": "施针",
+    "aliases": [],
+    "category": "stitch",
+    "summary": "先以稀针铺底，再逐层增加稀针以加密、加色，保持线条组织灵活。",
+    "facts": [
+      {
+        "text": "先以稀针铺底，再逐层增加稀针以加密、加色，保持线条组织灵活。",
+        "sourceIds": [
+          "dpm-229393"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "施针",
+      "stitch"
+    ],
+    "scope": "traditional-embroidery-general",
+    "relations": [],
+    "sourceIds": [
+      "dpm-229393"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "stitch-xiechan",
+    "type": "stitch",
+    "title": "斜缠针",
+    "aliases": [],
+    "category": "stitch",
+    "summary": "绣线斜向排列，适宜单色形体，要求排列整齐且不重叠露底。",
+    "facts": [
+      {
+        "text": "绣线斜向排列，适宜单色形体，要求排列整齐且不重叠露底。",
+        "sourceIds": [
+          "dpm-230670"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "斜缠针",
+      "stitch"
+    ],
+    "scope": "traditional-embroidery-general",
+    "relations": [],
+    "sourceIds": [
+      "dpm-230670"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "stitch-song",
+    "type": "stitch",
+    "title": "松针",
+    "aliases": [],
+    "category": "stitch",
+    "summary": "细直绒线从外向中心落针，错落排列成圆形。",
+    "facts": [
+      {
+        "text": "细直绒线从外向中心落针，错落排列成圆形。",
+        "sourceIds": [
+          "dpm-229477"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "松针",
+      "stitch"
+    ],
+    "scope": "traditional-embroidery-general",
+    "relations": [],
+    "sourceIds": [
+      "dpm-229477"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "stitch-dingxian",
+    "type": "stitch",
+    "title": "钉线",
+    "aliases": [],
+    "category": "stitch",
+    "summary": "以针脚把已经铺成的线条固定。",
+    "facts": [
+      {
+        "text": "以针脚把已经铺成的线条固定。",
+        "sourceIds": [
+          "dpm-230670"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "钉线",
+      "stitch"
+    ],
+    "scope": "traditional-embroidery-general",
+    "relations": [],
+    "sourceIds": [
+      "dpm-230670"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "stitch-souhe",
+    "type": "stitch",
+    "title": "擞和针",
+    "aliases": [
+      "长短针",
+      "羼针"
+    ],
+    "category": "stitch",
+    "summary": "长短线错落分层嵌合，组织近于套针，可表现花鸟、人物、树石和书法。",
+    "facts": [
+      {
+        "text": "长短线错落分层嵌合，组织近于套针，可表现花鸟、人物、树石和书法。",
+        "sourceIds": [
+          "dpm-lemma-239955"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "擞和针",
+      "stitch"
+    ],
+    "scope": "traditional-embroidery-general",
+    "relations": [
+      {
+        "type": "relatedTo",
+        "target": "stitch-tao"
+      }
+    ],
+    "sourceIds": [
+      "dpm-lemma-239955"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "stitch-jimao",
+    "type": "stitch",
+    "title": "鸡毛针",
+    "aliases": [],
+    "category": "stitch",
+    "summary": "以人字形或交叉线条组织，适于表现建筑转角和尖瓣小花。",
+    "facts": [
+      {
+        "text": "以人字形或交叉线条组织，适于表现建筑转角和尖瓣小花。",
+        "sourceIds": [
+          "dpm-229672"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "鸡毛针",
+      "stitch"
+    ],
+    "scope": "traditional-embroidery-general",
+    "relations": [],
+    "sourceIds": [
+      "dpm-229672"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "stitch-ding",
+    "type": "stitch",
+    "title": "钉针",
+    "aliases": [],
+    "category": "stitch",
+    "summary": "用针脚加固长线，使已绣线条整齐。",
+    "facts": [
+      {
+        "text": "用针脚加固长线，使已绣线条整齐。",
+        "sourceIds": [
+          "dpm-lemma-243239"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "钉针",
+      "stitch"
+    ],
+    "scope": "traditional-embroidery-general",
+    "relations": [
+      {
+        "type": "relatedTo",
+        "target": "stitch-dingxian"
+      }
+    ],
+    "sourceIds": [
+      "dpm-lemma-243239"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "stitch-kelin",
+    "type": "stitch",
+    "title": "刻鳞针",
+    "aliases": [],
+    "category": "stitch",
+    "summary": "先铺长直针，再绣鳞羽状线条。",
+    "facts": [
+      {
+        "text": "先铺长直针，再绣鳞羽状线条。",
+        "sourceIds": [
+          "dpm-229672"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "刻鳞针",
+      "stitch"
+    ],
+    "scope": "traditional-embroidery-general",
+    "relations": [],
+    "sourceIds": [
+      "dpm-229672"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "stitch-pingjin",
+    "type": "stitch",
+    "title": "平金",
+    "aliases": [],
+    "category": "stitch",
+    "summary": "金线铺出纹样，丝线钉固；故宫记载京绣、苏绣都曾采用此法。",
+    "facts": [
+      {
+        "text": "金线铺出纹样，丝线钉固；故宫记载京绣、苏绣都曾采用此法。",
+        "sourceIds": [
+          "dpm-230670"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "平金",
+      "stitch"
+    ],
+    "scope": "traditional-embroidery-general",
+    "relations": [],
+    "sourceIds": [
+      "dpm-230670"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "stitch-zhengchuan",
+    "type": "stitch",
+    "title": "正串",
+    "aliases": [],
+    "category": "stitch",
+    "summary": "纱地上的计数刺绣，针线方向与纬线垂直，按跨过的纬线根数称几丝串。",
+    "facts": [
+      {
+        "text": "纱地上的计数刺绣，针线方向与纬线垂直，按跨过的纬线根数称几丝串。",
+        "sourceIds": [
+          "dpm-lemma-245174"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "正串",
+      "stitch"
+    ],
+    "scope": "traditional-embroidery-general",
+    "relations": [],
+    "sourceIds": [
+      "dpm-lemma-245174"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    }
+  },
+  {
+    "id": "standard-gb",
+    "type": "standard",
+    "title": "GB/T 38029-2019《苏绣》",
+    "aliases": [
+      "GB/T 38029-2019"
+    ],
+    "category": "standard",
+    "summary": "GB/T 38029-2019，名称《苏绣》。核验时目录标注现行；2019-08-30发布，2020-03-01实施，主管部门为中国纺织工业联合会。仅收录目录元数据。",
+    "facts": [
+      {
+        "text": "GB/T 38029-2019，名称《苏绣》。核验时目录标注现行；2019-08-30发布，2020-03-01实施，主管部门为中国纺织工业联合会。仅收录目录元数据。",
+        "sourceIds": [
+          "standard-gb"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "GB/T 38029-2019《苏绣》",
+      "standard"
+    ],
+    "scope": "suxiu",
+    "relations": [],
+    "sourceIds": [
+      "standard-gb"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    },
+    "standardNumber": "GB/T 38029-2019",
+    "standardStatus": "现行",
+    "publicationDate": "2019-08-30",
+    "effectiveDate": "2020-03-01",
+    "fullTextRead": false
+  },
+  {
+    "id": "standard-db",
+    "type": "standard",
+    "title": "DB3205/T 1076-2023《苏式传统文化 苏绣技艺与文化传承指南》",
+    "aliases": [
+      "DB3205/T 1076-2023"
+    ],
+    "category": "standard",
+    "summary": "DB3205/T 1076-2023，名称《苏式传统文化 苏绣技艺与文化传承指南》。核验时目录标注现行；2023-05-12发布，2023-05-19实施，主管部门为苏州市市场监督管理局。仅收录目录元数据。",
+    "facts": [
+      {
+        "text": "DB3205/T 1076-2023，名称《苏式传统文化 苏绣技艺与文化传承指南》。核验时目录标注现行；2023-05-12发布，2023-05-19实施，主管部门为苏州市市场监督管理局。仅收录目录元数据。",
+        "sourceIds": [
+          "standard-db"
+        ],
+        "evidenceLevel": "A"
+      }
+    ],
+    "keywords": [
+      "DB3205/T 1076-2023《苏式传统文化 苏绣技艺与文化传承指南》",
+      "standard"
+    ],
+    "scope": "suxiu",
+    "relations": [],
+    "sourceIds": [
+      "standard-db"
+    ],
+    "verified": true,
+    "expertReviewed": false,
+    "review": {
+      "method": "official-source-paraphrase",
+      "accessedDate": "2026-10-15",
+      "note": "AI辅助官方资料整理，未经苏绣专家人工审定"
+    },
+    "standardNumber": "DB3205/T 1076-2023",
+    "standardStatus": "现行",
+    "publicationDate": "2023-05-12",
+    "effectiveDate": "2023-05-19",
+    "fullTextRead": false
+  }
+]
