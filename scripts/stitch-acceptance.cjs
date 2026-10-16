@@ -5,6 +5,7 @@ const out=process.env.STITCH_OUTPUT_DIR || path.resolve(__dirname,'../docs/stitc
 try{
  const local=publicBase?null:await serve();server=local?.server;const base=publicBase||local.base;
  browser=await chromium.launch({channel:'msedge',headless:true});const page=await browser.newPage({viewport:{width:1280,height:960}});page.on('pageerror',e=>errors.push(e.message));
+ if(publicBase){page.setDefaultNavigationTimeout(120000);page.setDefaultTimeout(60000);}
  const goto=async()=>{await page.goto(base+'#ar',{waitUntil:'networkidle'});await page.waitForFunction(()=>window.lihuaStitchDiagnostics?.().player.total===16&&!lihuaStitchDiagnostics().loading);await page.locator('#stitch-lab').scrollIntoViewIfNeeded();};
  const seek=async value=>page.locator('#lab-scrubber').evaluate((el,v)=>{el.value=String(v);el.dispatchEvent(new Event('input',{bubbles:true}));},value);
  const diag=()=>page.evaluate(()=>lihuaStitchDiagnostics());
