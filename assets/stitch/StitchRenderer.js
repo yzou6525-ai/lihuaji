@@ -42,7 +42,7 @@ export class StitchRenderer {
       uvs.set([0,0,1,0,1,1,0,0,1,1,0,1],i*12);
     });
     this.bounds={x:(Math.min(...xs)+Math.max(...xs))/2,y:(Math.min(...ys)+Math.max(...ys))/2,w:Math.max(20,Math.max(...xs)-Math.min(...xs)),h:Math.max(20,Math.max(...ys)-Math.min(...ys))};
-    this.width=Math.max(this.bounds.w,this.bounds.h)*.006;
+    this.width=Math.max(this.bounds.w,this.bounds.h)*(data.renderStyle?.strandWidthRatio ?? .006);
     const geometry=new THREE.BufferGeometry();
     geometry.setAttribute('position',new THREE.BufferAttribute(positions,3).setUsage(THREE.DynamicDrawUsage));
     geometry.setAttribute('color',new THREE.BufferAttribute(colors,3));geometry.setAttribute('uv',new THREE.BufferAttribute(uvs,2));geometry.setDrawRange(0,0);

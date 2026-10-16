@@ -2,7 +2,8 @@ import {StitchPlayer} from './stitch/StitchPlayer.js';
 import {getSuxiuKnowledgeById} from './suxiu-knowledge-store.js';
 
 export const demoCatalogue = Object.freeze([
-  {id:'demo-straight-basic',title:'直线针'}, {id:'demo-tao-basic',title:'套针'}, {id:'demo-gun-basic',title:'滚针'}
+  {id:'demo-straight-basic',title:'直线针'}, {id:'demo-tao-basic',title:'套针'}, {id:'demo-gun-basic',title:'滚针'},
+  {id:'demo-santao-pear-petal',title:'散套针 · 梨花瓣数字示意'}
 ]);
 export function ensureStitchStyles() {
   if(document.querySelector('link[data-stitch-style]'))return;
@@ -12,18 +13,21 @@ export function mountStitchLab(root) {
   ensureStitchStyles();
   root.innerHTML=`<div class="lab-heading"><div><h2>数字针迹实验室</h2><p class="small">数字练习示意 · 一针一针，看路径如何形成。</p></div><label>选择练习<select id="lab-demo">${demoCatalogue.map(d=>`<option value="${d.id}">${d.title}</option>`).join('')}</select></label></div>
     <div class="lab-stage"><div id="lab-canvas"></div><span class="lab-empty">正在准备数字针迹…</span></div>
-    <div class="lab-progress"><span id="lab-count" aria-live="polite">当前第 0 针 / 共 0 针</span><span id="lab-percent">0%</span></div>
+    <div class="lab-progress"><span id="lab-count" aria-live="polite">当前第 0 针 / 共 0 针</span><span id="lab-batch" class="small" hidden></span><span id="lab-percent">0%</span></div>
     <label>逐针进度<input id="lab-scrubber" type="range" min="0" max="1" step="0.01" value="0" disabled></label>
     <div class="lab-controls"><button id="lab-previous" disabled>上一针</button><button id="lab-play" class="primary" disabled>播放</button><button id="lab-next" disabled>下一针</button><button id="lab-restart" disabled>重播</button></div>
     <div class="lab-options"><label>速度<select id="lab-speed"><option value="0.5">0.5x</option><option value="1" selected>1x</option><option value="1.5">1.5x</option></select></label><label><input id="lab-points" type="checkbox">显示针落点</label></div>
     <p id="lab-status" role="status">正在加载练习…</p><div class="lab-knowledge" id="lab-knowledge"></div>
-    <p class="lab-note">针迹动画为《梨花季》数字练习示意，用于理解路径与先后关系，不替代真实刺绣教学，未经苏绣专家人工审定。</p>`;
+    <p class="lab-note" id="lab-authenticity">针迹动画为《梨花季》数字练习示意，用于理解路径与先后关系，不替代真实刺绣教学，未经苏绣专家人工审定。</p><p class="lab-note" id="lab-color-note" hidden></p>`;
   const $=selector=>root.querySelector(selector),stage=$('#lab-canvas');stage.style.cssText='width:100%;height:100%';
   let alive=true,renderer=null,ticket=0,request=null,loading=true,observer=null;
   const player=new StitchPlayer({onChange:state=>{
     if(!alive)return;
     renderer?.update(state);
     $('#lab-count').textContent=`当前第 ${state.current} 针 / 共 ${state.total} 针`;
+    const group=player.data?.stitches[Math.max(0,state.current-1)]?.group;
+    const batch=player.data?.batches?.find(b=>b.group===group);
+    $('#lab-batch').hidden=!batch;$('#lab-batch').textContent=batch?.label || '';
     $('#lab-percent').textContent=(state.total?Math.round(state.position/state.total*100):0)+'%';
     $('#lab-scrubber').max=String(state.total || 1);$('#lab-scrubber').value=String(state.position);
     $('#lab-scrubber').setAttribute('aria-valuetext',`第 ${state.current} 针，共 ${state.total} 针`);
@@ -42,6 +46,8 @@ export function mountStitchLab(root) {
       if(!response.ok)throw Error('针迹资料暂时未载入，请重新选择练习或稍后重试。');
       const data=await response.json();if(!alive||ticket!==current)return;
       player.loadStitchDemo(data);renderer.load(player.data);loading=false;player.notify();
+      $('#lab-authenticity').textContent=data.authenticityNote || '针迹动画为《梨花季》数字练习示意，用于理解路径与先后关系，不替代真实刺绣教学，未经苏绣专家人工审定。';
+      $('#lab-color-note').textContent=data.colorNote || '';$('#lab-color-note').hidden=!data.colorNote;
       $('#lab-status').textContent=data.title+' · 项目自编练习';
       if(data.knowledgeId){
         try{const k=await getSuxiuKnowledgeById(data.knowledgeId);if(!alive||ticket!==current)return;

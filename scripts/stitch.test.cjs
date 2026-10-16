@@ -2,8 +2,33 @@ const test=require('node:test'),assert=require('node:assert/strict'),fs=require(
 const read=name=>JSON.parse(fs.readFileSync(path.join(__dirname,'..',name),'utf8'));
 const modules=Promise.all([import('../assets/stitch/StitchPlayer.js'),import('../assets/stitch-video-store.js'),import('./validate-stitch.mjs')]);
 function clock(){let time=0,id=0;const callbacks=new Map();return {now:()=>time,requestFrame:cb=>{callbacks.set(++id,cb);return id;},cancelFrame:id=>callbacks.delete(id),tick:ms=>{time+=ms;const queued=[...callbacks.values()];callbacks.clear();queued.forEach(cb=>cb(time));},get size(){return callbacks.size;}};}
-test('all three authored demos and official sources validate; linked knowledge exists',async()=>{
- const [,,m]=await modules,r=m.validateStitchFiles();assert.deepEqual(r.demos.map(d=>d.count),[16,24,20]);assert.equal(r.videos,6);
+test('all four authored demos and official sources validate; linked knowledge exists',async()=>{
+ const [,,m]=await modules,r=m.validateStitchFiles();assert.deepEqual(r.demos.map(d=>d.count),[16,24,20,56]);assert.equal(r.videos,6);
+});
+test('santao project visual validation: 56 stitches, 28/14/14, interior overlap and one connected tapered petal',async()=>{
+ const [,,m]=await modules,d=read('content/stitch-demos/demo-santao-pear-petal.json'),v=m.validateSantaoVisual(d);
+ assert.deepEqual(v.counts,[28,14,14]);assert(v.batch2InteriorOverlap>=11);assert(v.batch3InteriorOverlap>=11);assert.equal(v.connectedStitches,56);
+ for(const mutate of [d=>d.illustrativeStitchCount=55,d=>d.stitches.pop(),d=>d.knowledgeId='stitch-tao',d=>d.nature='digital-practice-demo',d=>d.stitches[28].group=1,d=>d.stitches[3].start[0]=51,d=>d.stitches[5].end=d.stitches[5].start,d=>d.stitches[2].id=d.stitches[1].id,d=>d.stitches[7].order=30,d=>d.stitches[0].end[1]=Infinity,d=>d.expertReviewed=true,d=>d.historicalReconstruction=true,d=>d.note='',d=>d.batches[0].count=27]){const c=structuredClone(d);mutate(c);assert.throws(()=>m.validateSantaoVisual(c));}
+});
+test('visual validation rejects orderly tips and appended/disjoint batches; it does not certify historical craft',async()=>{
+ const [,,m]=await modules,original=read('content/stitch-demos/demo-santao-pear-petal.json');
+ for(const mutate of [
+   d=>d.stitches.slice(0,28).forEach(s=>{s.end[1]=0;}),
+   d=>d.stitches.slice(28,42).forEach(s=>{s.start=[s.start[0],-47];s.end=[s.end[0],-51];}),
+   d=>d.stitches.slice(42).forEach(s=>{s.start=[s.start[0],-52];s.end=[s.end[0],-54];}),
+   d=>{d.stitches[0].start=[-49,59];d.stitches[0].end=[-48,58];}
+ ]){const d=structuredClone(original);mutate(d);assert.throws(()=>m.validateSantaoVisual(d));}
+});
+test('santao fixed-seed generator reproduces committed data exactly and keeps every point finite',async()=>{
+ const {generateSantaoPetal}=await import('./santao-petal-data.mjs'),a=generateSantaoPetal();
+ assert.deepEqual(a,generateSantaoPetal());assert.deepEqual(a,read('content/stitch-demos/demo-santao-pear-petal.json'));
+ assert(a.stitches.every(s=>[...s.start,...s.end].every(Number.isFinite)));
+});
+test('santao shares original playback including partial batch transitions and end stopping',async()=>{
+ const [{StitchPlayer,validateStitchDemo}]=await modules,c=clock(),p=new StitchPlayer(c),d=read('content/stitch-demos/demo-santao-pear-petal.json');p.loadStitchDemo(d);
+ for(const [position,group] of [[28,1],[28.1,2],[42,2],[42.1,3],[56,3]]){p.seek(position);assert.equal(p.data.stitches[p.state.current-1].group,group);}
+ p.seek(55.95);p.play();c.tick(100);assert.equal(p.position,56);assert(!p.playing);assert.equal(c.size,0);p.dispose();
+ for(const width of [0,Infinity,.2]){const bad=structuredClone(d);bad.renderStyle.strandWidthRatio=width;assert.throws(()=>validateStitchDemo(bad));}
 });
 test('play/pause, fractional progress, steps, seek boundaries, restart and one scheduled frame',async()=>{
  const [{StitchPlayer}]=await modules,c=clock(),p=new StitchPlayer(c);p.loadStitchDemo(read('content/stitch-demos/demo-tao-basic.json'));

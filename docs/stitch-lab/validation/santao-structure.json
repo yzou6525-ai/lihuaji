@@ -1,0 +1,15 @@
+{
+  "type": "project-visual-validation",
+  "counts": [
+    28,
+    14,
+    14
+  ],
+  "batch2InteriorOverlap": 14,
+  "batch3InteriorOverlap": 14,
+  "connectedStitches": 56,
+  "lengthRange": 28.926245908287825,
+  "endpointDepthRange": 50.883,
+  "crownWidth": 82.03800000000001,
+  "baseWidth": 33.738
+}

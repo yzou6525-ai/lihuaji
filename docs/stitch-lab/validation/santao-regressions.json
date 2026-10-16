@@ -1,0 +1,155 @@
+{
+  "date": "2026-10-16",
+  "baseline": "6fcedef280b0984a788631958a315b2b95bc2ecb",
+  "scope": "santao-petal-v0",
+  "nodeTests": {
+    "passed": 31,
+    "failed": 0
+  },
+  "build": true,
+  "ar": {
+    "ok": true,
+    "checks": [
+      "home 手机布局与页面载入",
+      "library 手机布局与页面载入",
+      "create 手机布局与页面载入",
+      "gallery 手机布局与页面载入",
+      "game 手机布局与页面载入",
+      "guide 手机布局与页面载入",
+      "palette 手机布局与页面载入",
+      "profile 手机布局与页面载入",
+      "about 手机布局与页面载入",
+      "face 手机布局与页面载入",
+      "两种渲染方式预热后多次切换单图与分层目标，几何与纹理数量均不增长",
+      "单层缺图仍可显示其余五层并正常收拢"
+    ],
+    "errors": [],
+    "reportFileModified": "2026-10-16T10:42:03.638Z"
+  },
+  "story": {
+    "ok": true,
+    "checks": [
+      "故事产生三套候选、可换版和选择，人工增纹换色被记录",
+      "SVG可解析、相同创作过程含模型边界、候选历史、人工修改和可复核哈希",
+      "现有译绣可生成并实际下载SVG、CSV、完整过程JSON，输出哈希一致",
+      "我的作品进入五层绣境；真实MindAR匹配梨花定位卡后承载作品，未伪装成识别生成图",
+      "载入资源后断网，故事规则生成到译绣仍能完成；390px无横向溢出",
+      "原梨花识别目标仍真实匹配成功",
+      "原纹样库保留，牡丹详情下方增加来源注解"
+    ],
+    "errors": [],
+    "posts": [],
+    "realAIInference": false,
+    "physicalPhoneAR": "未真机验证",
+    "sessionFixture": "仅脚本内毕业故事示例，非用户私人输入",
+    "reportFileModified": "2026-10-16T10:42:11.088Z"
+  },
+  "library": {
+    "ok": true,
+    "target": "local",
+    "total": 1038,
+    "added": 264,
+    "checks": [
+      "统一纹样库数量与分页正确",
+      "528张新增展示图及缩略图实际解码成功",
+      "九个文化地区筛选数量正确",
+      "馆藏编号检索、原作资料、出处和许可详情可用",
+      "新纹样进入现有译绣并实际下载带来源的SVG",
+      "390px手机布局无横向溢出，滚动载入的卡片图片正常",
+      "祥云配对挑战直接使用统一目录中的新增图片"
+    ],
+    "errors": [],
+    "reportFileModified": "2026-10-16T10:44:47.719Z"
+  },
+  "suxiu": {
+    "ok": true,
+    "target": "local",
+    "searches": [
+      {
+        "query": "苏绣",
+        "guide": true,
+        "global": true,
+        "firstId": "suxiu"
+      },
+      {
+        "query": "散套",
+        "guide": true,
+        "global": true,
+        "firstId": "stitch-santao"
+      },
+      {
+        "query": "套针",
+        "guide": true,
+        "global": true,
+        "firstId": "stitch-tao"
+      },
+      {
+        "query": "打籽",
+        "guide": true,
+        "global": true,
+        "firstId": "stitch-dazi"
+      },
+      {
+        "query": "设计绣稿",
+        "guide": true,
+        "global": true,
+        "firstId": "process-design"
+      },
+      {
+        "query": "绷架",
+        "guide": true,
+        "global": true,
+        "firstId": "tool-frame"
+      },
+      {
+        "query": "乱针绣",
+        "guide": true,
+        "global": true,
+        "firstId": "craft-random"
+      },
+      {
+        "query": "双面绣",
+        "guide": true,
+        "global": true,
+        "firstId": "craft-double"
+      },
+      {
+        "query": "双面三异绣",
+        "guide": true,
+        "global": true,
+        "firstId": "craft-double-three"
+      },
+      {
+        "query": "顾文霞",
+        "guide": true,
+        "global": true,
+        "firstId": "inheritor-gu-wenxia"
+      },
+      {
+        "query": "李娥瑛",
+        "guide": true,
+        "global": true,
+        "firstId": "inheritor-li-eying"
+      },
+      {
+        "query": "GB/T 38029-2019",
+        "guide": true,
+        "global": true,
+        "firstId": "standard-gb"
+      }
+    ],
+    "checks": [
+      "12个关键词在知识手册和顶部搜索均找到预期首条记录，官方结果优先",
+      "套针分型关系可点击进入散套，稳定ID深链接可用",
+      "完整九工序顺序可查看与跳转",
+      "乱针绣体系与常州扩展项目分别展示",
+      "原文创与纹样搜索保留",
+      "390px标准长标题、来源链接与展开资料无横向溢出",
+      "已加载后断网仍可搜索缓存资料",
+      "资料503时保留练习说明，恢复后可重试",
+      "慢速加载时切换首页不会被旧知识页覆盖"
+    ],
+    "errors": [],
+    "reportFileModified": "2026-10-16T10:44:46.858Z"
+  }
+}

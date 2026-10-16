@@ -3,7 +3,8 @@ export function validateStitchDemo(data) {
   const fail = () => { throw Error('针迹资料格式不正确，请选择其他练习。'); };
   if (!data || typeof data.id !== 'string' || !/^[a-z0-9-]+$/.test(data.id) || typeof data.title !== 'string' || !data.title.trim()) fail();
   if (!Object.hasOwn(data, 'knowledgeId') || (data.knowledgeId !== null && (typeof data.knowledgeId !== 'string' || !/^[a-z0-9-]+$/.test(data.knowledgeId)))) fail();
-  if (data.nature !== 'digital-practice-demo' || data.expertReviewed !== false || data.historicalReconstruction !== false) fail();
+  if (!['digital-practice-demo','digital-craft-visualization'].includes(data.nature) || data.expertReviewed !== false || data.historicalReconstruction !== false) fail();
+  if (data.renderStyle && (!Number.isFinite(data.renderStyle.strandWidthRatio) || data.renderStyle.strandWidthRatio < .002 || data.renderStyle.strandWidthRatio > .03)) fail();
   if (!Array.isArray(data.stitches) || !data.stitches.length || data.stitches.length > 10000) fail();
   const ids = new Set(), point = p => Array.isArray(p) && p.length === 2 && p.every(n => Number.isFinite(n) && Math.abs(n) <= 10000);
   data.stitches.forEach((s, i) => {
