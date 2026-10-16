@@ -1,0 +1,26 @@
+/* Scoped additions only; the site's theme, layout and existing cards are inherited. */
+#stitch-lab{margin:30px 0;color:#3F5A4F}
+#stitch-lab .lab-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+#stitch-lab .lab-heading label{margin:0;min-width:180px}
+#stitch-lab .lab-stage{position:relative;height:340px;background:#F8F6EF;border:1px solid var(--line);border-radius:6px;margin:18px 0 12px;overflow:hidden}
+#stitch-lab canvas{display:block;width:100%;height:100%}
+#stitch-lab .lab-empty{position:absolute;left:15px;right:15px;top:45%;text-align:center;pointer-events:none;color:#68776e;font-size:13px}
+#stitch-lab .lab-empty[hidden]{display:none}
+#stitch-lab .lab-progress{display:flex;justify-content:space-between;gap:10px;font-size:13px}
+#stitch-lab input[type=range]{padding:0;min-height:44px;accent-color:#3F5A4F;background:transparent;border:0;cursor:pointer}
+#stitch-lab .lab-controls{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+#stitch-lab button{min-height:44px}
+#stitch-lab .lab-options{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;margin:16px 0}
+#stitch-lab .lab-options label{margin:0;display:flex;align-items:center;gap:10px}
+#stitch-lab .lab-options select{width:auto;margin:0}
+#stitch-lab .lab-options input{margin:0}
+#stitch-lab .lab-note{padding-top:16px;border-top:1px solid var(--line);font-size:12px;line-height:1.9}
+#stitch-lab .lab-knowledge{font-size:13px}
+#stitch-lab .lab-error{color:#963e32}
+#stitch-lab [hidden]{display:none!important}
+#official-videos{margin-top:35px}
+#official-videos .video-card,#main .video-card{min-width:0}
+#official-videos .video-card h3,#main .video-card h3{font-family:var(--serif);font-weight:500;font-size:20px}
+#official-videos .video-card p,#main .video-card p{font-size:13px}
+#official-videos .video-source-mark,#main .video-source-mark{color:#68776e;font-size:12px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+@media(max-width:600px){#stitch-lab .lab-stage{height:270px}#stitch-lab .lab-heading{gap:10px}#stitch-lab .lab-heading label{width:100%}#stitch-lab .lab-controls{gap:6px}#stitch-lab .lab-controls button{padding:8px 12px}#stitch-lab .lab-options{gap:15px}#official-videos .grid{grid-template-columns:1fr}}

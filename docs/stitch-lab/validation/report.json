@@ -1,0 +1,110 @@
+{
+  "ok": true,
+  "target": "local",
+  "checks": [
+    "play/pause/next/previous/restart、三档速度、0/中间/100%进度、回退消失、部分针段与针落点开关",
+    "三套数据载入成功，套针/滚针知识档案直接引用正式知识库",
+    "12次切换数据几何/纹理数量不增长；3次播放中离页RAF取消、几何/纹理计数归零",
+    "4个视频、1门课程、1条延伸阅读，仅外链，无视频元素、iframe或第三方封面",
+    "7个指定查询命中官方影像，原知识搜索结果并存",
+    "390×844手机视口控制可操作，实验室/官方影像均无横向溢出",
+    "损坏JSON不影响原练习且可换练习恢复；Three模块失败有提示；影像503可重试；慢加载离页不会复活"
+  ],
+  "resourceSamples": [
+    {
+      "cycle": 0,
+      "resources": {
+        "geometries": 2,
+        "textures": 1
+      }
+    },
+    {
+      "cycle": 1,
+      "resources": {
+        "geometries": 2,
+        "textures": 1
+      }
+    },
+    {
+      "cycle": 2,
+      "resources": {
+        "geometries": 2,
+        "textures": 1
+      }
+    },
+    {
+      "cycle": 3,
+      "resources": {
+        "geometries": 2,
+        "textures": 1
+      }
+    },
+    {
+      "exit": 0,
+      "resources": {
+        "geometries": 0,
+        "textures": 0
+      }
+    },
+    {
+      "exit": 1,
+      "resources": {
+        "geometries": 0,
+        "textures": 0
+      }
+    },
+    {
+      "exit": 2,
+      "resources": {
+        "geometries": 0,
+        "textures": 0
+      }
+    }
+  ],
+  "queries": [
+    "苏绣 视频",
+    "姚惠芬",
+    "套针",
+    "滚针",
+    "打籽",
+    "梅花",
+    "蒋雪英"
+  ],
+  "links": [
+    {
+      "url": "https://tv.cctv.com/2019/04/10/VIDEZh3UD0beJiJrLJDVXeV9190410.shtml",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "url": "https://tv.cctv.com/v/v1/VIDES4sb3WAjpaImxxoSAtdQ190501.html",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "url": "https://tv.cctv.com/2018/06/14/VIDEfObG0X1Q9vANAKqdJDfh180614.shtml",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "url": "https://www.icourse163.org/course/SGMART-1206997809",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "url": "https://szfy.wglj.suzhou.com.cn/2025yxyp/detail.php?id=2",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "url": "https://szfy.wglj.suzhou.com.cn/index.php/fy-project/8",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    }
+  ],
+  "errors": [],
+  "limits": [
+    "移动测试为桌面浏览器390×844视口，不等于实体手机全机型验证",
+    "外部来源仅核验网页/公开目录；未播放或下载第三方视频"
+  ]
+}

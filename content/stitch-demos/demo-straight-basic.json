@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 1,
+  "id": "demo-straight-basic",
+  "title": "直线针数字练习示意",
+  "knowledgeId": "stitch-plain",
+  "nature": "digital-practice-demo",
+  "expertReviewed": false,
+  "historicalReconstruction": false,
+  "coordinateSystem": "arbitrary-units-y-up",
+  "description": "项目自编的表面路径与先后关系示意，不模拟背面过线、针尖运动、张力或真实工艺参数。",
+  "stitches": [
+    {
+      "id": "s001",
+      "start": [
+        -45,
+        -22
+      ],
+      "end": [
+        -45,
+        22
+      ],
+      "order": 1,
+      "group": 1,
+      "color": "#718B78"
+    },
+    {
+      "id": "s002",
+      "start": [
+        -39,
+        -22
+      ],
+      "end": [
+        -39,
+        22
+      ],
+      "order": 2,
+      "group": 1,
+      "color": "#718B78"
+    },
+    {
+      "id": "s003",
+      "start": [
+        -33,
+        -22
+      ],
+      "end": [
+        -33,
+        22
+      ],
+      "order": 3,
+      "group": 1,
+      "color": "#718B78"
+    },
+    {
+      "id": "s004",
+      "start": [
+        -27,
+        -22
+      ],
+      "end": [
+        -27,
+        22
+      ],
+      "order": 4,
+      "group": 1,
+      "color": "#718B78"
+    },
+    {
+      "id": "s005",
+      "start": [
+        -21,
+        -22
+      ],
+      "end": [
+        -21,
+        22
+      ],
+      "order": 5,
+      "group": 1,
+      "color": "#718B78"
+    },
+    {
+      "id": "s006",
+      "start": [
+        -15,
+        -22
+      ],
+      "end": [
+        -15,
+        22
+      ],
+      "order": 6,
+      "group": 1,
+      "color": "#718B78"
+    },
+    {
+      "id": "s007",
+      "start": [
+        -9,
+        -22
+      ],
+      "end": [
+        -9,
+        22
+      ],
+      "order": 7,
+      "group": 1,
+      "color": "#718B78"
+    },
+    {
+      "id": "s008",
+      "start": [
+        -3,
+        -22
+      ],
+      "end": [
+        -3,
+        22
+      ],
+      "order": 8,
+      "group": 1,
+      "color": "#718B78"
+    },
+    {
+      "id": "s009",
+      "start": [
+        3,
+        -22
+      ],
+      "end": [
+        3,
+        22
+      ],
+      "order": 9,
+      "group": 1,
+      "color": "#718B78"
+    },
+    {
+      "id": "s010",
+      "start": [
+        9,
+        -22
+      ],
+      "end": [
+        9,
+        22
+      ],
+      "order": 10,
+      "group": 1,
+      "color": "#718B78"
+    },
+    {
+      "id": "s011",
+      "start": [
+        15,
+        -22
+      ],
+      "end": [
+        15,
+        22
+      ],
+      "order": 11,
+      "group": 1,
+      "color": "#718B78"
+    },
+    {
+      "id": "s012",
+      "start": [
+        21,
+        -22
+      ],
+      "end": [
+        21,
+        22
+      ],
+      "order": 12,
+      "group": 1,
+      "color": "#718B78"
+    },
+    {
+      "id": "s013",
+      "start": [
+        27,
+        -22
+      ],
+      "end": [
+        27,
+        22
+      ],
+      "order": 13,
+      "group": 1,
+      "color": "#718B78"
+    },
+    {
+      "id": "s014",
+      "start": [
+        33,
+        -22
+      ],
+      "end": [
+        33,
+        22
+      ],
+      "order": 14,
+      "group": 1,
+      "color": "#718B78"
+    },
+    {
+      "id": "s015",
+      "start": [
+        39,
+        -22
+      ],
+      "end": [
+        39,
+        22
+      ],
+      "order": 15,
+      "group": 1,
+      "color": "#718B78"
+    },
+    {
+      "id": "s016",
+      "start": [
+        45,
+        -22
+      ],
+      "end": [
+        45,
+        22
+      ],
+      "order": 16,
+      "group": 1,
+      "color": "#718B78"
+    }
+  ]
+}
