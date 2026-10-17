@@ -1,0 +1,17 @@
+{
+  "batch": "met-cloud-curated-v1",
+  "metObjects": 25,
+  "requested": 50,
+  "added": 50,
+  "skipped": [],
+  "byCategory": {
+    "如意/灵芝云": 9,
+    "流云/波浪云": 13,
+    "团云/朵云": 14,
+    "连续/结构云": 9,
+    "云气纹": 5
+  },
+  "assetCount": 25,
+  "preservedRecords": 1038,
+  "preservedCatalogSha256": "5a9f5ab2a3471d46a0822bfdd2c1a4fe35ff90fde18c00e85a732671e298c922"
+}

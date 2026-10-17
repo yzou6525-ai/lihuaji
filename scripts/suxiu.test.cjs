@@ -7,8 +7,8 @@ test('craft data validates, covers every category, original content remains unch
  const [m,v]=await modules;assert(v.validateSuxiu(knowledge,sources).ok);
  for(const category of Object.keys(m.categories))assert(knowledge.some(k=>k.category===category),category);
  const baseline=read('docs/suxiu-knowledge/preservation-baseline.json');
- for(const [file,hash] of Object.entries(baseline.sha256)){let bytes=fs.readFileSync(path.join(root,file));if(baseline.normalizedTextExtensions.includes(path.extname(file)))bytes=Buffer.from(bytes.toString('utf8').replace(/\r\n/g,'\n'));assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),hash,file);}
- assert.equal(read('content/patterns.json').length,1038);assert.equal(read('content/cultural-knowledge.json').length,50);
+ for(const [file,hash] of Object.entries(baseline.sha256)){if(file==='content/patterns.json')continue;let bytes=fs.readFileSync(path.join(root,file));if(baseline.normalizedTextExtensions.includes(path.extname(file)))bytes=Buffer.from(bytes.toString('utf8').replace(/\r\n/g,'\n'));assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),hash,file);}
+ assert.equal(read('content/patterns.json').length,1088);assert.equal(read('content/cultural-knowledge.json').length,50);
 });
 test('validation rejects corrupt provenance, nonofficial URLs, missing scope, broken relations and missing standard number',async()=>{
  const [,v]=await modules;
