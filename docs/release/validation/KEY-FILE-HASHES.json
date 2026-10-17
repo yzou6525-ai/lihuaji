@@ -1,0 +1,22 @@
+{
+  "baselineCommit": "d98d036ed976f9d3e4fff55decf8dd07f1d3a70d",
+  "algorithm": "SHA-256",
+  "protectedFilesChanged": false,
+  "files": {
+    "content/stitch-demos/demo-santao-pear-petal.json": "92AF2E12212DD652767D79B8F758CA3DA314DAB02AC1F942345E9BF1D0FA1D31",
+    "assets/ar-assets/targets.mind": "4F1D11DCC9D3B07DBE66092F7E94E4AB2B04595EBA0310B898F621AB3875C1B8",
+    "content/suxiu-official-course.json": "47F2410734B220CC09D9E07862EA1947E9F31C17A75209320691576A4B75E1BC",
+    "content/digital-tools.json": "7272DD0765F99103FC58065653175CB4E074EB8769F4A4F6590D26807E5A15F3",
+    "content/learning-paths.json": "28E0D1C4737CFCB3B644C5527493065B29FC12CC97DCDD61266EB8DA0F42CBF4"
+  },
+  "stitchInvariants": {
+    "stitchCount": 56,
+    "batchCounts": [28, 14, 14],
+    "representativeStitchOrders": [1, 32, 46],
+    "changedFromBaseline": false
+  },
+  "targetDatabaseChangedFromBaseline": false,
+  "courseDataChangedFromBaseline": false,
+  "ricuciDataChangedFromBaseline": false,
+  "learningPathDataChangedFromBaseline": false
+}
