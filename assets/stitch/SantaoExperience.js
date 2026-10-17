@@ -5,9 +5,9 @@ import {SantaoVisual} from './SantaoVisual.js';
 export class SantaoExperience {
   constructor(renderer,data,{onChange=()=>{}}={}){
     this.renderer=renderer;this.disposed=false;
-    this.saved={zoom:renderer.camera.zoom,z:renderer.camera.position.z,clipping:renderer.renderer.localClippingEnabled};
+    this.saved={view:renderer.getViewState(),z:renderer.camera.position.z,clipping:renderer.renderer.localClippingEnabled};
     this.visual=new SantaoVisual(renderer,data,renderer.scene);
-    renderer.camera.position.z=30;renderer.renderer.localClippingEnabled=true;
+    renderer.setViewLocked(true);renderer.setPlanSuppressed(true);renderer.fitToData();renderer.camera.position.z=30;renderer.renderer.localClippingEnabled=true;
     this.timeline=new SantaoTimeline({onChange:state=>{
       this.visual.update(state);
       renderer.camera.zoom=1+(state.stage==='batch2-key'?.12*Math.sin(Math.PI*state.key.progress):0);
@@ -18,6 +18,6 @@ export class SantaoExperience {
   diagnostics(){return {...this.visual.diagnostics(),timeline:this.timeline.state};}
   dispose(){
     if(this.disposed)return;this.timeline.dispose();this.visual.dispose();this.disposed=true;
-    const r=this.renderer;if(!r.disposed){r.camera.zoom=this.saved.zoom;r.camera.position.z=this.saved.z;r.camera.updateProjectionMatrix();r.renderer.localClippingEnabled=this.saved.clipping;}
+    const r=this.renderer;if(!r.disposed){r.camera.position.z=this.saved.z;r.renderer.localClippingEnabled=this.saved.clipping;r.setViewLocked(false);r.setPlanSuppressed(false);r.setViewState(this.saved.view);}
   }
 }

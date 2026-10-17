@@ -39,6 +39,14 @@ test('play/pause, fractional progress, steps, seek boundaries, restart and one s
  p.play();assert.equal(p.position,0);p.seek(23.95);p.play();c.tick(100);assert.equal(p.position,24);assert.equal(p.playing,false);assert.equal(c.size,0);
  p.restart();assert.equal(p.position,0);assert.equal(p.playing,true);p.dispose();assert.equal(c.size,0);assert.equal(p.data,null);p.play();p.seek(10);assert.equal(c.size,0);
 });
+test('normalized progress is read-only, finite and preserves the one-unit-per-stitch position API',async()=>{
+ const [{StitchPlayer}]=await modules,p=new StitchPlayer(clock());
+ assert.equal(p.normalizedProgress,0);assert.equal(p.getNormalizedProgress(),0);assert.equal(p.state.normalizedProgress,0);
+ p.loadStitchDemo(read('content/stitch-demos/demo-tao-basic.json'));assert.equal(p.normalizedProgress,0);
+ p.seek(12);assert.equal(p.position,12);assert.equal(p.getNormalizedProgress(),.5);assert.equal(p.state.normalizedProgress,.5);
+ p.seek(24);assert.equal(p.position,24);assert.equal(p.normalizedProgress,1);
+ p.position=Infinity;assert.equal(p.normalizedProgress,0);p.position=NaN;assert.equal(p.normalizedProgress,0);p.dispose();
+});
 test('speed ratios, point toggle and arbitrary future stitch-santao ID are independent of UI',async()=>{
  const [{StitchPlayer}]=await modules,c=clock(),p=new StitchPlayer(c),demo=read('content/stitch-demos/demo-straight-basic.json');
  demo.id='future-fixture';demo.knowledgeId='stitch-santao';p.loadStitchDemo(demo);

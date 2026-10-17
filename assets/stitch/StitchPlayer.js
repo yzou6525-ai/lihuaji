@@ -22,8 +22,10 @@ export class StitchPlayer {
   }
   get state() {
     const total = this.data?.stitches.length || 0;
-    return {id:this.data?.id || null, position:this.position, total, current:Math.min(total, Math.ceil(this.position)), completed:Math.floor(this.position), playing:this.playing, speed:this.speed, showPoints:this.showPoints, disposed:this.disposed, pendingFrame:this.raf !== null};
+    return {id:this.data?.id || null, position:this.position, normalizedProgress:this.normalizedProgress, total, current:Math.min(total, Math.ceil(this.position)), completed:Math.floor(this.position), playing:this.playing, speed:this.speed, showPoints:this.showPoints, disposed:this.disposed, pendingFrame:this.raf !== null};
   }
+  get normalizedProgress() { const total=this.data?.stitches.length||0;return total&&Number.isFinite(this.position)?Math.max(0,Math.min(1,this.position/total)):0; }
+  getNormalizedProgress() { return this.normalizedProgress; }
   notify() { if (!this.disposed) this.onChange(this.state); }
   loadStitchDemo(data) {
     if (this.disposed) return;

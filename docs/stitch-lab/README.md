@@ -261,3 +261,40 @@ node scripts/suxiu-acceptance.cjs
 ### 边界
 
 本版是二维针迹基础上的数字工艺展示，局部线条仍有程序几何感；不模拟实物张力、手势、背面过线或真实布料形变。390×844 是浏览器视口测试，未等同于实体手机性能验证。WebGL 丢失时提示重新进入页面，不声称自动恢复图形上下文。**本轮没有修改 MindAR / AR tracking，没有接入摄像头或开始下一阶段。**
+
+## 数字刺绣阅读能力 V4
+
+日期：2026-10-17。此轮只扩展现有 Stitch Lab 的完整针迹计划与画布阅读操作，不增加针法、页面或 renderer。
+
+### Stitch Plan
+
+“显示完整针迹计划”默认关闭，与速度、针落点选项同组。加载练习时建立一份独立的完整计划 BufferGeometry；颜色属性含逐顶点 alpha，未完成针迹使用共享丝线 CanvasTexture 和 0.14 的低透明度，已完成针迹透明度归零。播放主 mesh 继续通过原 drawRange 和当前 partial segment 显示；计划 mesh 不共享其 drawRange。针落点仍只属于真实播放进度。开关只切换 mesh.visible，不创建或释放几何，也不修改播放器状态。
+
+### Zoom、Pan 与 Fit
+
+StitchRenderer 仍使用原来的单一 WebGLRenderer、canvas、scene 和 OrthographicCamera。视图状态集中保存在 renderer：`zoom` 限制在 0.8–5，`panX` / `panY` 使用数据坐标；滚轮与双指缩放根据指针或两指中点锚定画面，鼠标/单指拖动画布平移。“适合画布”会依据当前数据 bounds 恢复 `zoom=1, panX=0, panY=0`，不改变播放进度。画布双击也可 Fit。切换练习后自动 Fit；窗口尺寸变化仅更新正交 frustum，保留用户当前 zoom 与 pan。
+
+触摸手势通过局部 Pointer Events 实现。`touch-action:none` 只应用于针迹 canvas；canvas 外的页面滚动保持浏览器默认行为。显影播放时保存普通阅读视图，临时隐藏计划 mesh 并锁定画布手势；返回逐针时恢复原计划开关、zoom 和 pan。计划偏好本身没有被改写。
+
+### 进度与只读诊断
+
+`StitchPlayer.normalizedProgress` 与 `getNormalizedProgress()` 返回有限的 0–1 值，沿用现有 `position`（一单位一针），不修改 SantaoTimeline 的秒级显影时间轴。`window.lihuaStitchDiagnostics()` 增加 `view`、计划 geometry/ghost 数量、计划显示/抑制状态和视图锁定状态，不记录个人信息。
+
+### V4 验收
+
+完整验收扩展在 `scripts/stitch-acceptance.cjs`。浏览器截图由真实运行页面生成：
+
+- [22 完整 56 针计划](validation/22-plan-full.png)
+- [23 第 28.5 针与剩余计划](validation/23-plan-progress-28.png)
+- [24 约 200% 缩放](validation/24-zoom-200.png)
+- [25 平移局部](validation/25-pan-detail.png)
+- [26 Fit 恢复](validation/26-fit-restored.png)
+- [27 针落点与计划](validation/27-plan-points.png)
+- [28 移动端工具，390×844](validation/28-mobile-tools.png)
+- [29 显影中计划隐藏](validation/29-cinematic-plan-hidden.png)
+
+测试覆盖 0/28.5/42/56 针、计划开关不改进度、主 mesh partial drawRange、滚轮及鼠标拖动、单指/双指 Pointer 手势、Fit 不改播放、四种练习切换自动 Fit、视图 resize、显影五次进出并恢复，以及 20 次计划切换、20 次缩放/平移/Fit 和 12 次练习切换的资源计数。模拟触摸由浏览器 PointerEvent 验证，`physicalTouchDeviceVerified=false`。
+
+本地 Edge/Playwright 验收不使用 Browser 插件（当前会话未提供）。课程专题与针法影像只做原功能回归，没有更改课程数据、标题、目录、iframe 或官方来源。47 项自动测试通过，静态站构建通过；Stitch Lab、显影及 AR/页面回归均通过。计划打开时资源稳定为 3 geometries / 1 texture，关闭计划时为 2 / 1；20 次显隐和 20 次视图操作不增长；显影 5 次进入退出恢复到逐针视图资源基线，离页归零。AR-Santao 使用合成相机流通过 MindAR 回归，非真实手机验收。AR 实现、MindAR、识别卡、targets.mind、散套 56 针 JSON 和 11 秒 SantaoTimeline 均未修改。
+
+开源参考与许可边界见 [OPEN-SOURCE-INSPIRATION.md](OPEN-SOURCE-INSPIRATION.md)：Bastidor、Ink/Stitch 和 dst-format 只作交互/技术概念参考，Copied code 均为 None；没有新增第三方依赖。

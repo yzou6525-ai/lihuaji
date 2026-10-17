@@ -25,7 +25,7 @@ export function mountStitchLab(root) {
     <div id="lab-ordinary-controls"><div class="lab-progress"><span id="lab-count" aria-live="polite">当前第 0 针 / 共 0 针</span><span id="lab-batch" class="small" hidden></span><span id="lab-percent">0%</span></div>
     <label>逐针进度<input id="lab-scrubber" type="range" min="0" max="1" step="0.01" value="0" disabled></label>
     <div class="lab-controls"><button id="lab-previous" disabled>上一针</button><button id="lab-play" class="primary" disabled>播放</button><button id="lab-next" disabled>下一针</button><button id="lab-restart" disabled>重播</button></div>
-    <div class="lab-options"><label>速度<select id="lab-speed"><option value="0.5">0.5x</option><option value="1" selected>1x</option><option value="1.5">1.5x</option></select></label><label><input id="lab-points" type="checkbox">显示针落点</label></div></div>
+    <div class="lab-options"><label>速度<select id="lab-speed"><option value="0.5">0.5x</option><option value="1" selected>1x</option><option value="1.5">1.5x</option></select></label><label><input id="lab-points" type="checkbox">显示针落点</label><label><input id="lab-plan" type="checkbox">显示完整针迹计划</label><span class="lab-view-tools"><button id="lab-fit" type="button">适合画布</button><span id="lab-zoom" class="small" aria-live="polite">视图 100%</span></span></div></div>
     <p id="lab-status" role="status">正在加载练习…</p><div class="lab-knowledge" id="lab-knowledge"></div>
     <p class="lab-note" id="lab-authenticity">针迹动画为《梨花季》数字练习示意，用于理解路径与先后关系，不替代真实刺绣教学，未经苏绣专家人工审定。</p><p class="lab-note" id="lab-color-note" hidden></p>`;
   const $=selector=>root.querySelector(selector),stage=$('#lab-canvas');stage.style.cssText='width:100%;height:100%';
@@ -37,7 +37,7 @@ export function mountStitchLab(root) {
     const group=player.data?.stitches[Math.max(0,state.current-1)]?.group;
     const batch=player.data?.batches?.find(b=>b.group===group);
     $('#lab-batch').hidden=!batch;$('#lab-batch').textContent=batch?.label || '';
-    $('#lab-percent').textContent=(state.total?Math.round(state.position/state.total*100):0)+'%';
+    $('#lab-percent').textContent=Math.round(state.normalizedProgress*100)+'%';
     $('#lab-scrubber').max=String(state.total || 1);$('#lab-scrubber').value=String(state.position);
     $('#lab-scrubber').setAttribute('aria-valuetext',`第 ${state.current} 针，共 ${state.total} 针`);
     $('#lab-play').textContent=state.playing?'暂停':state.position===state.total&&state.total?'重新播放':'播放';
@@ -105,6 +105,7 @@ export function mountStitchLab(root) {
   $('#lab-play').onclick=()=>ordinary(()=>player.playing?player.pause():player.play());$('#lab-restart').onclick=()=>ordinary(()=>player.restart());
   $('#lab-next').onclick=()=>ordinary(()=>player.next());$('#lab-previous').onclick=()=>ordinary(()=>player.previous());
   $('#lab-scrubber').oninput=e=>{const value=Number(e.target.value);ordinary(()=>player.seek(value));};$('#lab-speed').onchange=e=>ordinary(()=>player.setSpeed(Number(e.target.value)));$('#lab-points').onchange=e=>ordinary(()=>player.setPoints(e.target.checked));
+  $('#lab-plan').onchange=e=>ordinary(()=>renderer?.setPlanVisible(e.target.checked));$('#lab-fit').onclick=()=>ordinary(()=>renderer?.fitToData());
   $('#lab-cinema-start').onclick=startCinema;$('#lab-cinema-exit').onclick=leaveCinema;
   $('#lab-cinema-play').onclick=()=>{if(cinema){if(cinema.timeline.playing)cinema.pause();else cinema.resume();}};
   $('#lab-cinema-restart').onclick=()=>cinema?.restart();$('#lab-cinema-scrubber').oninput=e=>cinema?.seek(Number(e.target.value));
@@ -115,11 +116,11 @@ export function mountStitchLab(root) {
     root.querySelectorAll('button,input,select').forEach(el=>{el.onclick=null;el.oninput=null;el.onchange=null;});
   };
   window.addEventListener('pagehide',dispose);
-  const diagnostic=()=>({alive,loading,owner:cinema?'cinematic':'ordinary',cinemaStarting,cinema:cinema?.diagnostics()||lastCinema,player:player.state,render:renderer?.diagnostics()||null});
+  const diagnostic=()=>({alive,loading,owner:cinema?'cinematic':'ordinary',cinemaStarting,cinema:cinema?.diagnostics()||lastCinema,player:player.state,view:renderer?.getViewState()||{zoom:1,panX:0,panY:0,planVisible:false},render:renderer?.diagnostics()||null});
   // Read-only diagnostics, no cameras, story content or user records.
   window.lihuaStitchDiagnostics=diagnostic;
   import('./stitch/StitchRenderer.js').then(async({StitchRenderer})=>{
-    if(!alive)return;renderer=new StitchRenderer(stage);
+    if(!alive)return;renderer=new StitchRenderer(stage);renderer.onViewChange=view=>{$('#lab-zoom').textContent=`视图 ${Math.round(view.zoom*100)}%`;$('#lab-plan').checked=view.planVisible;};
     renderer.renderer.domElement.addEventListener('webglcontextlost',e=>{if(!alive)return;e.preventDefault();loading=true;pause();$('#lab-cinema-start').disabled=true;$('#lab-cinema-controls').querySelectorAll('button,input').forEach(el=>el.disabled=true);$('#lab-status').textContent='图形资源已暂停，请重新进入本页面。';$('#lab-status').className='lab-error';root.classList.remove('lab-cinematic-active');});
     observer=new IntersectionObserver(entries=>{if(!entries[0].isIntersecting)pause();});observer.observe(root);
     await load($('#lab-demo').value);
