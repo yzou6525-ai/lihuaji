@@ -1,0 +1,81 @@
+{
+  "ok": true,
+  "target": "local",
+  "durationMs": 11061,
+  "representatives": [
+    1,
+    32,
+    46
+  ],
+  "checks": [
+    "0/2.5/5/7.5/9.5/11秒真实截图，松线/收紧截图；独立进度条可反向恢复，普通播放器无RAF",
+    "真实完整播放约11秒、暂停继续重播、结束自动停止，普通上一针恢复到55且显影销毁",
+    "5次进入/退出显影资源稳定，换练习销毁显影并恢复原模式",
+    "播放中离页取消全部RAF并释放图形资源",
+    "390×844无溢出，5秒套入可见，暂停/回看/返回逐针可操作",
+    "减少动态偏好初始暂停；显影模块失败保留普通56针播放",
+    "慢加载显影时离页不复活；WebGL丢失后暂停且禁用继续播放"
+  ],
+  "samples": [
+    {
+      "cycle": 0,
+      "active": {
+        "geometries": 7,
+        "textures": 2
+      },
+      "after": {
+        "geometries": 2,
+        "textures": 1
+      }
+    },
+    {
+      "cycle": 1,
+      "active": {
+        "geometries": 7,
+        "textures": 2
+      },
+      "after": {
+        "geometries": 2,
+        "textures": 1
+      }
+    },
+    {
+      "cycle": 2,
+      "active": {
+        "geometries": 7,
+        "textures": 2
+      },
+      "after": {
+        "geometries": 2,
+        "textures": 1
+      }
+    },
+    {
+      "cycle": 3,
+      "active": {
+        "geometries": 7,
+        "textures": 2
+      },
+      "after": {
+        "geometries": 2,
+        "textures": 1
+      }
+    },
+    {
+      "cycle": 4,
+      "active": {
+        "geometries": 7,
+        "textures": 2
+      },
+      "after": {
+        "geometries": 2,
+        "textures": 1
+      }
+    }
+  ],
+  "errors": [],
+  "limits": [
+    "针尖运动及空间高度为数字示意，不是MoCap或真实物理",
+    "390×844为浏览器视口，不是实体手机性能测试"
+  ]
+}

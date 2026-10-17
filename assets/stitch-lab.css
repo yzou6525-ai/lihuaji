@@ -17,6 +17,13 @@
 #stitch-lab .lab-note{padding-top:16px;border-top:1px solid var(--line);font-size:12px;line-height:1.9}
 #stitch-lab .lab-knowledge{font-size:13px}
 #stitch-lab .lab-error{color:#963e32}
+#stitch-lab #lab-cinematic{margin:16px 0 24px}
+#stitch-lab .lab-cinema-caption{display:flex;justify-content:space-between;align-items:center;gap:12px}
+#stitch-lab .lab-cinema-caption p{margin:4px 0}
+#stitch-lab #lab-cinema-time{white-space:nowrap;font-variant-numeric:tabular-nums}
+#stitch-lab #lab-cinema-caption{font-family:var(--serif);font-size:18px}
+#stitch-lab.lab-cinematic-active #lab-authenticity,#stitch-lab.lab-cinematic-active #lab-color-note,#stitch-lab.lab-cinematic-active #lab-status{display:none!important}
+#stitch-lab:not(.lab-cinematic-active) .lab-cinema-note{display:none}
 #stitch-lab [hidden]{display:none!important}
 #official-videos{margin-top:35px}
 #official-videos .video-card,#main .video-card{min-width:0}

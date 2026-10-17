@@ -13,17 +13,26 @@ export function mountStitchLab(root) {
   ensureStitchStyles();
   root.innerHTML=`<div class="lab-heading"><div><h2>数字针迹实验室</h2><p class="small">数字练习示意 · 一针一针，看路径如何形成。</p></div><label>选择练习<select id="lab-demo">${demoCatalogue.map(d=>`<option value="${d.id}">${d.title}</option>`).join('')}</select></label></div>
     <div class="lab-stage"><div id="lab-canvas"></div><span class="lab-empty">正在准备数字针迹…</span></div>
-    <div class="lab-progress"><span id="lab-count" aria-live="polite">当前第 0 针 / 共 0 针</span><span id="lab-batch" class="small" hidden></span><span id="lab-percent">0%</span></div>
+    <div id="lab-cinematic" hidden>
+      <button id="lab-cinema-start" class="primary">播放数字显影</button>
+      <div id="lab-cinema-controls" hidden>
+        <div class="lab-cinema-caption"><div><p id="lab-cinema-caption"></p><p id="lab-cinema-detail" class="small"></p></div><span id="lab-cinema-time" class="small">0.0 / 11.0 秒</span></div>
+        <label>数字显影进度<input id="lab-cinema-scrubber" type="range" min="0" max="11" step="0.01" value="0"></label>
+        <div class="lab-controls"><button id="lab-cinema-play">暂停显影</button><button id="lab-cinema-restart">重播显影</button><button id="lab-cinema-exit">返回逐针</button></div>
+      </div>
+      <p class="lab-note lab-cinema-note">本体验依据《梨花季》已核验的散套针公开资料进行数字工艺示意。梨花瓣造型、56条示意针迹、针尖运动、空间高度及动画时间均为项目数字视觉设计，并非某件历史苏绣作品的逐针复原，未经苏绣专家人工审定。<br>高亮仅用于数字结构说明，不代表真实丝线配色。</p>
+    </div>
+    <div id="lab-ordinary-controls"><div class="lab-progress"><span id="lab-count" aria-live="polite">当前第 0 针 / 共 0 针</span><span id="lab-batch" class="small" hidden></span><span id="lab-percent">0%</span></div>
     <label>逐针进度<input id="lab-scrubber" type="range" min="0" max="1" step="0.01" value="0" disabled></label>
     <div class="lab-controls"><button id="lab-previous" disabled>上一针</button><button id="lab-play" class="primary" disabled>播放</button><button id="lab-next" disabled>下一针</button><button id="lab-restart" disabled>重播</button></div>
-    <div class="lab-options"><label>速度<select id="lab-speed"><option value="0.5">0.5x</option><option value="1" selected>1x</option><option value="1.5">1.5x</option></select></label><label><input id="lab-points" type="checkbox">显示针落点</label></div>
+    <div class="lab-options"><label>速度<select id="lab-speed"><option value="0.5">0.5x</option><option value="1" selected>1x</option><option value="1.5">1.5x</option></select></label><label><input id="lab-points" type="checkbox">显示针落点</label></div></div>
     <p id="lab-status" role="status">正在加载练习…</p><div class="lab-knowledge" id="lab-knowledge"></div>
     <p class="lab-note" id="lab-authenticity">针迹动画为《梨花季》数字练习示意，用于理解路径与先后关系，不替代真实刺绣教学，未经苏绣专家人工审定。</p><p class="lab-note" id="lab-color-note" hidden></p>`;
   const $=selector=>root.querySelector(selector),stage=$('#lab-canvas');stage.style.cssText='width:100%;height:100%';
-  let alive=true,renderer=null,ticket=0,request=null,loading=true,observer=null;
+  let alive=true,renderer=null,ticket=0,request=null,loading=true,observer=null,cinema=null,cinemaEpoch=0,cinemaStarting=false,lastCinema=null;
   const player=new StitchPlayer({onChange:state=>{
     if(!alive)return;
-    renderer?.update(state);
+    if(!cinema)renderer?.update(state);
     $('#lab-count').textContent=`当前第 ${state.current} 针 / 共 ${state.total} 针`;
     const group=player.data?.stitches[Math.max(0,state.current-1)]?.group;
     const batch=player.data?.batches?.find(b=>b.group===group);
@@ -35,9 +44,40 @@ export function mountStitchLab(root) {
     $('#lab-play').setAttribute('aria-pressed',String(state.playing));
     for(const id of ['lab-play','lab-restart','lab-scrubber'])$('#'+id).disabled=loading||!state.total;
     $('#lab-previous').disabled=loading||state.position<=0;$('#lab-next').disabled=loading||state.position>=state.total;
-    $('.lab-empty').hidden=state.position>0;$('.lab-empty').textContent='点击播放，或从下一针开始。';
+    $('.lab-empty').hidden=!!cinema||state.position>0;$('.lab-empty').textContent='点击播放，或从下一针开始。';
   }});
+  function leaveCinema(){
+    cinemaEpoch++;cinemaStarting=false;
+    if(cinema){cinema.dispose();lastCinema=cinema.diagnostics();cinema=null;}
+    root.classList.remove('lab-cinematic-active');
+    $('#lab-cinema-controls').hidden=true;$('#lab-cinema-start').hidden=false;$('#lab-cinema-start').disabled=loading;
+    $('#lab-ordinary-controls').hidden=false;player.notify();
+  }
+  async function startCinema(){
+    if(loading||cinemaStarting||!renderer||player.data?.id!=='demo-santao-pear-petal')return;
+    if(cinema){cinema.restart();return;}
+    player.pause();const epoch=++cinemaEpoch;cinemaStarting=true;$('#lab-cinema-start').disabled=true;
+    try{
+      const {SantaoExperience}=await import('./stitch/SantaoExperience.js');
+      if(!alive||epoch!==cinemaEpoch||player.data?.id!=='demo-santao-pear-petal')return;
+      cinema=new SantaoExperience(renderer,player.data,{onChange:state=>{
+        if(!alive)return;
+        $('#lab-cinema-caption').textContent=state.caption;$('#lab-cinema-detail').textContent=state.detail;
+        $('#lab-cinema-time').textContent=state.time.toFixed(1)+' / 11.0 秒';$('#lab-cinema-scrubber').value=String(state.time);
+        $('#lab-cinema-scrubber').setAttribute('aria-valuetext',`${state.time.toFixed(1)}秒，${state.caption}，${state.detail}`);
+        $('#lab-cinema-play').textContent=state.playing?'暂停显影':state.time>=11?'重新显影':'继续显影';$('#lab-cinema-play').setAttribute('aria-pressed',String(state.playing));
+        $('#lab-ordinary-controls').hidden=state.time<11;
+        if(state.time>=11&&player.position!==56)player.seek(56);
+      }});
+      cinemaStarting=false;root.classList.add('lab-cinematic-active');$('#lab-cinema-start').hidden=true;$('#lab-cinema-controls').hidden=false;$('.lab-empty').hidden=true;
+      // Reduced-motion visitors can scrub the same complete experience without autoplay.
+      if(matchMedia('(prefers-reduced-motion: reduce)').matches)cinema.seek(0);else cinema.start();
+    }catch{
+      if(alive&&epoch===cinemaEpoch){leaveCinema();$('#lab-status').textContent='数字显影暂未载入，可继续逐针查看，或重新点击播放数字显影。';}
+    }finally{if(alive&&epoch===cinemaEpoch){cinemaStarting=false;$('#lab-cinema-start').disabled=false;}}
+  }
   async function load(id) {
+    leaveCinema();$('#lab-cinematic').hidden=true;
     const current=++ticket;request?.abort();request=new AbortController();loading=true;player.pause();$('#lab-knowledge').replaceChildren();
     $('#lab-status').textContent='正在加载练习…';$('#lab-status').className='';
     try {
@@ -46,6 +86,7 @@ export function mountStitchLab(root) {
       if(!response.ok)throw Error('针迹资料暂时未载入，请重新选择练习或稍后重试。');
       const data=await response.json();if(!alive||ticket!==current)return;
       player.loadStitchDemo(data);renderer.load(player.data);loading=false;player.notify();
+      $('#lab-cinematic').hidden=data.id!=='demo-santao-pear-petal';$('#lab-cinema-start').disabled=false;
       $('#lab-authenticity').textContent=data.authenticityNote || '针迹动画为《梨花季》数字练习示意，用于理解路径与先后关系，不替代真实刺绣教学，未经苏绣专家人工审定。';
       $('#lab-color-note').textContent=data.colorNote || '';$('#lab-color-note').hidden=!data.colorNote;
       $('#lab-status').textContent=data.title+' · 项目自编练习';
@@ -60,22 +101,26 @@ export function mountStitchLab(root) {
     }catch(error){if(alive&&ticket===current&&error.name!=='AbortError'){loading=true;player.pause();$('#lab-status').className='lab-error';$('#lab-status').textContent=error instanceof SyntaxError?'针迹 JSON 损坏，请选择其他练习。':error.message;}}
   }
   $('#lab-demo').onchange=e=>{if(renderer)load(e.target.value);};
-  $('#lab-play').onclick=()=>player.playing?player.pause():player.play();$('#lab-restart').onclick=()=>player.restart();
-  $('#lab-next').onclick=()=>player.next();$('#lab-previous').onclick=()=>player.previous();
-  $('#lab-scrubber').oninput=e=>player.seek(Number(e.target.value));$('#lab-speed').onchange=e=>player.setSpeed(Number(e.target.value));$('#lab-points').onchange=e=>player.setPoints(e.target.checked);
-  const pause=()=>player.pause(),visibility=()=>{if(document.hidden)pause();};document.addEventListener('visibilitychange',visibility);
+  const ordinary=action=>{if(cinema||cinemaStarting)leaveCinema();action();};
+  $('#lab-play').onclick=()=>ordinary(()=>player.playing?player.pause():player.play());$('#lab-restart').onclick=()=>ordinary(()=>player.restart());
+  $('#lab-next').onclick=()=>ordinary(()=>player.next());$('#lab-previous').onclick=()=>ordinary(()=>player.previous());
+  $('#lab-scrubber').oninput=e=>{const value=Number(e.target.value);ordinary(()=>player.seek(value));};$('#lab-speed').onchange=e=>ordinary(()=>player.setSpeed(Number(e.target.value)));$('#lab-points').onchange=e=>ordinary(()=>player.setPoints(e.target.checked));
+  $('#lab-cinema-start').onclick=startCinema;$('#lab-cinema-exit').onclick=leaveCinema;
+  $('#lab-cinema-play').onclick=()=>{if(cinema){if(cinema.timeline.playing)cinema.pause();else cinema.resume();}};
+  $('#lab-cinema-restart').onclick=()=>cinema?.restart();$('#lab-cinema-scrubber').oninput=e=>cinema?.seek(Number(e.target.value));
+  const pause=()=>{cinema?.pause();player.pause();},visibility=()=>{if(document.hidden)pause();};document.addEventListener('visibilitychange',visibility);
   const dispose=()=>{
-    if(!alive)return;alive=false;ticket++;request?.abort();observer?.disconnect();player.dispose();renderer?.dispose();
+    if(!alive)return;alive=false;ticket++;cinemaEpoch++;request?.abort();observer?.disconnect();cinema?.dispose();if(cinema)lastCinema=cinema.diagnostics();cinema=null;player.dispose();renderer?.dispose();
     document.removeEventListener('visibilitychange',visibility);window.removeEventListener('pagehide',dispose);
     root.querySelectorAll('button,input,select').forEach(el=>{el.onclick=null;el.oninput=null;el.onchange=null;});
   };
   window.addEventListener('pagehide',dispose);
-  const diagnostic=()=>({alive,loading,player:player.state,render:renderer?.diagnostics()||null});
+  const diagnostic=()=>({alive,loading,owner:cinema?'cinematic':'ordinary',cinemaStarting,cinema:cinema?.diagnostics()||lastCinema,player:player.state,render:renderer?.diagnostics()||null});
   // Read-only diagnostics, no cameras, story content or user records.
   window.lihuaStitchDiagnostics=diagnostic;
   import('./stitch/StitchRenderer.js').then(async({StitchRenderer})=>{
     if(!alive)return;renderer=new StitchRenderer(stage);
-    renderer.renderer.domElement.addEventListener('webglcontextlost',e=>{if(!alive)return;e.preventDefault();loading=true;player.pause();$('#lab-status').textContent='图形资源已暂停，请重新进入本页面。';});
+    renderer.renderer.domElement.addEventListener('webglcontextlost',e=>{if(!alive)return;e.preventDefault();loading=true;pause();$('#lab-cinema-start').disabled=true;$('#lab-cinema-controls').querySelectorAll('button,input').forEach(el=>el.disabled=true);$('#lab-status').textContent='图形资源已暂停，请重新进入本页面。';$('#lab-status').className='lab-error';root.classList.remove('lab-cinematic-active');});
     observer=new IntersectionObserver(entries=>{if(!entries[0].isIntersecting)pause();});observer.observe(root);
     await load($('#lab-demo').value);
   }).catch(()=>{if(alive){player.pause();renderer?.dispose();$('#lab-status').textContent='Three.js 或 WebGL 未能启动，请刷新或换用支持 WebGL 的浏览器。下方基础练习和官方影像仍可阅读。';$('#lab-status').className='lab-error';$('.lab-empty').textContent='数字画面暂不可用';}});

@@ -1,0 +1,188 @@
+{
+  "date": "2026-10-17",
+  "baseCommit": "6608f3322598e748f87d46c157f89f98c287b11b",
+  "unitTests": {
+    "passed": 36,
+    "failed": 0
+  },
+  "build": "passed",
+  "dataChanged": false,
+  "arFilesChanged": false,
+  "ordinaryStitch": {
+    "ok": true,
+    "target": "local",
+    "checks": [
+      "play/pause/next/previous/restart、三档速度、0/中间/100%进度、回退消失、部分针段与针落点开关",
+      "三套数据载入成功，套针/滚针知识档案直接引用正式知识库",
+      "散套56针：28/42/56截图、28.1/42.1标签、112针落点、逐针/三档速度/自动结束/重播暂停、正式散套档案及真实性文案",
+      "16次四套数据切换几何/纹理数量不增长，旧练习无散套标签残留；3次播放中离页RAF取消、几何/纹理计数归零",
+      "4个视频、1门课程、1条延伸阅读，仅外链，无视频元素、iframe或第三方封面",
+      "7个指定查询命中官方影像，原知识搜索结果并存",
+      "390×844手机视口控制可操作，实验室/官方影像均无横向溢出",
+      "散套390×844截图、进度/逐针/播放暂停/调速/针落点可操作，无横向溢出（非实体手机）",
+      "损坏JSON不影响原练习且可换练习恢复；Three模块失败有提示；影像503可重试；慢加载离页不会复活"
+    ],
+    "resourceSamples": [
+      {
+        "cycle": 0,
+        "resources": {
+          "geometries": 2,
+          "textures": 1
+        }
+      },
+      {
+        "cycle": 1,
+        "resources": {
+          "geometries": 2,
+          "textures": 1
+        }
+      },
+      {
+        "cycle": 2,
+        "resources": {
+          "geometries": 2,
+          "textures": 1
+        }
+      },
+      {
+        "cycle": 3,
+        "resources": {
+          "geometries": 2,
+          "textures": 1
+        }
+      },
+      {
+        "exit": 0,
+        "resources": {
+          "geometries": 0,
+          "textures": 0
+        }
+      },
+      {
+        "exit": 1,
+        "resources": {
+          "geometries": 0,
+          "textures": 0
+        }
+      },
+      {
+        "exit": 2,
+        "resources": {
+          "geometries": 0,
+          "textures": 0
+        }
+      }
+    ],
+    "queries": [
+      "苏绣 视频",
+      "姚惠芬",
+      "套针",
+      "滚针",
+      "打籽",
+      "梅花",
+      "蒋雪英"
+    ],
+    "links": [
+      {
+        "url": "https://tv.cctv.com/2019/04/10/VIDEZh3UD0beJiJrLJDVXeV9190410.shtml",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "url": "https://tv.cctv.com/v/v1/VIDES4sb3WAjpaImxxoSAtdQ190501.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "url": "https://tv.cctv.com/2018/06/14/VIDEfObG0X1Q9vANAKqdJDfh180614.shtml",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "url": "https://www.icourse163.org/course/SGMART-1206997809",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "url": "https://szfy.wglj.suzhou.com.cn/2025yxyp/detail.php?id=2",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "url": "https://szfy.wglj.suzhou.com.cn/index.php/fy-project/8",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      }
+    ],
+    "errors": [],
+    "limits": [
+      "移动测试为桌面浏览器390×844视口，不等于实体手机全机型验证",
+      "外部来源仅核验网页/公开目录；未播放或下载第三方视频"
+    ]
+  },
+  "regressions": [
+    {
+      "name": "ar",
+      "ok": true,
+      "errors": [],
+      "checks": [
+        "home 手机布局与页面载入",
+        "library 手机布局与页面载入",
+        "create 手机布局与页面载入",
+        "gallery 手机布局与页面载入",
+        "game 手机布局与页面载入",
+        "guide 手机布局与页面载入",
+        "palette 手机布局与页面载入",
+        "profile 手机布局与页面载入",
+        "about 手机布局与页面载入",
+        "face 手机布局与页面载入",
+        "两种渲染方式预热后多次切换单图与分层目标，几何与纹理数量均不增长",
+        "单层缺图仍可显示其余五层并正常收拢"
+      ]
+    },
+    {
+      "name": "story",
+      "ok": true,
+      "errors": [],
+      "checks": [
+        "故事产生三套候选、可换版和选择，人工增纹换色被记录",
+        "SVG可解析、相同创作过程含模型边界、候选历史、人工修改和可复核哈希",
+        "现有译绣可生成并实际下载SVG、CSV、完整过程JSON，输出哈希一致",
+        "我的作品进入五层绣境；真实MindAR匹配梨花定位卡后承载作品，未伪装成识别生成图",
+        "载入资源后断网，故事规则生成到译绣仍能完成；390px无横向溢出",
+        "原梨花识别目标仍真实匹配成功",
+        "原纹样库保留，牡丹详情下方增加来源注解"
+      ]
+    },
+    {
+      "name": "library",
+      "ok": true,
+      "errors": [],
+      "checks": [
+        "统一纹样库数量与分页正确",
+        "528张新增展示图及缩略图实际解码成功",
+        "九个文化地区筛选数量正确",
+        "馆藏编号检索、原作资料、出处和许可详情可用",
+        "新纹样进入现有译绣并实际下载带来源的SVG",
+        "390px手机布局无横向溢出，滚动载入的卡片图片正常",
+        "祥云配对挑战直接使用统一目录中的新增图片"
+      ]
+    },
+    {
+      "name": "suxiu",
+      "ok": true,
+      "errors": [],
+      "checks": [
+        "12个关键词在知识手册和顶部搜索均找到预期首条记录，官方结果优先",
+        "套针分型关系可点击进入散套，稳定ID深链接可用",
+        "完整九工序顺序可查看与跳转",
+        "乱针绣体系与常州扩展项目分别展示",
+        "原文创与纹样搜索保留",
+        "390px标准长标题、来源链接与展开资料无横向溢出",
+        "已加载后断网仍可搜索缓存资料",
+        "资料503时保留练习说明，恢复后可重试",
+        "慢速加载时切换首页不会被旧知识页覆盖"
+      ]
+    }
+  ]
+}

@@ -202,3 +202,62 @@ node scripts/suxiu-acceptance.cjs
 已逐张查看28、42、56针、针落点及390px截图，并据上述问题迭代坐标。当前可见第一批不齐内缘、后两批在原组织内部增加针段、最终上宽下窄的单瓣轮廓。最终审美与工艺判断仍由用户及后续专家审核，不能用自动测试代替。
 
 当前用直线四边形表达表面丝线，局部间隙和几何感仍在；没有真实丝线的柔软、张力、圆弧、背面过线或物理光照。没有历史作品或专家逐针标注可比对，不能称为真实/标准梨花绣法。本轮止于数据原型，不追加针模型、11秒动画、纹理融合、摄像头或AR接入。复用Three.js及原MIT许可，无新增第三方代码或素材。
+
+## 散套针 · 梨花一瓣数字显影 V1
+
+2026-10-17，基于 `6608f3322598e748f87d46c157f89f98c287b11b` 增量实现。在原“数字针迹实验室”选择散套练习后，点击“播放数字显影”。首页、导航、其他练习及 AR 追踪保持原样。本节描述 V1，前述 V0 的阶段限制保留为版本记录。
+
+### 文件与架构
+
+新增 `assets/stitch/SantaoExperience.js`、`assets/stitch/SantaoTimeline.js`、`scripts/santao-cinematic.test.cjs`、`scripts/santao-cinematic-acceptance.cjs`；修改 `assets/stitch-lab.js`、`assets/stitch-lab.css`、`package.json` 及本说明。新截图与测试记录位于 `validation/13` 至 `21`、`cinematic-report.json`、`cinematic-regressions.json`。无新增第三方依赖，继续使用现有 Three.js 与其 MIT 许可证。
+
+`SantaoExperience` 借用原 renderer、相机和丝线纹理，拥有一个独立展示 Group。包含完成面、轮廓、针杆/针尖和动态丝线。显影期间原播放器暂停，只有显影更新场景；退出后恢复普通线宽、颜色、透明度、相机与裁剪配置。没有第二个 renderer 或 canvas。
+
+`SantaoTimeline` 将时间映射为纯状态，可从任意时间重建画面，不依赖累积播放。控制 start/pause/resume/seek/restart/dispose，只有一个 requestAnimationFrame。切换练习、离页、页面隐藏及离开视口均处理暂停或销毁；慢加载后离页不会重新挂载。减少动态偏好下先暂停，用户可主动播放。
+
+### 56 针与代表针
+
+**未修改或重新生成基础 56 针数据**，仍为 28/14/14。JSON 统一 LF 后 SHA-256：`92af2e12212dd652767d79b8f758ca3da314dab02ac1f942345e9bf1d0fa1d31`，自动测试固定验证。
+
+代表针实际 order 为 **1、32、46**。第二、三批选用同批内稍靠内部的针，使“套入”发生在可见的旧丝线组织内部；没有改变坐标、数据 order 或普通逐针顺序。显影只先展示该代表针，再填入同批其余针，其他 53 针各出现一次。每批最终仍严格 28、14、14。
+
+针杆为八面圆柱，针尖为八面圆锥，总长度 12 个示意坐标单位；用浅灰无金属高光材质及表面裁剪表达出入针。每条重点针均包含出针、抬针、行针、入针、拉线。高度、动作、角度及时间为数字设计，**不是 MoCap、历史复原或专家逐针数据**。
+
+松弛丝线使用二次 Bézier，控制点带少量侧向弯曲和高度。沿曲线采样为 12 段动态三角形 ribbon，复用普通模式丝线纹理；拉线时控制点回到两端中点，收紧为表面针迹。没有绳索物理，也没有重型 TubeGeometry。完成面由现有针迹方向生成原创细纤维纹理，开始自然淡出，结尾自然淡回，不冒充真实作品照片。
+
+### 11 秒实际时间轴
+
+|秒|阶段|
+|---|---|
+|0–1|完整梨花瓣完成面|
+|1–2|完成面淡出，保留轮廓|
+|2–3.2|第 1 针完整动作|
+|3.2–4.5|补齐第一批 28 针|
+|4.5–5.8|第 32 针套入，轻微放大|
+|5.8–7|补齐第二批，累计 42 针|
+|7–8|第 46 针相嵌|
+|8–9|补齐第三批，累计 56 针|
+|9–10.2|针迹与完成面融合|
+|10.2–11|完整梨花瓣与收束文字|
+
+独立进度条支持 0–11 秒回看；暂停、继续、重播、返回逐针均可用。结束后恢复普通控件，操作普通控件会先销毁显影。
+
+### 浏览器截图与视检修正
+
+实际浏览器截图：[开始](validation/13-santao-intro.png)、[第一批](validation/14-santao-batch1-action.png)、[第二批约 5 秒](validation/15-santao-batch2-action.png)、[第三批](validation/16-santao-batch3-action.png)、[融合](validation/17-santao-merge.png)、[完成](validation/18-santao-complete.png)、[390×844](validation/19-santao-cinematic-mobile.png)、[松线](validation/20-santao-thread-slack.png)、[收紧](validation/21-santao-thread-tight.png)。
+
+逐张视检后：将第二、三条代表针从外侧移至同批内部；降低旧线对比、减细显影线宽并增加第二批轻微放大；修正针模型可能超出相机范围的问题；把字幕放在画布下方，收起重复说明，保留完整真实性提示；修复截图读取进度条后未等待绘制造成的视觉不同步。普通模式样式与基础数据不变。
+
+### 测试与资源
+
+运行 `npm test`、`node scripts/build.mjs`；浏览器运行 `node scripts/santao-cinematic-acceptance.cjs`。设置 `SANTAO_TEST_URL` 为末尾带 `/` 的站点根地址可验收公网；`SANTAO_OUTPUT_DIR` 指定输出目录。需要 Playwright 和 Edge。原有 `stitch-acceptance.cjs`、`ar-site-regression.cjs`、`story-acceptance.cjs`、`library-acceptance.cjs`、`suxiu-acceptance.cjs` 均保留。
+
+本地 36 项自动测试通过，构建通过，完整播放实测 11061ms。新浏览器验收涵盖时间回退、暂停/继续、完整播放、重播、普通控件恢复、模块加载失败、慢加载离页、图形上下文丢失、减少动态偏好及移动视口。报告见 [显影验收](validation/cinematic-report.json) 和 [原功能回归](validation/cinematic-regressions.json)。公网结果在发布后独立记录，不用本地结果冒充。
+
+5 次进入/退出：WebGL 几何/纹理从普通 2/1 到显影 7/2，退出均回到 2/1；离页为 0/0。显影自有 5 个几何、4 个材质、1 张纹理全部释放，借用的原丝线纹理不销毁。退出后 RAF 取消。
+
+原四套逐针、知识跳转、故事译绣及 SVG/CSV 下载、1038 条纹样库与 528 张新增图片解码、知识手册搜索/来源、原 AR 页面与识别目标回归通过。
+
+### 边界
+
+本版是二维针迹基础上的数字工艺展示，局部线条仍有程序几何感；不模拟实物张力、手势、背面过线或真实布料形变。390×844 是浏览器视口测试，未等同于实体手机性能验证。WebGL 丢失时提示重新进入页面，不声称自动恢复图形上下文。**本轮没有修改 MindAR / AR tracking，没有接入摄像头或开始下一阶段。**
