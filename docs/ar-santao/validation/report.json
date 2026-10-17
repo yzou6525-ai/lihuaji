@@ -1,0 +1,132 @@
+{
+  "ok": true,
+  "target": "local",
+  "durationMs": 11072,
+  "checks": [
+    "仅梨花看针开放；真实热点Raycaster+UV与前层花瓣列表均可进入，知识链接正确",
+    "Preview完整约11秒，共享manual时间轴；暂停/回看/重播、交互锁、完成知识卡及原状态精确恢复",
+    "连续10次进入退出几何/纹理回归基线，无资源累积，无第二画布",
+    "示例图片真实MindAR匹配后，显影挂在anchor/content，未改变识别矩阵或相机投影",
+    "390×844视口无横向溢出；固定stage高度，控件在画面下方，按钮至少44px",
+    "合成相机流经真实MindAR：移动识别卡时显影跟随；lost保留时间并暂停，found仅恢复自动暂停；手动暂停保持；关闭释放媒体轨道（非真机）",
+    "显影模块加载失败保留六层、赏纹、解绣与相机控制",
+    "自定义story五层仍可查看，不能自动显示散套入口"
+  ],
+  "resources": [
+    {
+      "cycle": 0,
+      "active": {
+        "geometries": 18,
+        "textures": 9
+      },
+      "after": {
+        "geometries": 12,
+        "textures": 7
+      }
+    },
+    {
+      "cycle": 1,
+      "active": {
+        "geometries": 18,
+        "textures": 9
+      },
+      "after": {
+        "geometries": 12,
+        "textures": 7
+      }
+    },
+    {
+      "cycle": 2,
+      "active": {
+        "geometries": 18,
+        "textures": 9
+      },
+      "after": {
+        "geometries": 12,
+        "textures": 7
+      }
+    },
+    {
+      "cycle": 3,
+      "active": {
+        "geometries": 18,
+        "textures": 9
+      },
+      "after": {
+        "geometries": 12,
+        "textures": 7
+      }
+    },
+    {
+      "cycle": 4,
+      "active": {
+        "geometries": 18,
+        "textures": 9
+      },
+      "after": {
+        "geometries": 12,
+        "textures": 7
+      }
+    },
+    {
+      "cycle": 5,
+      "active": {
+        "geometries": 18,
+        "textures": 9
+      },
+      "after": {
+        "geometries": 12,
+        "textures": 7
+      }
+    },
+    {
+      "cycle": 6,
+      "active": {
+        "geometries": 18,
+        "textures": 9
+      },
+      "after": {
+        "geometries": 12,
+        "textures": 7
+      }
+    },
+    {
+      "cycle": 7,
+      "active": {
+        "geometries": 18,
+        "textures": 9
+      },
+      "after": {
+        "geometries": 12,
+        "textures": 7
+      }
+    },
+    {
+      "cycle": 8,
+      "active": {
+        "geometries": 18,
+        "textures": 9
+      },
+      "after": {
+        "geometries": 12,
+        "textures": 7
+      }
+    },
+    {
+      "cycle": 9,
+      "active": {
+        "geometries": 18,
+        "textures": 9
+      },
+      "after": {
+        "geometries": 12,
+        "textures": 7
+      }
+    }
+  ],
+  "errors": [],
+  "realPhoneARVerified": false,
+  "realCameraTrackingVerified": false,
+  "trackingScreenshot": "08 is a synthetic Canvas camera stream, not a physical-camera loss",
+  "dataHash": "92af2e12212dd652767d79b8f758ca3da314dab02ac1f942345e9bf1d0fa1d31"
+}

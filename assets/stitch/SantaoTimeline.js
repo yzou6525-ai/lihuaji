@@ -51,17 +51,19 @@ export function sampleNeedle(stitch,key) {
 export function quadraticPoint(a,c,b,t){return a.map((v,i)=>(1-t)*(1-t)*v+2*(1-t)*t*c[i]+t*t*b[i]);}
 
 export class SantaoTimeline {
-  constructor({onChange=()=>{},requestFrame=cb=>requestAnimationFrame(cb),cancelFrame=id=>cancelAnimationFrame(id),now=()=>performance.now()}={}){
-    Object.assign(this,{onChange,requestFrame,cancelFrame,now});this.time=0;this.playing=false;this.started=false;this.disposed=false;this.raf=null;
+  constructor({onChange=()=>{},requestFrame=cb=>requestAnimationFrame(cb),cancelFrame=id=>cancelAnimationFrame(id),now=()=>performance.now(),clockMode='internal'}={}){
+    if(!['internal','manual'].includes(clockMode))throw Error('Unknown timeline clock');
+    Object.assign(this,{onChange,requestFrame,cancelFrame,now,clockMode});this.time=0;this.playing=false;this.started=false;this.disposed=false;this.raf=null;
   }
   get state(){return {...santaoFrame(this.time),stage:this.started?santaoFrame(this.time).stage:'idle',playing:this.playing,pendingFrame:this.raf!==null,disposed:this.disposed,duration:SANTAO_DURATION};}
   notify(){if(!this.disposed)this.onChange(this.state);}
   start(){if(this.disposed)return;this.pause();this.time=0;this.started=true;this.resume();}
   pause(){if(this.disposed)return;this.playing=false;if(this.raf!==null)this.cancelFrame(this.raf);this.raf=null;this.notify();}
   resume(){if(this.disposed||this.playing)return;if(this.time>=11)this.time=0;this.started=true;this.playing=true;this.last=this.now();
-    const tick=time=>{this.raf=null;if(this.disposed||!this.playing)return;this.time=clamp(this.time+Math.max(0,time-this.last)/1000,0,11);this.last=time;if(this.time>=11)this.playing=false;else this.raf=this.requestFrame(tick);this.notify();};
-    this.raf=this.requestFrame(tick);this.notify();
+    const tick=time=>{this.raf=null;this.tick(time);if(!this.disposed&&this.playing)this.raf=this.requestFrame(tick);};
+    if(this.clockMode==='internal')this.raf=this.requestFrame(tick);this.notify();
   }
+  tick(time){if(this.disposed||!this.playing||!Number.isFinite(time))return;this.time=clamp(this.time+Math.max(0,time-this.last)/1000,0,11);this.last=time;if(this.time>=11)this.playing=false;this.notify();}
   seek(time){if(this.disposed||!Number.isFinite(time))return;this.pause();this.started=true;this.time=clamp(time,0,11);this.notify();}
   restart(){this.start();}
   dispose(){if(this.disposed)return;this.pause();this.disposed=true;this.onChange=()=>{};}

@@ -13,17 +13,17 @@
     "content/sources.json": "46fd1dfb078789d48606d4ce0e4b1978814f355b77056ab5be70048eb14df0bd",
     "content/patterns.json": "5a9f5ab2a3471d46a0822bfdd2c1a4fe35ff90fde18c00e85a732671e298c922",
     "content/products.json": "516ef6df04954d2d2e4fc2c65a1e52ae9ea3329cf4e354484ede87a58d2733ae",
-    "assets/ar-experience.css": "3cdf7043605b4ece7efa04182e4740f994f7619a3033652f7eda70c4617a0496",
-    "assets/ar-experience.html": "a0aeaa62ca00d1d3a24f29b175bf14611a0be05531cf75c7d5596497a1f58a2f",
-    "assets/ar-experience.js": "d240a05b7bf4e09269bb55800d56b5db932b82ec4e41a312ab1d770589713d00",
-    "assets/ar/CraftOverlay.js": "e4941155328e34cf2f620b2fe1c55b5da29fa036a901f8f17830499339c78a47",
-    "assets/ar/LayeredPattern.js": "7925fe56a0bdf7c66b5f522690e4a22dc8560a959c601f31f20db757f4ac02d3",
+    "assets/ar-experience.css": "5bd8b0fb0bb9d66f04e06363ad05ad69758b07dfe2bf5675e7767ba8b00a0a8a",
+    "assets/ar-experience.html": "4de0cd0a9865c6ab5919e019c6cee2c5d6161f3870df8711a23cfc024b6a7539",
+    "assets/ar-experience.js": "2dc05fdfe49727c03062b05d488cd4fc294df05d11ae9703ac4e815d1e75995e",
+    "assets/ar/CraftOverlay.js": "6c077328b82677f02c15d6fc903b0e12add7ca13b1b137dc9b20e68da5b534b0",
+    "assets/ar/LayeredPattern.js": "146a91ac1ae05f05c485653aa6b7e69f3cc23c0130b89ba75162be62a0832038",
     "assets/ar/svg-layers.js": "96203d27732a6494019c9e9502bfd35f22d2998f94db4a3c1669cdf0331face5",
     "assets/ar/TrackingState.js": "ebdb64ad18b52b66d53ac2ad3e41944e705562625d62dfc8dd5f7d54630e420d",
     "assets/ar/Tween.js": "f67fbb2d40076fca57641d10755d0aaad5dad0f9647c21d38310322655802376",
     "assets/ar-assets/lotus.png": "f8b2ba36d553bae2c214073eca78ef0cf6da05a4b6c051aa84fad92ba0324e59",
     "assets/ar-assets/product.jpg": "ed21581df7847e310accabdea6613ba8fc46f3bbdb103418414b65e85ba02029",
-    "assets/ar-assets/targets.json": "764fb02670f9691ca3f4dff4d0e4b77735cc7863735be4d73f691a619e3c784b",
+    "assets/ar-assets/targets.json": "f7e8ba023694728b1d2e9f74ad6ec2153bb235a694e056d27346ea9facfb9ba4",
     "assets/ar-assets/targets.mind": "4f1d11dcc9d3b07dbe66092f7e94e4ab2b04595eba0310b898f621ab3875c1b8",
     "assets/ar-assets/markers/pear-blossom.png": "087815b801de68764102d8fa9338016fa6fbfd551ef8767289e1772d83bba8ce",
     "assets/ar-assets/layers/pear-blossom/layer_00_base.png": "53025246fd2fea42e1e26b6447d423b84256b061b68c79839b587749bf40c351",
@@ -46,5 +46,41 @@
     ".js",
     ".json",
     ".cjs"
-  ]
+  ],
+  "authorizedARRevision": {
+    "baseCommit": "7abab4c37a0712790e944a2c5bef3a509f6db038",
+    "reason": "Requested Santao AR V2 integration; all other frozen files retain original hashes.",
+    "files": [
+      {
+        "file": "assets/ar-experience.css",
+        "previousSha256": "3cdf7043605b4ece7efa04182e4740f994f7619a3033652f7eda70c4617a0496",
+        "sha256": "5bd8b0fb0bb9d66f04e06363ad05ad69758b07dfe2bf5675e7767ba8b00a0a8a"
+      },
+      {
+        "file": "assets/ar-experience.html",
+        "previousSha256": "a0aeaa62ca00d1d3a24f29b175bf14611a0be05531cf75c7d5596497a1f58a2f",
+        "sha256": "4de0cd0a9865c6ab5919e019c6cee2c5d6161f3870df8711a23cfc024b6a7539"
+      },
+      {
+        "file": "assets/ar-experience.js",
+        "previousSha256": "d240a05b7bf4e09269bb55800d56b5db932b82ec4e41a312ab1d770589713d00",
+        "sha256": "2dc05fdfe49727c03062b05d488cd4fc294df05d11ae9703ac4e815d1e75995e"
+      },
+      {
+        "file": "assets/ar/CraftOverlay.js",
+        "previousSha256": "e4941155328e34cf2f620b2fe1c55b5da29fa036a901f8f17830499339c78a47",
+        "sha256": "6c077328b82677f02c15d6fc903b0e12add7ca13b1b137dc9b20e68da5b534b0"
+      },
+      {
+        "file": "assets/ar/LayeredPattern.js",
+        "previousSha256": "7925fe56a0bdf7c66b5f522690e4a22dc8560a959c601f31f20db757f4ac02d3",
+        "sha256": "146a91ac1ae05f05c485653aa6b7e69f3cc23c0130b89ba75162be62a0832038"
+      },
+      {
+        "file": "assets/ar-assets/targets.json",
+        "previousSha256": "764fb02670f9691ca3f4dff4d0e4b77735cc7863735be4d73f691a619e3c784b",
+        "sha256": "f7e8ba023694728b1d2e9f74ad6ec2153bb235a694e056d27346ea9facfb9ba4"
+      }
+    ]
+  }
 }

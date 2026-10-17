@@ -3,6 +3,13 @@
 <body data-ready="0">
  <header class="experience-title"><div><p>AR 绣境</p><h1 id="pattern-title">梨花 · 一枝春</h1></div><label class="target-label">选择纹样<select id="target" disabled aria-label="选择纹样"></select></label></header>
  <div id="stage"><video id="camera" muted playsinline></video><span id="badge">正在准备纹样</span><span id="tracking-state" class="sr-only" aria-live="polite"></span><div id="hint" role="status">正在准备绣品…</div><div id="fatal" hidden></div></div>
+ <section id="santao-controls" hidden aria-label="散套针数字显影">
+  <div class="santao-caption"><div><strong id="santao-caption">散套针</strong><span id="santao-detail"></span></div><span id="santao-time">0.0 / 11.0 秒</span></div>
+  <label class="sr-only" for="santao-progress">散套数字显影进度</label><input id="santao-progress" type="range" min="0" max="11" step="0.01" value="0">
+  <div class="santao-actions"><button id="santao-play">暂停</button><button id="santao-replay">重播</button><button id="santao-exit">退出显影</button><a class="santao-knowledge" href="../#guide/stitch-santao" target="_top">查看完整知识档案</a></div>
+  <p id="santao-complete" hidden>散套针 · 批批相迭 · 针针相嵌 · 由外向里 · 数字工艺示意</p>
+  <p class="santao-note">本体验依据《梨花季》已核验的散套针公开资料进行数字工艺示意。梨花瓣造型、56条示意针迹、针尖运动、空间高度及动画时间均为项目数字视觉设计，并非某件历史苏绣作品的逐针复原，未经苏绣专家人工审定。高亮仅用于数字结构说明，不代表真实苏绣丝线配色。</p>
+ </section>
  <section id="layer-tools" hidden aria-label="纹样赏析">
   <div class="mode-row"><div class="modes" role="group" aria-label="赏析模式"><button data-view="appreciate" aria-pressed="true">赏纹</button><button data-view="explain" aria-pressed="false">解绣</button><button data-view="craft" aria-pressed="false">看针</button></div><button id="toggle-layers" disabled>收拢</button></div>
   <p id="view-help">拖动欣赏层次，点击“解绣”细看构图。</p><div id="layer-list" hidden aria-label="选择图层"></div><aside id="craft-info" hidden aria-live="polite"></aside>

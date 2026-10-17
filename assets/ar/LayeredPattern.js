@@ -70,12 +70,13 @@ export class LayeredPattern {
   }
   highlightLayer(index){if(!this.entries[index])return;this.selected=index;this.transitionSelection();}
   clearHighlight(){this.selected=-1;this.transitionSelection();}
-  pick(raycaster){
+  pick(raycaster){return this.pickDetailed(raycaster)?.layerIndex??-1;}
+  pickDetailed(raycaster){
     for(const hit of raycaster.intersectObjects(this.entries.map(e=>e.mesh))){
       const i=hit.object.userData.layerIndex,mask=this.entries[i].mask;
       if(hit.uv&&mask.pixels){const x=Math.min(mask.width-1,Math.max(0,Math.floor(hit.uv.x*mask.width))),y=Math.min(mask.height-1,Math.max(0,Math.floor((1-hit.uv.y)*mask.height)));if(mask.pixels[y*mask.width+x]<40)continue;}
-      return i;
-    }return -1;
+      return {layerIndex:i,uv:hit.uv?{x:hit.uv.x,y:hit.uv.y}:null};
+    }return null;
   }
   update(time){this.tweens.forEach(t=>t.update(time));this.tweens=this.tweens.filter(t=>!t.finished);if(!this.tweens.length)this.state=this.expanded?'active':'collapsed';}
   clear(){this.stopTweens();this.entries.forEach(({mesh})=>{mesh.geometry.dispose();mesh.material.map?.dispose();mesh.material.dispose();});this.group.clear();this.entries=[];this.selected=-1;this.state='collapsed';this.expanded=false;}

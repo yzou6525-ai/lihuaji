@@ -22,7 +22,8 @@
   {
     "id": "pear-blossom", "name": "梨花 · 一枝春", "image": "ar-assets/markers/pear-blossom.png",
     "widthMeters": 0.16, "lesson": null,
-    "credit": "梨花季 · AI辅助编写的原创矢量构图示意，非馆藏图像或真实绣品扫描；工艺资料待补充",
+    "credit": "梨花季 · AI辅助原创数字构图，非馆藏图像或真实绣品扫描；散套针工艺说明链接项目官方来源核验知识库。",
+    "craftExperiences": [{"id":"santao-pear-petal","layerIndex":4,"knowledgeId":"stitch-santao","hotspot":{"u":0.3564453125,"v":0.67578125,"radius":0.055},"transform":{"x":-0.1435546875,"y":0.17578125,"z":0.006,"scale":0.00155,"rotationZ":1.6964600329}}],
     "layers": [
       {"src":"ar-assets/layers/pear-blossom/layer_00_base.png","name":"底稿","depth":0},
       {"src":"ar-assets/layers/pear-blossom/layer_01_branch.png","name":"枝干","depth":0.03},
