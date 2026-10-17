@@ -1,0 +1,79 @@
+{
+  "id": "sgmart-suxiu-course",
+  "sourceId": "mooc-suxiu",
+  "title": "意线情针——苏绣技艺",
+  "organization": "苏州工艺美术职业技术学院",
+  "platform": "中国大学MOOC",
+  "official": true,
+  "courseUrl": "https://www.icourse163.org/course/SGMART-1206997809",
+  "embedMode": "iframe",
+  "iframeTested": true,
+  "iframeAllowed": true,
+  "iframeTest": {
+    "testedAt": "2026-10-17",
+    "browser": "Microsoft Edge via Playwright",
+    "httpStatus": 200,
+    "xFrameOptions": null,
+    "contentSecurityPolicy": "upgrade-insecure-requests",
+    "frameNavigation": "success in standalone check; intermittent ERR_CONNECTION_CLOSED in integrated app check",
+    "lessonPlayback": "not-tested"
+  },
+  "description": "课程介绍包含苏绣技艺的传统与当代发展，并设有“苏绣技能虚拟实践课题”，以数字化虚拟刺绣帮助学习者排列针脚。课程与图形模板由课程提供方发布。",
+  "modules": [
+    {
+      "id": "mooc-suxiu-01",
+      "section": "课程导入",
+      "title": "苏绣硬件软件——针法、开绣演示",
+      "topics": ["针法", "开绣演示"],
+      "official": true,
+      "courseUrl": "https://www.icourse163.org/course/SGMART-1206997809",
+      "knowledgeIds": ["tool-needle"],
+      "localDemoIds": [],
+      "type": "lecture"
+    },
+    {
+      "id": "mooc-suxiu-02",
+      "section": "苏绣针法基础",
+      "title": "平绣四针法一：齐针、套针演示",
+      "topics": ["平绣", "齐针", "套针"],
+      "official": true,
+      "courseUrl": "https://www.icourse163.org/course/SGMART-1206997809",
+      "knowledgeIds": ["stitch-tao"],
+      "localDemoIds": ["demo-tao-basic"],
+      "type": "lecture"
+    },
+    {
+      "id": "mooc-suxiu-03",
+      "section": "苏绣针法基础",
+      "title": "平绣四针法二：滚针、打籽演示",
+      "topics": ["平绣", "滚针", "打籽"],
+      "official": true,
+      "courseUrl": "https://www.icourse163.org/course/SGMART-1206997809",
+      "knowledgeIds": ["stitch-gun", "stitch-dazi"],
+      "localDemoIds": ["demo-gun-basic"],
+      "type": "lecture"
+    },
+    {
+      "id": "mooc-suxiu-04",
+      "section": "苏绣针法基础",
+      "title": "平绣四针法绣《梅花》演示",
+      "topics": ["平绣", "四针法", "梅花"],
+      "official": true,
+      "courseUrl": "https://www.icourse163.org/course/SGMART-1206997809",
+      "knowledgeIds": ["craft-plain"],
+      "localDemoIds": [],
+      "type": "lecture"
+    },
+    {
+      "id": "mooc-suxiu-05",
+      "section": "苏绣技能虚拟实践课题",
+      "title": "生肖肖像-狗针法体验（下载文件解压）",
+      "topics": ["生肖肖像", "虚拟刺绣", "针法体验"],
+      "official": true,
+      "courseUrl": "https://www.icourse163.org/course/SGMART-1206997809",
+      "knowledgeIds": [],
+      "localDemoIds": [],
+      "type": "virtual-practice"
+    }
+  ]
+}

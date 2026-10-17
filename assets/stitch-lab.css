@@ -30,4 +30,41 @@
 #official-videos .video-card h3,#main .video-card h3{font-family:var(--serif);font-weight:500;font-size:20px}
 #official-videos .video-card p,#main .video-card p{font-size:13px}
 #official-videos .video-source-mark,#main .video-source-mark{color:#68776e;font-size:12px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.official-course{margin:26px 0 34px;border-color:#C9CCBF;background:#FCFBF6}
+.official-course-head{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-bottom:15px;border-bottom:1px solid var(--line)}
+.official-course-label{margin:0 0 8px!important;color:#536C5C;font-size:11px!important;letter-spacing:.04em}
+.official-course-head h3{margin:0 0 5px;font:500 27px/1.45 var(--serif);color:var(--ink)}
+.official-course-head p:last-child{margin:0;color:var(--muted)}
+.official-course-seal{display:grid;place-items:center;flex:none;width:46px;height:46px;border:1px solid #A8B2A0;border-radius:50%;color:#536C5C;font:20px var(--serif)}
+.official-course-description{max-width:850px;margin:17px 0;color:var(--muted);font-size:13px;line-height:1.9}
+.official-course>h4{margin:22px 0 9px;font:500 18px/1.5 var(--serif)}
+.official-course-modules{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.official-course-module{display:grid;width:100%;grid-template-columns:42px minmax(0,1fr) auto;align-items:center;gap:12px;padding:13px 10px;text-align:left;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;color:var(--ink)}
+.official-course-module:hover,.official-course-module[aria-pressed=true]{background:#F0F0E8;color:var(--ink)}
+.official-course-module[aria-pressed=true]{box-shadow:inset 3px 0 #667C68}
+.course-number{font:20px/1.3 var(--serif);color:#617663}
+.course-module-copy{display:grid;gap:3px;min-width:0}
+.course-module-copy strong{font:500 14px/1.6 var(--serif)}
+.course-module-copy small{color:var(--muted);font-size:11px;line-height:1.6}
+.course-module-mark{font-size:11px;color:var(--muted);white-space:nowrap}
+.official-course-viewer{margin-top:20px;padding:18px;background:#F3F2EA;border:1px solid var(--line);border-radius:6px}
+.official-course-viewer-heading{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.official-course-viewer-heading>div{min-width:0}
+.official-course-viewer-heading p{margin:0 0 5px}
+.official-course-viewer-heading h4{margin:0 0 6px;font:500 20px/1.55 var(--serif)}
+.official-course-viewer-heading .btn{flex:none}
+.official-course-frame-wrap{margin-top:15px;padding:10px;background:#FCFBF6;border:1px solid var(--line);border-radius:5px}
+.official-course-frame{display:block;width:100%;height:420px;border:0;background:#FCFBF6}
+.official-course-frame-wrap>p{margin:8px 4px 0}
+.official-course-frame-fallback{margin-top:15px;padding:18px;background:#FCFBF6;border:1px solid var(--line);border-radius:5px}
+.official-course-frame-fallback strong{font:500 16px/1.5 var(--serif)}
+.official-course-frame-fallback p{margin:7px 0 0;font-size:12px;line-height:1.8;color:var(--muted)}
+.official-course-links{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:15px;padding-top:13px;border-top:1px solid var(--line)}
+.official-course-links>div{display:flex;align-items:flex-start;align-content:flex-start;flex-direction:column;gap:5px;min-width:0}
+.official-course-links strong{font-size:11px;color:var(--muted);font-weight:500}
+.official-course-links a,.official-course-links button{font-size:12px;line-height:1.7;text-align:left}
+.official-course-practice{padding:0;border:0;background:none;color:#3F5A4F;text-decoration:underline;text-underline-offset:3px}
+.official-course-note,.official-course-source{margin:12px 0 0;color:var(--muted);font-size:11px;line-height:1.8}
+.official-course-virtual-note{padding:13px 15px;border-left:3px solid #697E68;background:#EDEFE7;color:#435B4D}
 @media(max-width:600px){#stitch-lab .lab-stage{height:270px}#stitch-lab .lab-heading{gap:10px}#stitch-lab .lab-heading label{width:100%}#stitch-lab .lab-controls{gap:6px}#stitch-lab .lab-controls button{padding:8px 12px}#stitch-lab .lab-options{gap:15px}#official-videos .grid{grid-template-columns:1fr}}
+@media(max-width:600px){.official-course{padding:18px}.official-course-head h3{font-size:22px}.official-course-description{font-size:12px}.official-course-module{grid-template-columns:34px minmax(0,1fr);gap:9px;padding:12px 7px}.course-module-mark{grid-column:2}.course-module-copy strong{font-size:13px}.course-module-copy small{font-size:10px}.official-course-viewer{padding:13px}.official-course-viewer-heading{align-items:flex-start;flex-direction:column}.official-course-viewer-heading .btn{width:100%;text-align:center}.official-course-frame{height:320px}.official-course-links{grid-template-columns:1fr;gap:11px}.official-course-seal{width:40px;height:40px}}

@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "test": "node --test scripts/ar-state.test.cjs scripts/story.test.cjs scripts/library.test.cjs scripts/suxiu.test.cjs scripts/stitch.test.cjs scripts/santao-cinematic.test.cjs scripts/ar-santao.test.cjs"
+    "test": "node --test scripts/ar-state.test.cjs scripts/story.test.cjs scripts/library.test.cjs scripts/suxiu.test.cjs scripts/stitch.test.cjs scripts/stitch-course.test.cjs scripts/santao-cinematic.test.cjs scripts/ar-santao.test.cjs"
   },
   "engines": {"node": ">=20"}
 }
