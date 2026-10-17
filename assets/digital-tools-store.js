@@ -50,7 +50,8 @@ function cardMarkup(tool){
 
 export function mountDigitalTools(root){
  let active=true,frame=null;
- const showError=()=>{if(active){root.innerHTML='<p class="small">数字工具目录暂未载入，其他教学内容不受影响。</p><button type="button" data-digital-retry>重新加载</button>';root.querySelector('[data-digital-retry]').onclick=load;}};
+ let readyPromise=Promise.resolve(false);
+ const showError=()=>{if(active){root.innerHTML='<p class="small">数字工具目录暂未载入，其他教学内容不受影响。</p><button type="button" data-digital-retry>重新加载</button>';root.querySelector('[data-digital-retry]').onclick=()=>{readyPromise=load();};}};
  const load=async()=>{
   try{
    const [tool]=await digitalToolStore.load();if(!active)return;
@@ -66,9 +67,12 @@ export function mountDigitalTools(root){
     frame=document.createElement('iframe');frame.className='digital-tool-iframe';frame.title='Ricuci 数字刺绣文件查看与转换工具';frame.src=tool.officialWebApp;frame.loading='eager';frame.referrerPolicy='strict-origin-when-cross-origin';
     container.append(controls,frame);status.textContent='Ricuci 官方工具已在本页载入；文件由该浏览器工具处理。';
    };
-  }catch{showError();}
+  }catch{showError();return false;}
+  return true;
  };
  ensureDigitalToolsStyles();
- load();
- return()=>{active=false;frame?.remove();root.replaceChildren();};
+ readyPromise=load();
+ const dispose=()=>{active=false;frame?.remove();root.replaceChildren();};
+ dispose.focusOpenButton=async()=>{await readyPromise;if(!active)return false;const button=root.querySelector('[data-digital-open]');if(!button)return false;button.focus({preventScroll:true});return true;};
+ return dispose;
 }

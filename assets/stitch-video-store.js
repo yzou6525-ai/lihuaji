@@ -72,8 +72,8 @@ export function videoCard(row) {
  const category=row.category||(row.sourceType==='official-reference'?'非遗资料':'官方影像');
  return `<article class="card video-card" data-video="${esc(row.id)}"><p class="video-source-mark">${esc(row.organization)} · <span class="video-category-tag">${esc(category)}</span></p><h3>${esc(row.title)}</h3><p>${row.topics.map(esc).join(' · ')}</p>${row.accessStatus!=='verified-page'?`<p class="small">${row.accessStatus==='unavailable'?'当前官方页面暂不可访问':'已核对页面标题，播放状态待原站确认'}</p>`:''}<a class="btn" href="${esc(row.url)}" target="_blank" rel="noopener noreferrer">${label} →</a><p class="small">来源：${esc(row.organization)} · 原站观看</p></article>`;
 }
-export function mountVideoArchive(root,{openCourse=false}={}) {
- let active=true;
+export function mountVideoArchive(root,{openCourse=false,initialModuleId=null}={}) {
+ let active=true,requestedModuleId=initialModuleId,renderCourseModule=null;
  root.innerHTML='<h2>官方课程与苏绣影像</h2><p>按官方课程、传承人、工艺观摩与非遗影像整理苏绣学习入口。</p><p class="small">课程与影像由原提供方发布；梨花季只整理经核验的标题、主题和来源链接，不复制、下载或重新托管内容。</p><div data-video-content role="status">正在读取官方影像目录…</div>';
  const content=root.querySelector('[data-video-content]');
  const knowledgeLabels=new Map([['stitch-tao','套针知识'],['stitch-gun','滚针知识'],['stitch-dazi','打籽知识'],['tool-needle','绣针知识'],['craft-plain','平绣知识']]);
@@ -119,8 +119,17 @@ export function mountVideoArchive(root,{openCourse=false}={}) {
    else if(openCourse)card.scrollIntoView({behavior:'smooth',block:'start'});
   };
   const startPractice=id=>{const lab=root.ownerDocument.querySelector('#stitch-lab'),picker=lab?.querySelector('#lab-demo');if(!lab||!picker)return;picker.value=id;picker.dispatchEvent(new Event('change',{bubbles:true}));lab.setAttribute('tabindex','-1');lab.scrollIntoView({behavior:'smooth',block:'start'});lab.focus({preventScroll:true});};
-  render(course.modules[0].id);
+  renderCourseModule=(id,scrollViewer=false)=>render(id,scrollViewer);
+  render(requestedModuleId||course.modules[0].id,Boolean(requestedModuleId)||openCourse);
  };
  const load=()=>Promise.all([stitchVideoStore.load(),officialCourseStore.load()]).then(([rows,course])=>{if(!active)return;content.innerHTML='<div class="grid">'+rows.filter(r=>r.sourceType==='official-video').map(videoCard).join('')+'</div><h3 style="margin-top:24px">延伸阅读 · 官方工艺背景</h3>'+rows.filter(r=>r.sourceType==='official-reference').map(videoCard).join('');courseCard(course);}).catch(()=>{if(active){content.innerHTML='<p>官方影像或课程目录暂未载入，原有练习仍可使用。</p><button>重新加载影像目录</button>';content.querySelector('button').onclick=load;}});
- load();return()=>{active=false;};
+ const selectCourseModule=moduleId=>{
+  if(!['mooc-suxiu-02','mooc-suxiu-03'].includes(moduleId))return false;
+  requestedModuleId=moduleId;
+  if(renderCourseModule)renderCourseModule(moduleId,true);
+  return true;
+ };
+ const dispose=()=>{active=false;renderCourseModule=null;};
+ dispose.selectCourseModule=selectCourseModule;
+ load();return dispose;
 }

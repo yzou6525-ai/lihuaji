@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "paths": [
+    {
+      "id": "tao",
+      "title": "套针 · 从真实教学到数字拆针",
+      "subtitle": "从官方课程理解工艺，再用数字针迹观察路径结构。",
+      "steps": [
+        {
+          "id": "course",
+          "type": "course",
+          "title": "看官方课程",
+          "description": "苏州工艺美术职业技术学院《意线情针——苏绣技艺》· 平绣四针法一：齐针、套针演示。",
+          "buttonLabel": "开始官方课程",
+          "target": "mooc-suxiu-02"
+        },
+        {
+          "id": "knowledge",
+          "type": "knowledge",
+          "title": "读针法知识",
+          "description": "查看现有知识档案中的套针条目与核验来源。",
+          "buttonLabel": "查看套针知识",
+          "target": "stitch-tao"
+        },
+        {
+          "id": "practice",
+          "type": "practice",
+          "title": "数字拆针",
+          "description": "梨花季数字示意：使用套针 24 针练习，观察针迹次序与路径。",
+          "buttonLabel": "开始套针数字练习",
+          "target": "demo-tao-basic"
+        },
+        {
+          "id": "art",
+          "type": "art",
+          "title": "看针法如何进入作品",
+          "description": "进阶观察：散套针 · 梨花一瓣数字显影。散套针属于另一种针法；此处用于观察针法结构如何进入作品，不是套针实操的延续。",
+          "buttonLabel": "进入作品看针",
+          "target": "santao-pear-petal"
+        },
+        {
+          "id": "tool",
+          "type": "tool",
+          "title": "数字刺绣拓展",
+          "description": "Ricuci 用于查看机器刺绣文件结构；机器刺绣文件与苏绣传统手工针法并非同一体系。",
+          "buttonLabel": "打开数字刺绣工具",
+          "target": "ricuci"
+        }
+      ]
+    },
+    {
+      "id": "gun",
+      "title": "滚针 · 从真实教学到数字拆针",
+      "subtitle": "从官方课程理解工艺，再用数字针迹观察路径结构。",
+      "steps": [
+        {
+          "id": "course",
+          "type": "course",
+          "title": "看官方课程",
+          "description": "苏州工艺美术职业技术学院《意线情针——苏绣技艺》· 平绣四针法二：滚针、打籽演示。",
+          "buttonLabel": "开始官方课程",
+          "target": "mooc-suxiu-03"
+        },
+        {
+          "id": "knowledge",
+          "type": "knowledge",
+          "title": "读针法知识",
+          "description": "查看现有知识档案中的滚针条目与核验来源。",
+          "buttonLabel": "查看滚针知识",
+          "target": "stitch-gun"
+        },
+        {
+          "id": "practice",
+          "type": "practice",
+          "title": "数字拆针",
+          "description": "梨花季数字示意：使用滚针 20 针练习，观察针迹次序与路径。",
+          "buttonLabel": "开始滚针数字练习",
+          "target": "demo-gun-basic"
+        },
+        {
+          "id": "art",
+          "type": "art",
+          "title": "看针法如何进入作品",
+          "description": "进阶观察：散套针 · 梨花一瓣数字显影。散套针不是滚针；此处用于观察传统针法结构如何进入完整视觉作品。",
+          "buttonLabel": "进入作品看针",
+          "target": "santao-pear-petal"
+        },
+        {
+          "id": "tool",
+          "type": "tool",
+          "title": "数字刺绣拓展",
+          "description": "Ricuci 用于查看机器刺绣文件结构；机器刺绣文件与苏绣传统手工针法并非同一体系。",
+          "buttonLabel": "打开数字刺绣工具",
+          "target": "ricuci"
+        }
+      ]
+    }
+  ]
+}

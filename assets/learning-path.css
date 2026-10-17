@@ -1,0 +1,33 @@
+#learning-path{margin:24px 0 30px;padding:22px 24px;background:#FCFBF6;border:1px solid #D9D8CC;border-radius:6px;color:#3F5A4F}
+#learning-path .learning-path-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;flex-wrap:wrap}
+#learning-path .learning-path-kicker{margin:0 0 5px;color:#68776E;font-size:11px;letter-spacing:.07em}
+#learning-path h2,#learning-path h3{font-family:var(--serif);font-weight:500;color:var(--ink)}
+#learning-path .learning-path-title{margin:0;font-size:25px;line-height:1.5}
+#learning-path .learning-path-subtitle{margin:5px 0 0;color:var(--muted);font-size:13px;line-height:1.8}
+#learning-path .learning-path-switch{display:flex;gap:8px;flex-wrap:wrap}
+#learning-path .learning-path-switch button{min-height:44px;padding:9px 18px;border:1px solid #C9CCBF;background:transparent;color:#536C5C}
+#learning-path .learning-path-switch button[aria-pressed=true]{background:#EDEFE7;border-color:#7F907E;color:#344F43}
+#learning-path .learning-progress{display:grid;grid-template-columns:auto minmax(70px,180px);align-items:center;gap:12px;margin:16px 0 13px;color:#536C5C;font-size:12px}
+#learning-path .learning-progress-count{font-variant-numeric:tabular-nums;white-space:nowrap}
+#learning-path .learning-progress-line{height:2px;background:#E5E3D8;overflow:hidden}
+#learning-path .learning-progress-line span{display:block;width:var(--learning-progress,0%);height:100%;background:#738675;transition:width .18s ease}
+#learning-path .learning-path-complete{margin:12px 0;padding:10px 13px;background:#F2F2EA;border-left:2px solid #82917E;color:#465B4D;font-size:13px;line-height:1.8}
+#learning-path .learning-step-list{list-style:none;margin:0;padding:0;border-top:1px solid #E5E3D8}
+#learning-path .learning-step{display:grid;grid-template-columns:42px minmax(0,1fr) auto;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid #E5E3D8}
+#learning-path .learning-step-number{align-self:start;padding-top:1px;color:#738675;font:20px/1.4 var(--serif);font-variant-numeric:tabular-nums}
+#learning-path .learning-step-copy{min-width:0}
+#learning-path .learning-step-label{margin:0 0 3px;color:#758077;font-size:10px;letter-spacing:.04em}
+#learning-path .learning-step-copy h3{margin:0;font-size:16px;line-height:1.55}
+#learning-path .learning-step-copy>p:last-of-type{margin:3px 0 0;color:#68776E;font-size:12px;line-height:1.8}
+#learning-path .learning-step-state{display:inline-flex;align-items:center;gap:5px;margin-top:5px;color:#68776E;font-size:11px}
+#learning-path .learning-step-state-mark{display:inline-grid;place-items:center;width:17px;height:17px;border:1px solid #B7B9AD;border-radius:50%;color:#68776E;font-size:11px;line-height:1}
+#learning-path .learning-step[data-complete=true] .learning-step-state-mark{border-color:#728675;color:#40594B}
+#learning-path .learning-step-action{min-width:148px;min-height:44px;font-size:12px;padding:9px 13px}
+#learning-path .learning-reset-row{display:flex;justify-content:flex-end;margin-top:12px}
+#learning-path .learning-reset{min-height:40px;padding:7px 11px;background:transparent;border-color:transparent;color:#68776E;font-size:11px;text-decoration:underline;text-underline-offset:3px}
+#learning-path .learning-path-truth{margin:12px 0 0;padding-top:11px;border-top:1px solid #E5E3D8;color:#68776E;font-size:11px;line-height:1.8}
+#learning-path .learning-path-storage{margin:6px 0 0;color:#68776E;font-size:11px}
+#learning-path [hidden]{display:none!important}
+#ar-frame.learning-target-highlight{outline:2px solid #A9B29F;outline-offset:3px}
+@media(max-width:600px){#learning-path{padding:17px 15px;margin:20px 0 24px}#learning-path .learning-path-title{font-size:22px}#learning-path .learning-path-head{gap:12px}#learning-path .learning-path-switch{width:100%}#learning-path .learning-path-switch button{flex:1}#learning-path .learning-progress{grid-template-columns:auto minmax(60px,1fr)}#learning-path .learning-step{grid-template-columns:31px minmax(0,1fr);gap:8px;padding:12px 0}#learning-path .learning-step-number{font-size:18px}#learning-path .learning-step-action{grid-column:2;width:100%;min-width:0;text-align:center}#learning-path .learning-step-copy h3{font-size:15px}#learning-path .learning-step-copy>p:last-of-type{font-size:12px}}
+@media(prefers-reduced-motion:reduce){#learning-path .learning-progress-line span{transition:none}}

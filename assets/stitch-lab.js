@@ -9,7 +9,7 @@ export function ensureStitchStyles() {
   if(document.querySelector('link[data-stitch-style]'))return;
   const link=document.createElement('link');link.rel='stylesheet';link.href=new URL('./stitch-lab.css',import.meta.url).href;link.dataset.stitchStyle='';document.head.append(link);
 }
-export function mountStitchLab(root) {
+export function mountStitchLab(root,{onDemoProgress}={}) {
   ensureStitchStyles();
   root.innerHTML=`<div class="lab-heading"><div><h2>数字针迹实验室</h2><p class="small">数字练习示意 · 一针一针，看路径如何形成。</p></div><label>选择练习<select id="lab-demo">${demoCatalogue.map(d=>`<option value="${d.id}">${d.title}</option>`).join('')}</select></label></div>
     <div class="lab-stage"><div id="lab-canvas"></div><span class="lab-empty">正在准备数字针迹…</span></div>
@@ -29,7 +29,8 @@ export function mountStitchLab(root) {
     <p id="lab-status" role="status">正在加载练习…</p><div class="lab-knowledge" id="lab-knowledge"></div>
     <p class="lab-note" id="lab-authenticity">针迹动画为《梨花季》数字练习示意，用于理解路径与先后关系，不替代真实刺绣教学，未经苏绣专家人工审定。</p><p class="lab-note" id="lab-color-note" hidden></p>`;
   const $=selector=>root.querySelector(selector),stage=$('#lab-canvas');stage.style.cssText='width:100%;height:100%';
-  let alive=true,renderer=null,ticket=0,request=null,loading=true,observer=null,cinema=null,cinemaEpoch=0,cinemaStarting=false,lastCinema=null;
+  let alive=true,renderer=null,ticket=0,request=null,loading=true,observer=null,cinema=null,cinemaEpoch=0,cinemaStarting=false,lastCinema=null,pendingLoad=Promise.resolve(false),resolveRendererReady;
+  const rendererReady=new Promise(resolve=>{resolveRendererReady=resolve;});
   const player=new StitchPlayer({onChange:state=>{
     if(!alive)return;
     if(!cinema)renderer?.update(state);
@@ -38,6 +39,7 @@ export function mountStitchLab(root) {
     const batch=player.data?.batches?.find(b=>b.group===group);
     $('#lab-batch').hidden=!batch;$('#lab-batch').textContent=batch?.label || '';
     $('#lab-percent').textContent=Math.round(state.normalizedProgress*100)+'%';
+    try{onDemoProgress?.({id:player.data?.id||$('#lab-demo').value,normalizedProgress:state.normalizedProgress});}catch{}
     $('#lab-scrubber').max=String(state.total || 1);$('#lab-scrubber').value=String(state.position);
     $('#lab-scrubber').setAttribute('aria-valuetext',`第 ${state.current} 针，共 ${state.total} 针`);
     $('#lab-play').textContent=state.playing?'暂停':state.position===state.total&&state.total?'重新播放':'播放';
@@ -84,23 +86,32 @@ export function mountStitchLab(root) {
       if(!demoCatalogue.some(d=>d.id===id))throw Error('练习不存在');
       const response=await fetch(new URL(`../content/stitch-demos/${id}.json`,import.meta.url),{signal:request.signal});
       if(!response.ok)throw Error('针迹资料暂时未载入，请重新选择练习或稍后重试。');
-      const data=await response.json();if(!alive||ticket!==current)return;
+      const data=await response.json();if(!alive||ticket!==current)return false;
       player.loadStitchDemo(data);renderer.load(player.data);loading=false;player.notify();
       $('#lab-cinematic').hidden=data.id!=='demo-santao-pear-petal';$('#lab-cinema-start').disabled=false;
       $('#lab-authenticity').textContent=data.authenticityNote || '针迹动画为《梨花季》数字练习示意，用于理解路径与先后关系，不替代真实刺绣教学，未经苏绣专家人工审定。';
       $('#lab-color-note').textContent=data.colorNote || '';$('#lab-color-note').hidden=!data.colorNote;
       $('#lab-status').textContent=data.title+' · 项目自编练习';
       if(data.knowledgeId){
-        try{const k=await getSuxiuKnowledgeById(data.knowledgeId);if(!alive||ticket!==current)return;
+        try{const k=await getSuxiuKnowledgeById(data.knowledgeId);if(!alive||ticket!==current)return false;
           if(k){const p=document.createElement('p');p.textContent='相关知识：'+k.title+'。'+k.summary;
             const a=document.createElement('a');a.className='text-link';a.textContent='查看完整知识档案 →';a.href='#guide/'+encodeURIComponent(k.id);$('#lab-knowledge').append(p,a);
             const note=document.createElement('p');note.className='small';note.textContent='知识出处见档案；本示意的坐标、针序与配色为项目自编，并非来源提供的逐针数据。';$('#lab-knowledge').append(note);
           }else $('#lab-knowledge').textContent='关联知识资料待补充；本示意为项目自编练习。';
         }catch{if(alive&&ticket===current)$('#lab-knowledge').textContent='知识档案暂未载入，数字练习仍可使用。';}
       }else $('#lab-knowledge').textContent='本练习尚无对应官方知识条目，不作为官方教学。';
-    }catch(error){if(alive&&ticket===current&&error.name!=='AbortError'){loading=true;player.pause();$('#lab-status').className='lab-error';$('#lab-status').textContent=error instanceof SyntaxError?'针迹 JSON 损坏，请选择其他练习。':error.message;}}
+      return true;
+    }catch(error){if(alive&&ticket===current&&error.name!=='AbortError'){loading=true;player.pause();$('#lab-status').className='lab-error';$('#lab-status').textContent=error instanceof SyntaxError?'针迹 JSON 损坏，请选择其他练习。':error.message;}return false;}
   }
-  $('#lab-demo').onchange=e=>{if(renderer)load(e.target.value);};
+  const selectDemo=async id=>{
+    if(!demoCatalogue.some(d=>d.id===id))return false;
+    if(!await rendererReady||!alive)return false;
+    if($('#lab-demo').value!==id){$('#lab-demo').value=id;pendingLoad=load(id);}
+    const loaded=await pendingLoad;
+    if(!loaded||!alive||player.data?.id!==id)return false;
+    renderer?.fitToData();return true;
+  };
+  $('#lab-demo').onchange=e=>{if(renderer)pendingLoad=load(e.target.value);};
   const ordinary=action=>{if(cinema||cinemaStarting)leaveCinema();action();};
   $('#lab-play').onclick=()=>ordinary(()=>player.playing?player.pause():player.play());$('#lab-restart').onclick=()=>ordinary(()=>player.restart());
   $('#lab-next').onclick=()=>ordinary(()=>player.next());$('#lab-previous').onclick=()=>ordinary(()=>player.previous());
@@ -120,10 +131,12 @@ export function mountStitchLab(root) {
   // Read-only diagnostics, no cameras, story content or user records.
   window.lihuaStitchDiagnostics=diagnostic;
   import('./stitch/StitchRenderer.js').then(async({StitchRenderer})=>{
-    if(!alive)return;renderer=new StitchRenderer(stage);renderer.onViewChange=view=>{$('#lab-zoom').textContent=`视图 ${Math.round(view.zoom*100)}%`;$('#lab-plan').checked=view.planVisible;};
+    if(!alive){resolveRendererReady(false);return;}renderer=new StitchRenderer(stage);renderer.onViewChange=view=>{$('#lab-zoom').textContent=`视图 ${Math.round(view.zoom*100)}%`;$('#lab-plan').checked=view.planVisible;};resolveRendererReady(true);
     renderer.renderer.domElement.addEventListener('webglcontextlost',e=>{if(!alive)return;e.preventDefault();loading=true;pause();$('#lab-cinema-start').disabled=true;$('#lab-cinema-controls').querySelectorAll('button,input').forEach(el=>el.disabled=true);$('#lab-status').textContent='图形资源已暂停，请重新进入本页面。';$('#lab-status').className='lab-error';root.classList.remove('lab-cinematic-active');});
     observer=new IntersectionObserver(entries=>{if(!entries[0].isIntersecting)pause();});observer.observe(root);
-    await load($('#lab-demo').value);
-  }).catch(()=>{if(alive){player.pause();renderer?.dispose();$('#lab-status').textContent='Three.js 或 WebGL 未能启动，请刷新或换用支持 WebGL 的浏览器。下方基础练习和官方影像仍可阅读。';$('#lab-status').className='lab-error';$('.lab-empty').textContent='数字画面暂不可用';}});
+    pendingLoad=load($('#lab-demo').value);await pendingLoad;
+  }).catch(()=>{resolveRendererReady(false);if(alive){player.pause();renderer?.dispose();$('#lab-status').textContent='Three.js 或 WebGL 未能启动，请刷新或换用支持 WebGL 的浏览器。下方基础练习和官方影像仍可阅读。';$('#lab-status').className='lab-error';$('.lab-empty').textContent='数字画面暂不可用';}});
+  dispose.selectDemo=selectDemo;
+  dispose.getState=()=>({id:player.data?.id||$('#lab-demo').value,normalizedProgress:player.state.normalizedProgress,loading,alive});
   return dispose;
 }
