@@ -1,6 +1,6 @@
 # 梨花季验收候选说明
 
-验收基线：`d98d036ed976f9d3e4fff55decf8dd07f1d3a70d`。  
+验收基线：`d98d036ed976f9d3e4fff55decf8dd07f1d3a70d`。
 候选结论：**Browser Verified**；实体设备条件未满足，本轮不打 RC tag、不创建 GitHub Release，也不声称正式锁版。
 
 ## 本轮完成
