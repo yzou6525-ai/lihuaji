@@ -1,0 +1,82 @@
+{
+  "ok": true,
+  "target": "local",
+  "checks": [
+    "保留原4条影像入口及MOOC/资料，在同一目录新增余福臻和邹英姿两条官方来源并显示传承人标签",
+    "工具卡明确区分机器刺绣与苏绣手工针法，说明浏览器本地文件处理与代码许可；初始无Ricuci iframe",
+    "点击打开后实际加载官方转换器；检查文件选择控件，验证工具可切换 English，未授予相机/麦克风/定位权限",
+    "连续5次打开/关闭后始终最多1个Ricuci iframe，关闭时DOM彻底移除",
+    "全局搜索的Ricuci/数字刺绣/机器刺绣/DST/PES/JEF/刺绣文件/转换均命中；余福臻和邹英姿均命中官方影像",
+    "390×844卡片与iframe均无横向溢出，移动端打开/关闭按钮可操作"
+  ],
+  "ricuciIframeTested": true,
+  "ricuciIframeAllowed": true,
+  "ricuciResponses": [
+    {
+      "status": 200,
+      "xFrameOptions": null,
+      "contentSecurityPolicy": null
+    },
+    {
+      "status": 200,
+      "xFrameOptions": null,
+      "contentSecurityPolicy": null
+    },
+    {
+      "status": 200,
+      "xFrameOptions": null,
+      "contentSecurityPolicy": null
+    },
+    {
+      "status": 200,
+      "xFrameOptions": null,
+      "contentSecurityPolicy": null
+    },
+    {
+      "status": 200,
+      "xFrameOptions": null,
+      "contentSecurityPolicy": null
+    },
+    {
+      "status": 200,
+      "xFrameOptions": null,
+      "contentSecurityPolicy": null
+    },
+    {
+      "status": 200,
+      "xFrameOptions": null,
+      "contentSecurityPolicy": null
+    }
+  ],
+  "openCloseCycles": 5,
+  "iframeRemovedOnClose": true,
+  "localFilePickerPresent": true,
+  "noPermissionDelegation": true,
+  "languageSelector": {
+    "englishOptionAvailable": true,
+    "changedToEnglish": true
+  },
+  "searches": [
+    "Ricuci",
+    "数字刺绣",
+    "机器刺绣",
+    "DST",
+    "PES",
+    "JEF",
+    "刺绣文件",
+    "转换",
+    "余福臻",
+    "邹英姿"
+  ],
+  "videoCount": 7,
+  "officialCourseModules": 5,
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "errors": [],
+  "limits": [
+    "文件选择控件仅检查存在；没有打开、读取、上传、转换或保存用户文件",
+    "实际 Ricuci 转换能力由 Ricuci 官方站提供；梨花季不解析跨站文件"
+  ]
+}

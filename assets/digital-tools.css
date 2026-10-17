@@ -1,0 +1,20 @@
+#digital-tools{margin:28px 0;color:#3F5A4F;min-width:0}
+#digital-tools .digital-tool-card{padding:24px;background:#F8F6EF;border:1px solid #EDE9DF}
+#digital-tools .digital-tool-card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap}
+#digital-tools .digital-tool-card h2{font-size:22px;margin:4px 0 8px;color:#3F5A4F}
+#digital-tools .digital-tool-mark{font-size:12px;color:#7B9480;letter-spacing:.03em;margin:0}
+#digital-tools .digital-tool-outlink{color:#3F5A4F;font-size:13px;text-decoration:underline;text-underline-offset:3px}
+#digital-tools .digital-tool-local-note,#digital-tools .digital-tool-boundary{font-size:13px;line-height:1.8;margin:12px 0;padding:10px 13px;background:#EDE9DF;border-left:3px solid #7B9480}
+#digital-tools .digital-tool-boundary{background:#F8F6EF;border-left-color:#D8C8A2}
+#digital-tools .digital-tool-formats{margin:12px 0;color:#6B776F}
+#digital-tools .digital-tool-details{border-top:1px solid #EDE9DF;border-bottom:1px solid #EDE9DF;padding:12px 0;margin:14px 0}
+#digital-tools .digital-tool-details summary{cursor:pointer;min-height:32px;display:flex;align-items:center;font-size:13px}
+#digital-tools .digital-tool-details p,#digital-tools .digital-tool-details a{font-size:12px;line-height:1.8;overflow-wrap:anywhere}
+#digital-tools .digital-tool-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:16px}
+#digital-tools .digital-tool-frame[hidden]{display:none}
+#digital-tools .digital-tool-frame{margin-top:16px;width:100%;min-width:0}
+#digital-tools .digital-tool-frame-controls{display:flex;justify-content:flex-end;margin-bottom:8px}
+#digital-tools .digital-tool-frame-controls button{min-height:44px}
+#digital-tools .digital-tool-iframe{display:block;width:100%;height:680px;border:1px solid #EDE9DF;border-radius:6px;background:#F8F6EF}
+.digital-tool-search-card .small{overflow-wrap:anywhere}
+@media(max-width:760px){#digital-tools .digital-tool-card{padding:18px}#digital-tools .digital-tool-card h2{font-size:20px}#digital-tools .digital-tool-actions{align-items:flex-start;flex-direction:column;gap:10px}#digital-tools .digital-tool-iframe{height:590px}#digital-tools .digital-tool-frame-controls{justify-content:flex-start}}

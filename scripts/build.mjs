@@ -5,7 +5,7 @@ import path from 'node:path';
 import {validateSuxiuFiles} from './validate-suxiu.mjs';
 import {validateStitchFiles} from './validate-stitch.mjs';
 const stitchReport=validateStitchFiles();
-console.log(`Validated ${stitchReport.demos.length} stitch demos and ${stitchReport.videos} official source links.`);
+console.log(`Validated ${stitchReport.demos.length} stitch demos, ${stitchReport.videos} official source links and ${stitchReport.digitalTools} digital embroidery tool.`);
 const suxiuReport=validateSuxiuFiles();
 console.log(`Validated ${suxiuReport.knowledgeCount} source-linked Su embroidery records.`);
 const patterns=JSON.parse(fs.readFileSync('content/patterns.json','utf8').replace(/^\uFEFF/,''));

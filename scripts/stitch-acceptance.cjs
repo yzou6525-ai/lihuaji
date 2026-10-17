@@ -57,12 +57,12 @@ try{
    const d=await diag();assert(!d.alive);assert(!d.player.pendingFrame);assert.equal(d.render.resources.geometries,0);assert.equal(d.render.resources.textures,0);samples.push({exit:i,resources:d.render.resources});await goto();
  }
  checks.push('16次四套数据切换几何/纹理数量不增长，旧练习无散套标签残留；3次播放中离页RAF取消、几何/纹理计数归零');
- await page.locator('[data-video="suzhou-craft-background"]').waitFor();assert.equal(await page.locator('#official-videos [data-video]').count(),5);assert.equal(await page.locator('#official-videos [data-official-course]').count(),1);assert.equal(await page.locator('#official-videos [data-course-module]').count(),5);
+ await page.locator('[data-video="suzhou-craft-background"]').waitFor();assert.equal(await page.locator('#official-videos [data-video]').count(),7);assert.equal(await page.locator('#official-videos [data-video="suzhou-yu-fuzhen"]').count(),1);assert.equal(await page.locator('#official-videos [data-video="cctv-zou-yingzi-2026"]').count(),1);assert.equal(await page.locator('#official-videos [data-official-course]').count(),1);assert.equal(await page.locator('#official-videos [data-course-module]').count(),5);
  const links=await page.locator('#official-videos [data-video] a').evaluateAll(all=>all.map(a=>({url:a.href,target:a.target,rel:a.rel})));
  assert(links.every(x=>x.url.startsWith('https:')&&x.target==='_blank'&&x.rel.includes('noopener')));
  assert.equal(await page.locator('#official-videos [data-video] video,#official-videos [data-video] iframe,#official-videos [data-video] img').count(),0);
  await page.locator('#official-videos').screenshot({path:path.join(out,'06-official-archive.png')});
- checks.push('4个视频、1门课程专题、1条延伸阅读；课程专题仍单独列出，影像区无视频元素或第三方封面');
+ checks.push('6条官方影像、1门课程专题、1条延伸阅读；课程专题仍单独列出，影像区无视频元素或第三方封面');
  for(const query of queries){await page.goto(base+'#search/'+encodeURIComponent(query));await page.locator('[data-video]').first().waitFor();const text=await page.locator('#main').innerText();assert(text.includes('官方影像')||text.includes('官方课程'),query);}
  checks.push('7个指定查询命中官方影像或官方课程分类，原知识搜索结果并存');
  await page.setViewportSize({width:390,height:844});await goto();await page.locator('#lab-demo').selectOption('demo-tao-basic');await page.waitForFunction(()=>lihuaStitchDiagnostics().player.id==='demo-tao-basic');await seek(12);await page.locator('#lab-points').check();

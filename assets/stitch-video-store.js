@@ -7,6 +7,7 @@ export function validateVideoSources(rows) {
    const url=new URL(row.url);
    if(ids.has(row.id)||row.official!==true||url.protocol!=='https:'||url.username||url.password||!videoHosts.has(url.hostname)||!['external','iframe'].includes(row.embedMode))throw Error('影像来源不符合官方链接协议');
    if(!Array.isArray(row.topics)||!row.topics.length||row.topics.some(x=>typeof x!=='string'||!x.trim()))throw Error('影像主题无效');
+   if(row.category!==undefined&&!['官方课程','针法教学','传承人','工艺观摩','非遗影像','非遗资料'].includes(row.category))throw Error('影像分类无效');
    if(!['official-video','official-course','official-reference'].includes(row.sourceType)||!['verified-page','partial-page','unavailable'].includes(row.accessStatus)||!/^\d{4}-\d{2}-\d{2}$/.test(row.accessedDate))throw Error('影像核验状态无效');
    if(row.downloaded!==false||row.hostedLocally!==false||row.embedMode==='iframe'&&row.iframeTested!==true)throw Error('禁止未经核验的嵌入或本地视频副本');
    ids.add(row.id);
@@ -52,7 +53,7 @@ export const officialCourseStore=createOfficialCourseStore();
 
 export function searchVideoRows(rows,query='') {
  const tokens=query.normalize('NFKC').toLowerCase().trim().split(/\s+/).filter(Boolean);
- return rows.filter(row=>{const words=[row.title,row.organization,...row.topics,row.sourceType==='official-reference'?'延伸阅读 官方工艺背景':'官方影像 视频 课程'].join(' ').toLowerCase();return tokens.every(t=>words.includes(t));});
+ return rows.filter(row=>{const fallback=row.sourceType==='official-course'?'官方课程 官方公开课程来源':row.sourceType==='official-reference'?'延伸阅读 官方工艺背景 非遗资料':'官方影像 视频';const words=[row.title,row.organization,row.category,fallback,...row.topics].filter(Boolean).join(' ').toLowerCase();return tokens.every(t=>words.includes(t));});
 }
 export function createVideoStore(fetcher=(...args)=>fetch(...args)) {
  let cache=null,pending=null;
@@ -66,13 +67,14 @@ export function createVideoStore(fetcher=(...args)=>fetch(...args)) {
 export const stitchVideoStore=createVideoStore();
 const esc=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function videoCard(row) {
- if(row.sourceType==='official-course')return `<article class="card video-card" data-video="${esc(row.id)}"><p class="video-source-mark">${esc(row.organization)} · 官方公开课程来源</p><h3>${esc(row.title)}</h3><p>${row.topics.map(esc).join(' · ')}</p><a class="btn" href="#ar/mooc-suxiu">在教学页查看课程目录</a><p class="small">课程内容由课程提供方和中国大学MOOC发布；梨花季仅整理目录并关联本地数字练习。</p></article>`;
+ if(row.sourceType==='official-course')return `<article class="card video-card" data-video="${esc(row.id)}"><p class="video-source-mark">${esc(row.organization)} · <span class="video-category-tag">官方课程</span> · 官方公开课程来源</p><h3>${esc(row.title)}</h3><p>${row.topics.map(esc).join(' · ')}</p><a class="btn" href="#ar/mooc-suxiu">在教学页查看课程目录</a><p class="small">课程内容由课程提供方和中国大学MOOC发布；梨花季仅整理目录并关联本地数字练习。</p></article>`;
  const label=row.sourceType==='official-reference'?'打开官方资料':row.sourceType==='official-course'?'打开官方课程':'打开官方视频';
- return `<article class="card video-card" data-video="${esc(row.id)}"><p class="video-source-mark">${esc(row.organization)}</p><h3>${esc(row.title)}</h3><p>${row.topics.map(esc).join(' · ')}</p>${row.accessStatus!=='verified-page'?`<p class="small">${row.accessStatus==='unavailable'?'当前官方页面暂不可访问':'已核对页面标题，播放状态待原站确认'}</p>`:''}<a class="btn" href="${esc(row.url)}" target="_blank" rel="noopener noreferrer">${label} →</a><p class="small">来源：${esc(row.organization)} · 原站观看</p></article>`;
+ const category=row.category||(row.sourceType==='official-reference'?'非遗资料':'官方影像');
+ return `<article class="card video-card" data-video="${esc(row.id)}"><p class="video-source-mark">${esc(row.organization)} · <span class="video-category-tag">${esc(category)}</span></p><h3>${esc(row.title)}</h3><p>${row.topics.map(esc).join(' · ')}</p>${row.accessStatus!=='verified-page'?`<p class="small">${row.accessStatus==='unavailable'?'当前官方页面暂不可访问':'已核对页面标题，播放状态待原站确认'}</p>`:''}<a class="btn" href="${esc(row.url)}" target="_blank" rel="noopener noreferrer">${label} →</a><p class="small">来源：${esc(row.organization)} · 原站观看</p></article>`;
 }
 export function mountVideoArchive(root,{openCourse=false}={}) {
  let active=true;
- root.innerHTML='<h2>官方针法影像</h2><p>整理苏绣相关官方公开影像与课程入口，用于继续观看真实技艺、传承人与针法演示。</p><p class="small">课程与影像由原提供方发布。本页只整理公开目录和来源，不复制、下载或重新托管课程内容。</p><div data-video-content role="status">正在读取官方影像目录…</div>';
+ root.innerHTML='<h2>官方课程与苏绣影像</h2><p>按官方课程、传承人、工艺观摩与非遗影像整理苏绣学习入口。</p><p class="small">课程与影像由原提供方发布；梨花季只整理经核验的标题、主题和来源链接，不复制、下载或重新托管内容。</p><div data-video-content role="status">正在读取官方影像目录…</div>';
  const content=root.querySelector('[data-video-content]');
  const knowledgeLabels=new Map([['stitch-tao','套针知识'],['stitch-gun','滚针知识'],['stitch-dazi','打籽知识'],['tool-needle','绣针知识'],['craft-plain','平绣知识']]);
  const courseCard=(course)=>{

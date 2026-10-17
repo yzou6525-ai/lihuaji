@@ -298,3 +298,13 @@ StitchRenderer 仍使用原来的单一 WebGLRenderer、canvas、scene 和 Ortho
 本地 Edge/Playwright 验收不使用 Browser 插件（当前会话未提供）。课程专题与针法影像只做原功能回归，没有更改课程数据、标题、目录、iframe 或官方来源。47 项自动测试通过，静态站构建通过；Stitch Lab、显影及 AR/页面回归均通过。计划打开时资源稳定为 3 geometries / 1 texture，关闭计划时为 2 / 1；20 次显隐和 20 次视图操作不增长；显影 5 次进入退出恢复到逐针视图资源基线，离页归零。AR-Santao 使用合成相机流通过 MindAR 回归，非真实手机验收。AR 实现、MindAR、识别卡、targets.mind、散套 56 针 JSON 和 11 秒 SantaoTimeline 均未修改。
 
 开源参考与许可边界见 [OPEN-SOURCE-INSPIRATION.md](OPEN-SOURCE-INSPIRATION.md)：Bastidor、Ink/Stitch 和 dst-format 只作交互/技术概念参考，Copied code 均为 None；没有新增第三方依赖。
+
+## 官方影像与数字刺绣工具 V5
+
+日期：2026-10-17。原有课程目录、课程 iframe 与练习联动不变；原 4 条视频入口、1 门课程、1 条官方资料保留。新增余福臻、邹英姿两条官方影像，合计 6 条影像、1 门课程、1 条非视频资料。两条新增内容归为“传承人”影像，不标记为针法教程。来源、分类边界和许可核验见 [VIDEO-SOURCES.md](VIDEO-SOURCES.md)。
+
+Stitch Lab 后、基础练习前新增同一教学页内的小型“数字刺绣工具”卡片，没有一级导航。Ricuci 的数据位于 `content/digital-tools.json`，由 `assets/digital-tools-store.js` 独立负责校验、搜索和渲染。点击“打开工具”才创建 Ricuci 官方 iframe；关闭时销毁 iframe，且无跨 iframe 文件传输。机器针迹与苏绣传统手工针法的区别、文件本机处理说明均直接显示。源码、许可证、iframe headers 和实测结论见 [Ricuci 接入说明](../tools/RICUCI.md)。没有复制 Ricuci 代码、字体、GSAP 或品牌素材。
+
+搜索新增 Ricuci、数字刺绣、机器刺绣、DST、PES、JEF、刺绣文件、转换；余福臻和邹英姿各自可在“官方影像与资料”搜索结果找到。
+
+V5 本地浏览器验收由 `scripts/digital-tools-acceptance.cjs` 执行，输出截图在 `../digital-tools/validation/`；包括影像卡分类、Ricuci 实际 iframe 与文件输入控件、五次打开关闭、关闭后 DOM 移除、搜索，以及 390×844 响应式视口。Ricuci iframe 于 2026-10-17 在 Microsoft Edge 实测 HTTP 200，无 X-Frame-Options/CSP 响应头且页面确实渲染。第三方站点未来可调整安全策略，卡片同时提供外站入口。

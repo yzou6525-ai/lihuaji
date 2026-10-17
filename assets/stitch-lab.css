@@ -35,6 +35,7 @@
 #official-videos .video-card h3,#main .video-card h3{font-family:var(--serif);font-weight:500;font-size:20px}
 #official-videos .video-card p,#main .video-card p{font-size:13px}
 #official-videos .video-source-mark,#main .video-source-mark{color:#68776e;font-size:12px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.video-category-tag{display:inline-block;margin-left:5px;padding:2px 8px;border:1px solid #C8D6C9;border-radius:999px;color:#3F5A4F;background:#F8F6EF;font-size:11px;white-space:nowrap}
 .official-course{margin:26px 0 34px;border-color:#C9CCBF;background:#FCFBF6}
 .official-course-head{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-bottom:15px;border-bottom:1px solid var(--line)}
 .official-course-label{margin:0 0 8px!important;color:#536C5C;font-size:11px!important;letter-spacing:.04em}

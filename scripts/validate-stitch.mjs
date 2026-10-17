@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import {validateStitchDemo} from '../assets/stitch/StitchPlayer.js';
 import {validateVideoSources} from '../assets/stitch-video-store.js';
+import {validateDigitalTools} from '../assets/digital-tools-store.js';
 import {demoCatalogue} from '../assets/stitch-lab.js';
 // Numerical safeguards for the PROJECT VISUAL DESIGN, not proof of craft authenticity.
 export function validateSantaoVisual(data) {
@@ -42,5 +43,6 @@ export function validateStitchFiles() {
  const santao=validateSantaoVisual(demos.find(d=>d.id==='demo-santao-pear-petal'));
  for(const demo of demos)if(demo.knowledgeId&&!knowledge.some(k=>k.id===demo.knowledgeId&&k.verified===true))throw Error('针迹知识关联不存在：'+demo.id);
  const videos=validateVideoSources(read('content/stitch-video-sources.json'));
- return {demos:demos.map(d=>({id:d.id,count:d.stitches.length,knowledgeId:d.knowledgeId})),videos:videos.length,santao};
+ const digitalTools=validateDigitalTools(read('content/digital-tools.json'));
+ return {demos:demos.map(d=>({id:d.id,count:d.stitches.length,knowledgeId:d.knowledgeId})),videos:videos.length,digitalTools:digitalTools.length,santao};
 }

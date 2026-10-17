@@ -9,6 +9,7 @@ import {dataURL} from './assets/engine.js';
 import {createARLayersFromSVG} from './assets/ar/svg-layers.js';
 import {mountStitchLab,ensureStitchStyles} from './assets/stitch-lab.js';
 import {mountVideoArchive,stitchVideoStore,videoCard} from './assets/stitch-video-store.js';
+import {mountDigitalTools,digitalToolStore,digitalToolSearchCard,ensureDigitalToolsStyles} from './assets/digital-tools-store.js';
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const asset=p=>'./assets/'+p, main=$('#main');let site,patterns,products,cleanup=()=>{},epoch=0;const storeKey='lihuaji.pages.progress.v1';let progress={days:[],best:0};try{progress={...progress,...JSON.parse(localStorage.getItem(storeKey)||'{}')}}catch{}
 function save(){try{localStorage.setItem(storeKey,JSON.stringify(progress))}catch{toast('浏览器未允许本地保存，本次仍可继续体验。')}}
@@ -67,13 +68,13 @@ function face(value=''){const [id,sku]=value.split('~');main.innerHTML=title('�
 async function story(){const ticket=epoch;const dispose=await mountStory(main,{download,navigate,isCurrent:()=>epoch===ticket});if(epoch===ticket)cleanup=dispose;else dispose();}
 function ar(id=''){
  const custom=id==='story'?getStorySession()?.selected:null;if(id==='story'&&!custom){main.innerHTML=title('先选一套故事纹样')+'<a class="btn primary" href="#story">返回故事译绣</a>';return;}
- main.innerHTML=title(custom?'AR 绣境 · 我的故事纹样':'AR 绣境 · 看一枝梨花展开','赏纹、解绣、看针。先欣赏立体构图，也可扫描识别卡，让纹样跟着卡片移动。')+`<label class="check"><input id="camera-consent" type="checkbox">同意本次在设备内使用相机，不上传画面。</label><iframe id="ar-frame" class="demo-frame" title="AR绣境与针法教学" allow="camera; xr-spatial-tracking" src="./assets/ar-experience.html?v=layers-20261009"></iframe><section id="stitch-lab" class="card" aria-label="数字针迹实验室"></section><h2>基础练习</h2><p class="small">项目自编练习，用于入门参考。</p><div class="grid">${lessons.map((l,i)=>`<article class="card"><h2>${esc(l.name)}</h2><p>${esc(l.summary)}</p><ol>${l.steps.map(x=>`<li>${esc(x)}</li>`).join('')}</ol><p>${esc(l.tip)}</p><button data-learn="${i}">记录今日练习</button></article>`).join('')}</div><section id="official-videos" aria-label="官方针法影像"></section>`;
- const disposeLab=mountStitchLab($('#stitch-lab')),disposeVideos=mountVideoArchive($('#official-videos'),{openCourse:id==='mooc-suxiu'});
+ main.innerHTML=title(custom?'AR 绣境 · 我的故事纹样':'AR 绣境 · 看一枝梨花展开','赏纹、解绣、看针。先欣赏立体构图，也可扫描识别卡，让纹样跟着卡片移动。')+`<label class="check"><input id="camera-consent" type="checkbox">同意本次在设备内使用相机，不上传画面。</label><iframe id="ar-frame" class="demo-frame" title="AR绣境与针法教学" allow="camera; xr-spatial-tracking" src="./assets/ar-experience.html?v=layers-20261009"></iframe><section id="stitch-lab" class="card" aria-label="数字针迹实验室"></section><section id="digital-tools" aria-label="数字刺绣工具"></section><h2>基础练习</h2><p class="small">项目自编练习，用于入门参考。</p><div class="grid">${lessons.map((l,i)=>`<article class="card"><h2>${esc(l.name)}</h2><p>${esc(l.summary)}</p><ol>${l.steps.map(x=>`<li>${esc(x)}</li>`).join('')}</ol><p>${esc(l.tip)}</p><button data-learn="${i}">记录今日练习</button></article>`).join('')}</div><section id="official-videos" aria-label="官方课程与苏绣影像"></section>`;
+ const disposeLab=mountStitchLab($('#stitch-lab')),disposeTools=mountDigitalTools($('#digital-tools')),disposeVideos=mountVideoArchive($('#official-videos'),{openCourse:id==='mooc-suxiu'});
  const frame=$('#ar-frame');let active=true,customSent=false;const sendCustom=async()=>{if(!custom||customSent)return;customSent=true;try{const generated=await createARLayersFromSVG(custom.svg);if(active){frame.contentWindow.postMessage({scope:'lihua-ar-host',type:'generated-pattern',pattern:{...generated,name:custom.title.slice(0,70)}},location.origin);}}catch(e){if(active)toast('作品分层未完成：'+e.message);}};const send=()=>frame.contentWindow?.postMessage({scope:'lihua-ar-host',type:'consent',value:$('#camera-consent').checked},location.origin);
  const receive=e=>{if(e.origin!==location.origin||e.source!==frame.contentWindow||e.data?.scope!=='lihua-ar')return;if(e.data.type==='ready'){send();sendCustom();}if(e.data.type==='resize'&&Number.isFinite(e.data.height))frame.style.height=Math.min(2200,Math.max(500,Math.ceil(e.data.height)+2))+'px';};
  window.addEventListener('message',receive);$('#camera-consent').onchange=send;frame.onload=send;
  main.querySelectorAll('[data-learn]').forEach(b=>b.onclick=()=>{const date=new Date().toLocaleDateString('sv-SE');if(!progress.days.includes(date))progress.days.push(date);save();toast('今日练习已记在此浏览器')});
- cleanup=()=>{active=false;disposeLab();disposeVideos();window.removeEventListener('message',receive);frame.contentWindow?.postMessage({scope:'lihua-ar-host',type:'stop'},location.origin);};
+ cleanup=()=>{active=false;disposeLab();disposeTools();disposeVideos();window.removeEventListener('message',receive);frame.contentWindow?.postMessage({scope:'lihua-ar-host',type:'stop'},location.origin);};
 }
 function officialKnowledgeCard(k,data,heading='h2'){
  const sourceById=new Map(data.sources.map(s=>[s.id,s])),byId=new Map(data.knowledge.map(x=>[x.id,x]));
@@ -117,8 +118,8 @@ async function searchPage(query=''){
  if(!query){main.innerHTML+='<div class="row"><a class="btn" href="#search/'+encodeURIComponent('花')+'">花卉纹样</a><a class="btn" href="#search/'+encodeURIComponent('套针')+'">套针练习</a><a class="btn" href="#search/'+encodeURIComponent('眼罩')+'">苏绣眼罩</a></div>';return}
  const q=query.toLowerCase(),matchedPatterns=patterns.filter(p=>[p.title,p.originalTitle,p.region,p.description,p.source,p.accession,p.date,p.technique,p.batch,JSON.stringify(p.tags||[])].join(' ').toLowerCase().includes(q)),matchedProducts=products.filter(p=>(p.title+p.category).toLowerCase().includes(q)),matchedKnowledge=knowledge.filter(k=>(k.title+k.tags+k.body).toLowerCase().includes(q));
  const block=(heading,items)=>'<section class="search-section"><h2>'+heading+'</h2>'+items+'</section>';
- let official=[],craftData,videos=[];
- await Promise.allSettled([(async()=>{craftData=await loadSuxiuKnowledge();official=await searchSuxiuKnowledge(query)})(),(async()=>{videos=await stitchVideoStore.search(query)})()]);
+ let official=[],craftData,videos=[],digitalTools=[];
+ await Promise.allSettled([(async()=>{craftData=await loadSuxiuKnowledge();official=await searchSuxiuKnowledge(query)})(),(async()=>{videos=await stitchVideoStore.search(query)})(),(async()=>{digitalTools=await digitalToolStore.search(query)})()]);
  if(routeEpoch!==epoch)return;
  if(official.length)main.innerHTML+=block('苏绣知识 · '+official.length+'条','<div class="grid search-knowledge">'+official.slice(0,3).map(k=>officialKnowledgeCard(k,craftData,'h3')).join('')+'</div><a class="text-link" href="#guide/'+encodeURIComponent(query)+'">查看全部知识 '+icon('arrow')+'</a>');
  if(matchedPatterns.length)main.innerHTML+=block('灵感图录 · '+matchedPatterns.length+'份','<div class="grid four">'+matchedPatterns.slice(0,4).map(patternCard).join('')+'</div><a class="text-link" href="#library/'+encodeURIComponent(query)+'">查看全部纹样 '+icon('arrow')+'</a>');
@@ -127,7 +128,8 @@ async function searchPage(query=''){
  const courseResults=videos.filter(row=>row.sourceType==='official-course'),mediaResults=videos.filter(row=>row.sourceType!=='official-course');
  if(courseResults.length){ensureStitchStyles();main.innerHTML+=block('官方课程 · '+courseResults.length+'门','<div class="grid">'+courseResults.map(videoCard).join('')+'</div>');}
  if(mediaResults.length){ensureStitchStyles();main.innerHTML+=block('官方影像与资料 · '+mediaResults.length+'条','<div class="grid two">'+mediaResults.map(videoCard).join('')+'</div>');}
- if(!matchedPatterns.length&&!matchedProducts.length&&!matchedKnowledge.length&&!official.length&&!videos.length)main.innerHTML+='<div class="empty"><p>暂未找到相关内容，试试“花”“套针”或“眼罩”。</p><a class="btn" href="#library">浏览全部纹样</a></div>';
+ if(digitalTools.length){ensureStitchStyles();ensureDigitalToolsStyles();main.innerHTML+=block('数字刺绣工具 · '+digitalTools.length+'项','<div class="grid">'+digitalTools.map(digitalToolSearchCard).join('')+'</div>');}
+ if(!matchedPatterns.length&&!matchedProducts.length&&!matchedKnowledge.length&&!official.length&&!videos.length&&!digitalTools.length)main.innerHTML+='<div class="empty"><p>暂未找到相关内容，试试“花”“套针”或“眼罩”。</p><a class="btn" href="#library">浏览全部纹样</a></div>';
  bindPatterns();
 }
 async function route(){

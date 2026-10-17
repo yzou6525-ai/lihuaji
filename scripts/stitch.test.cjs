@@ -3,7 +3,7 @@ const read=name=>JSON.parse(fs.readFileSync(path.join(__dirname,'..',name),'utf8
 const modules=Promise.all([import('../assets/stitch/StitchPlayer.js'),import('../assets/stitch-video-store.js'),import('./validate-stitch.mjs')]);
 function clock(){let time=0,id=0;const callbacks=new Map();return {now:()=>time,requestFrame:cb=>{callbacks.set(++id,cb);return id;},cancelFrame:id=>callbacks.delete(id),tick:ms=>{time+=ms;const queued=[...callbacks.values()];callbacks.clear();queued.forEach(cb=>cb(time));},get size(){return callbacks.size;}};}
 test('all four authored demos and official sources validate; linked knowledge exists',async()=>{
- const [,,m]=await modules,r=m.validateStitchFiles();assert.deepEqual(r.demos.map(d=>d.count),[16,24,20,56]);assert.equal(r.videos,6);
+ const [,,m]=await modules,r=m.validateStitchFiles();assert.deepEqual(r.demos.map(d=>d.count),[16,24,20,56]);assert.equal(r.videos,8);assert.equal(r.digitalTools,1);
 });
 test('santao project visual validation: 56 stitches, 28/14/14, interior overlap and one connected tapered petal',async()=>{
  const [,,m]=await modules,d=read('content/stitch-demos/demo-santao-pear-petal.json'),v=m.validateSantaoVisual(d);
@@ -60,11 +60,11 @@ test('corrupt coordinates, duplicate IDs, bad order, untrue provenance and missi
 });
 test('official video URL, source, rights and embedding validation rejects forged/unsupported records',async()=>{
  const [,m]=await modules,rows=read('content/stitch-video-sources.json');
- for(const mutate of [r=>r.official=false,r=>r.url='http://tv.cctv.com/a',r=>r.url='https://tv.cctv.com.evil.test/a',r=>r.embedMode='video',r=>r.embedMode='iframe',r=>r.downloaded=true,r=>r.hostedLocally=true,r=>r.title='',...['bilibili.com','douyin.com','xiaohongshu.com'].map(host=>r=>r.url='https://'+host+'/a')]){const copy=structuredClone(rows);mutate(copy[0]);assert.throws(()=>m.validateVideoSources(copy));}
+ for(const mutate of [r=>r.official=false,r=>r.url='http://tv.cctv.com/a',r=>r.url='https://tv.cctv.com.evil.test/a',r=>r.embedMode='video',r=>r.embedMode='iframe',r=>r.downloaded=true,r=>r.hostedLocally=true,r=>r.category='针法教程但无来源',r=>r.title='',...['bilibili.com','douyin.com','xiaohongshu.com'].map(host=>r=>r.url='https://'+host+'/a')]){const copy=structuredClone(rows);mutate(copy[0]);assert.throws(()=>m.validateVideoSources(copy));}
 });
 test('official search uses all words and verified course topics; no fabricated results',async()=>{
  const [,m]=await modules,rows=read('content/stitch-video-sources.json');
- for(const q of ['苏绣 视频','姚惠芬','套针','滚针','打籽','梅花','蒋雪英'])assert(m.searchVideoRows(rows,q).some(r=>r.sourceType!=='official-reference'),q);
+ for(const q of ['苏绣 视频','姚惠芬','套针','滚针','打籽','梅花','蒋雪英','余福臻','邹英姿'])assert(m.searchVideoRows(rows,q).some(r=>r.sourceType!=='official-reference'),q);
  assert.equal(m.searchVideoRows(rows,'不存在的影片').length,0);
  assert(m.searchVideoRows(rows,'姚惠芬').every(r=>r.id==='cctv-yao-huifen'));
 });

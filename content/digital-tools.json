@@ -1,0 +1,31 @@
+[
+  {
+    "id": "ricuci",
+    "title": "数字刺绣工具",
+    "provider": "Ricuci",
+    "repository": "Federicokalik/embroidery-converter-kit",
+    "license": "MIT",
+    "officialWebApp": "https://ricuci.app/convert/",
+    "repositoryUrl": "https://github.com/Federicokalik/embroidery-converter-kit",
+    "processing": "client-side",
+    "copiedCode": false,
+    "formatsRead": ["VIP", "ZHS", "DST", "EXP", "JEF", "PEC", "PES", "VP3", "HUS", "XXX", "SEW", "SHV", "PCS"],
+    "formatsWrite": ["ZHS", "DST", "EXP", "JEF", "PEC", "PES", "VP3", "HUS", "VIP", "XXX"],
+    "keywords": ["数字刺绣", "机器刺绣", "刺绣文件", "转换", "Ricuci", "DST", "PES", "JEF", "PEC", "VP3", "EXP", "HUS", "VIP", "XXX", "SEW", "SHV", "PCS"],
+    "iframeTested": true,
+    "iframeAllowed": true,
+    "iframeTest": {
+      "testedAt": "2026-10-17",
+      "browser": "Microsoft Edge via Playwright",
+      "httpStatus": 200,
+      "xFrameOptions": null,
+      "contentSecurityPolicy": null,
+      "frameAncestors": null,
+      "actualFrameLoad": true
+    },
+    "category": "机器刺绣文件查看与转换",
+    "displayNote": "浏览器本地读取并转换机器刺绣文件；读取格式和导出格式以 Ricuci 官方说明为准。工具可在顶部语言菜单切换为 English。",
+    "privacyNote": "文件处理由 Ricuci 浏览器工具在本机完成。梨花季不接收或保存用户选择的刺绣文件。",
+    "craftBoundary": "机器刺绣文件中的针迹数据与苏绣传统手工针法并非同一体系。本工具用于理解数字刺绣文件与机器针迹结构。"
+  }
+]
